@@ -1,0 +1,6 @@
+{
+  "name": "人形机器人开源生态导航",
+  "description": "交互式人形机器人开源生态全景平台，包含硬件本体、训练框架、仿真引擎、部署控制、VLA大模型、数据集与论文库索引。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

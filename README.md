@@ -217,4 +217,46 @@ Tesla Optimus · Figure 02 · Atlas 电动 · 1X Neo · Digit · Apollo · UBTec
 
 ---
 
-**本地运行**: `git clone` → `npm install` → `npm run dev`
+## 本地运行
+
+```bash
+# 克隆仓库
+git clone https://github.com/bbhliheyi/humanoid-eco-nav.git
+cd humanoid-eco-nav
+
+# 安装依赖
+npm install
+
+# 开发模式（热更新，默认 http://localhost:3000）
+npm run dev
+
+# 生产构建
+npm run build
+
+# 生产预览
+npm run preview
+```
+
+**技术栈**：React 19 + TypeScript 5.8 + Vite 6 + Tailwind CSS 4 + Lucide React
+
+**项目结构**：
+```
+src/
+├── App.tsx                    # 主应用（路由+状态管理）
+├── types.ts                   # TypeScript 类型定义
+├── data/
+│   ├── humanoidData.ts        # 全部开源项目数据（176条）
+│   ├── glossaryData.ts        # 技术百科术语数据（27条）
+│   └── techArchitectureData.ts # 架构链路详解数据（64条）
+├── components/
+│   ├── Navigation.tsx         # 侧边栏导航（按Phase分组）
+│   ├── OverviewView.tsx       # 全景总览首页
+│   ├── DevelopmentGuide.tsx   # 开发全流程总纲
+│   ├── GlossaryView.tsx       # 技术百科（树形架构）
+│   ├── DetailModal.tsx        # 项目详情弹窗（硬件规格+架构链路）
+│   ├── ProjectCard.tsx        # 项目卡片
+│   ├── ProjectTable.tsx       # 项目表格视图
+│   └── ...                    # 其他视图组件
+```
+
+**数据更新**：编辑 `src/data/humanoidData.ts` 即可修改项目信息，Vite 自动热更新。

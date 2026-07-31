@@ -153,13 +153,38 @@ Tesla Optimus · Figure 02 · Atlas 电动 · 1X Neo · Digit · Apollo · UBTec
 
 ### 核心论文 (33篇)
 
-**Sim2Real**：[legged_gym](https://github.com/leggedrobotics/legged_gym) `Science Robotics 22` · [Humanoid-Gym](https://github.com/roboterax/humanoid-gym) `CoRL 24` · [ASAP](https://github.com/LeCAR-Lab/ASAP) `RSS 25` · [DrEureka](https://github.com/eureka-research/DrEureka) `RSS 24` · [Isaac Gym](https://developer.nvidia.com/isaac-gym) `NeurIPS 21` · [Genesis](https://github.com/Genesis-Embodied-AI/genesis-world) `24` · [LucidSim](https://github.com/lucidsim/lucidsim) `CoRL 24`
-
-**VLA**：[RT-2](https://arxiv.org/abs/2307.15818) `CoRL 23` · [RT-1](https://arxiv.org/abs/2212.06817) `RSS 23` · [Octo](https://github.com/octo-models/octo) `RSS 24` · [Diffusion Policy](https://github.com/columbia-ai-robotics/diffusion_policy) `RSS 23` · [GR00T N1](https://github.com/Nvidia/Isaac-GR00T) `25` · [π0](https://github.com/Physical-Intelligence/openpi) `24` · [EgoScale](https://arxiv.org) `CVPR 25` · [Gato](https://arxiv.org/abs/2205.06175) `22`
-
-**控制**：[HumanPlus](https://github.com/ZipengFu/humanplus) `CoRL 24` · [OmniH2O](https://github.com/CMU-GKG/OmniH2O) `CoRL 24` · [ALOHA](https://github.com/MarkFzp/mobile-aloha) `24` · [ACT](https://github.com/tonyzhaozh/act) `CoRL 23` · [UMI](https://github.com/real-stanford/universal_manipulation_interface) `RSS 24` · [H2O](https://github.com/ZhengyiLuo/H2O) `CoRL 23` · [3D Diffuser](https://github.com/nickgkan/3d_diffuser_actor) `CoRL 24` · [Expressive Loco](https://github.com/hybridrobotics/berkeley-humanoid) `RSS 24`
-
-**综述**：[Awesome Humanoid 550+](https://github.com/YanjieZe/awesome-humanoid-robot-learning) · [Sim2Real Survey](https://ieeexplore.ieee.org) `T-RO 23` · [VLA Survey](https://arxiv.org) `25` · [Humanoid Survey](https://arxiv.org) `AR 25` · [IL Survey](https://arxiv.org) `AR 24` · [Deep RL Survey](https://arxiv.org) `T-RO 21` · [PPO](https://arxiv.org/abs/1707.06347) `17`
+| 论文 | 类别 | 会议 | 链接 |
+|------|------|------|------|
+| legged_gym | Sim2Real | Science Robotics 2022 | [GitHub](https://github.com/leggedrobotics/legged_gym) |
+| Humanoid-Gym | Sim2Real | CoRL 2024 | [GitHub](https://github.com/roboterax/humanoid-gym) |
+| ASAP | Sim2Real | RSS 2025 | [GitHub](https://github.com/LeCAR-Lab/ASAP) |
+| DrEureka | Sim2Real | RSS 2024 | [GitHub](https://github.com/eureka-research/DrEureka) |
+| Isaac Gym | Sim2Real | NeurIPS 2021 | [NVIDIA](https://developer.nvidia.com/isaac-gym) |
+| Genesis | Sim2Real | arXiv 2024 | [GitHub](https://github.com/Genesis-Embodied-AI/genesis-world) |
+| LucidSim | Sim2Real | CoRL 2024 | [GitHub](https://github.com/lucidsim/lucidsim) |
+| RT-2 | VLA | CoRL 2023 | [arXiv](https://arxiv.org/abs/2307.15818) |
+| RT-1 | VLA | RSS 2023 | [arXiv](https://arxiv.org/abs/2212.06817) |
+| Octo | VLA | RSS 2024 | [GitHub](https://github.com/octo-models/octo) |
+| Diffusion Policy | VLA | RSS 2023 | [GitHub](https://github.com/columbia-ai-robotics/diffusion_policy) |
+| GR00T N1 | VLA | arXiv 2025 | [GitHub](https://github.com/Nvidia/Isaac-GR00T) |
+| π0 | VLA | arXiv 2024 | [GitHub](https://github.com/Physical-Intelligence/openpi) |
+| EgoScale | VLA | CVPR 2025 | [arXiv](https://arxiv.org) |
+| Gato | VLA | arXiv 2022 | [arXiv](https://arxiv.org/abs/2205.06175) |
+| HumanPlus | 控制 | CoRL 2024 | [GitHub](https://github.com/ZipengFu/humanplus) |
+| OmniH2O | 控制 | CoRL 2024 | [GitHub](https://github.com/CMU-GKG/OmniH2O) |
+| Mobile ALOHA | 控制 | arXiv 2024 | [GitHub](https://github.com/MarkFzp/mobile-aloha) |
+| ACT | 控制 | CoRL 2023 | [GitHub](https://github.com/tonyzhaozh/act) |
+| UMI | 控制 | RSS 2024 | [GitHub](https://github.com/real-stanford/universal_manipulation_interface) |
+| H2O | 控制 | CoRL 2023 | [GitHub](https://github.com/ZhengyiLuo/H2O) |
+| 3D Diffuser Actor | 控制 | CoRL 2024 | [GitHub](https://github.com/nickgkan/3d_diffuser_actor) |
+| Expressive Loco | 控制 | RSS 2024 | [GitHub](https://github.com/hybridrobotics/berkeley-humanoid) |
+| Awesome Humanoid 550+ | 综述 | GitHub | [GitHub](https://github.com/YanjieZe/awesome-humanoid-robot-learning) |
+| Sim2Real Survey | 综述 | IEEE T-RO 2023 | [IEEE](https://ieeexplore.ieee.org) |
+| VLA Survey | 综述 | arXiv 2025 | [arXiv](https://arxiv.org) |
+| Humanoid Survey | 综述 | AR 2025 | [arXiv](https://arxiv.org) |
+| Imitation Learning Survey | 综述 | AR 2024 | [arXiv](https://arxiv.org) |
+| Deep RL for Robotics | 综述 | IEEE T-RO 2021 | [arXiv](https://arxiv.org) |
+| PPO | 文献 | arXiv 2017 | [arXiv](https://arxiv.org/abs/1707.06347) |
 
 ### 技术百科 (18 术语)
 

@@ -16,9 +16,9 @@
 <table>
 <thead>
 <tr>
-<th width="33%">项目</th>
-<th width="33%">机构</th>
-<th width="33%">开源内容</th>
+<th width="45%">项目</th>
+<th width="10%">机构</th>
+<th width="45%">开源内容</th>
 </tr>
 </thead>
 <tbody>
@@ -101,10 +101,10 @@
 <table>
 <thead>
 <tr>
-<th width="25%">项目</th>
-<th width="25%">机构</th>
-<th width="25%">开源内容</th>
-<th width="25%">许可</th>
+<th width="30%">项目</th>
+<th width="10%">机构</th>
+<th width="30%">开源内容</th>
+<th width="30%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -207,12 +207,12 @@
 <table>
 <thead>
 <tr>
-<th width="16%">平台</th>
-<th width="16%">机构</th>
-<th width="16%">DoF</th>
-<th width="16%">成本</th>
-<th width="16%">开源内容</th>
-<th width="16%">许可</th>
+<th width="18%">平台</th>
+<th width="10%">机构</th>
+<th width="18%">DoF</th>
+<th width="18%">成本</th>
+<th width="18%">开源内容</th>
+<th width="18%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -321,10 +321,10 @@
 <table>
 <thead>
 <tr>
-<th width="25%">平台</th>
-<th width="25%">机构</th>
-<th width="25%">开源内容</th>
-<th width="25%">许可</th>
+<th width="30%">平台</th>
+<th width="10%">机构</th>
+<th width="30%">开源内容</th>
+<th width="30%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -373,10 +373,10 @@
 <table>
 <thead>
 <tr>
-<th width="25%">平台</th>
-<th width="25%">机构</th>
-<th width="25%">亮点</th>
-<th width="25%">官网</th>
+<th width="30%">平台</th>
+<th width="10%">机构</th>
+<th width="30%">亮点</th>
+<th width="30%">官网</th>
 </tr>
 </thead>
 <tbody>
@@ -551,10 +551,10 @@
 <table>
 <thead>
 <tr>
-<th width="25%">项目</th>
-<th width="25%">机构</th>
-<th width="25%">开源内容</th>
-<th width="25%">许可</th>
+<th width="30%">项目</th>
+<th width="10%">机构</th>
+<th width="30%">开源内容</th>
+<th width="30%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -645,10 +645,10 @@
 <table>
 <thead>
 <tr>
-<th width="25%">模型</th>
-<th width="25%">机构</th>
-<th width="25%">开源内容</th>
-<th width="25%">许可</th>
+<th width="30%">模型</th>
+<th width="10%">机构</th>
+<th width="30%">开源内容</th>
+<th width="30%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -787,11 +787,11 @@
 <table>
 <thead>
 <tr>
-<th width="20%">数据集</th>
-<th width="20%">机构</th>
-<th width="20%">规模</th>
-<th width="20%">开源内容</th>
-<th width="20%">许可</th>
+<th width="22%">数据集</th>
+<th width="10%">机构</th>
+<th width="22%">规模</th>
+<th width="22%">开源内容</th>
+<th width="22%">许可</th>
 </tr>
 </thead>
 <tbody>

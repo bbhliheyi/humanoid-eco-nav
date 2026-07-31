@@ -16,9 +16,9 @@
 <table>
 <thead>
 <tr>
-<th width="45%">项目</th>
-<th width="10%">机构</th>
-<th width="45%">开源内容</th>
+<th width="18%">项目</th>
+<th width="8%">机构</th>
+<th width="40%">开源内容</th>
 </tr>
 </thead>
 <tbody>
@@ -101,10 +101,10 @@
 <table>
 <thead>
 <tr>
-<th width="30%">项目</th>
-<th width="10%">机构</th>
-<th width="30%">开源内容</th>
-<th width="30%">许可</th>
+<th width="18%">项目</th>
+<th width="8%">机构</th>
+<th width="40%">开源内容</th>
+<th width="10%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -208,11 +208,11 @@
 <thead>
 <tr>
 <th width="18%">平台</th>
-<th width="10%">机构</th>
-<th width="18%">DoF</th>
-<th width="18%">成本</th>
-<th width="18%">开源内容</th>
-<th width="18%">许可</th>
+<th width="8%">机构</th>
+<th width="8%">DoF</th>
+<th width="8%">成本</th>
+<th width="40%">开源内容</th>
+<th width="10%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -321,10 +321,10 @@
 <table>
 <thead>
 <tr>
-<th width="30%">平台</th>
-<th width="10%">机构</th>
-<th width="30%">开源内容</th>
-<th width="30%">许可</th>
+<th width="18%">平台</th>
+<th width="8%">机构</th>
+<th width="40%">开源内容</th>
+<th width="10%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -551,10 +551,10 @@
 <table>
 <thead>
 <tr>
-<th width="30%">项目</th>
-<th width="10%">机构</th>
-<th width="30%">开源内容</th>
-<th width="30%">许可</th>
+<th width="18%">项目</th>
+<th width="8%">机构</th>
+<th width="40%">开源内容</th>
+<th width="10%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -645,10 +645,10 @@
 <table>
 <thead>
 <tr>
-<th width="30%">模型</th>
-<th width="10%">机构</th>
-<th width="30%">开源内容</th>
-<th width="30%">许可</th>
+<th width="18%">模型</th>
+<th width="8%">机构</th>
+<th width="40%">开源内容</th>
+<th width="10%">许可</th>
 </tr>
 </thead>
 <tbody>
@@ -787,11 +787,11 @@
 <table>
 <thead>
 <tr>
-<th width="22%">数据集</th>
-<th width="10%">机构</th>
-<th width="22%">规模</th>
-<th width="22%">开源内容</th>
-<th width="22%">许可</th>
+<th width="18%">数据集</th>
+<th width="8%">机构</th>
+<th width="20%">规模</th>
+<th width="40%">开源内容</th>
+<th width="10%">许可</th>
 </tr>
 </thead>
 <tbody>

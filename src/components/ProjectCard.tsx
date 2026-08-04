@@ -161,6 +161,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <span className="font-semibold text-[#B83232]">{item.scale}</span>
             </div>
           )}
+          {item.hardwareSpecs?.emergencyStop && (
+            <div className="text-[10px] text-[#524D46] leading-relaxed pt-1 border-t border-[#D8D3CA] mt-1">
+              <span className="text-[#B83232] font-bold">急停: </span>
+              <span className="line-clamp-2">{item.hardwareSpecs.emergencyStop}</span>
+            </div>
+          )}
           {/* Fallback: show tech architecture summary if no other specs */}
           {!item.cost && !item.trainStack && !item.simBackend && !item.modelType && !item.deployStack && !item.scale && item.techArchitecture && (
             <div className="space-y-1">

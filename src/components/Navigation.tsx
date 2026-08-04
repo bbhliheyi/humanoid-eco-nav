@@ -45,7 +45,8 @@ export const CATEGORIES: { id: CategoryId; name: string; subtitle: string; icon:
   { id: 'urdf-pipeline', name: '  └ URDF 建模部署', subtitle: '数字孪生全链路', icon: Workflow },
   { id: 'frameworks', name: '  └ 训练框架算法', subtitle: 'PPO / SAC / Sim2Real', icon: Boxes },
   { id: 'platforms', name: 'Phase 2: 硬件驱动', subtitle: '45 款平台 / 电机 / 通信 / 标定', icon: Cpu },
-  { id: 'control', name: 'Phase 3: 算法智能', subtitle: 'WBC / 遥操作 / SLAM / 视觉导航', icon: Layers },
+  { id: 'control', name: 'Phase 3: 算法智能', subtitle: 'WBC / 遥操作 / 中间件', icon: Layers },
+  { id: 'slam', name: '  └ 视觉 SLAM 与导航', subtitle: 'ORB-SLAM3 / VINS / RTAB-Map', icon: Activity },
   { id: 'vla', name: '  └ VLA 具身大脑', subtitle: '基础模型 / 世界模型', icon: BrainCircuit },
   { id: 'datasets', name: '  └ 训练数据集', subtitle: '真机轨迹 / 遥操作采集', icon: Database },
   { id: 'papers', name: '测试部署 + 参考', subtitle: 'S2R / 迭代 / 论文 / 百科', icon: Compass },
@@ -57,7 +58,7 @@ export const CATEGORIES: { id: CategoryId; name: string; subtitle: string; icon:
 // 按人形机器人从零开发流程分组
 const GROUP_P1 = ['simulators', 'urdf-pipeline', 'frameworks'];
 const GROUP_P2 = ['platforms'];
-const GROUP_P3 = ['control', 'vla', 'datasets'];
+const GROUP_P3 = ['control', 'slam', 'vla', 'datasets'];
 const GROUP_P4 = ['papers', 'timeline', 'glossary', 'analytics'];
 
 const PHASE_CONFIG: { keys: string[]; label: string; subtitle: string; step: number }[] = [
@@ -81,7 +82,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   sidebarCollapsed,
   setSidebarCollapsed,
 }) => {
-  const showFilters = ['platforms', 'frameworks', 'simulators', 'control', 'vla', 'datasets', 'papers'].includes(
+  const showFilters = ['platforms', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets', 'papers'].includes(
     filter.categoryId
   );
 

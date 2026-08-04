@@ -12,6 +12,7 @@ export type CategoryId =
   | 'urdf-pipeline'
   | 'guide'
   | 'glossary'
+  | 'slam'
   | 'analytics';
 
 export interface EcosystemItem {

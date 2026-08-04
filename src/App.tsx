@@ -145,6 +145,7 @@ export default function App() {
       frameworks: ALL_ITEMS.filter((i) => i.category === 'frameworks').length,
       simulators: ALL_ITEMS.filter((i) => i.category === 'simulators').length,
       control: ALL_ITEMS.filter((i) => i.category === 'control').length,
+      slam: ALL_ITEMS.filter((i) => i.category === 'slam').length,
       vla: ALL_ITEMS.filter((i) => i.category === 'vla').length,
       datasets: ALL_ITEMS.filter((i) => i.category === 'datasets').length,
       guide: 0, // Standalone guide
@@ -271,7 +272,7 @@ export default function App() {
             <AnalyticsView items={ECOSYSTEM_ITEMS} />
           )}
 
-          {['platforms', 'frameworks', 'simulators', 'control', 'vla', 'datasets'].includes(
+          {['platforms', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets'].includes(
             filter.categoryId
           ) && (
             <div>

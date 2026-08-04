@@ -239,12 +239,14 @@ Gazebo（Classic / Ignition / Harmonic）
 ROS 集成：原生 ROS2 集成，ROS 生态标准仿真器
 适用场景：多传感器系统联调（LiDAR、相机、IMU），不是 RL 训练工具
 
-选型建议
-纯 RL 步态和运控训练 → MuJoCo MJX（最快）
-VLA 视觉-语言-动作训练 → Isaac Sim（光追级渲染）
-学术可微分物理研究 → Genesis 或 MuJoCo
-ROS 多传感器系统联调 → Gazebo Ignition`,
-    robotApplication: 'RL 训练的事实标准是 Isaac Lab（NVIDIA）或 MuJoCo Playground（DeepMind）。VLA 训练用 Isaac Sim 做视觉渲染。Genesis 正在快速追赶。Gazebo 用于传统 ROS 集成测试。',
+一句话选型决策
+练走路要真实感、有显卡 → Isaac Sim/Lab（照片级渲染，单卡几千 envs 并行，做四足人形运动控制首选）
+做抓取要快要省 → MuJoCo / MJX（接触和抓取金标准，pip 即装笔记本能跑，Playground 零样本 Sim2Real）
+要多物理可微分 → Genesis（刚体+柔体+流体全支持，GPU 加速+全可微，学术研究利器）
+要开源不被锁死 → ManiSkill3（基于 SAPIEN，GPU 并行，Isaac 的开源平替，操作任务开箱即用）
+ROS 系统多传感器联调 → Gazebo（原生 ROS2 集成，相机/LiDAR/IMU 仿真，不是 RL 训练工具）
+打通 MuJoCo+Isaac 生态 → Newton（NVIDIA+Google+Disney 联合开源，PhysX 5 内核）`,
+    robotApplication: 'RL 训练首选 Isaac Lab（NVIDIA）或 MuJoCo Playground（DeepMind）。VLA 训练用 Isaac Sim 做视觉渲染。Genesis 正在快速追赶。Gazebo 用于传统 ROS 集成测试。关键区别：Isaac 吃显卡+闭源，MuJoCo 开源+轻量，Genesis 最新+全可微。',
     relatedTerms: ['Sim2Real', '域随机化', 'GPU并行化', 'VLA'],
     relatedProjectIds: ['isaac-sim', 'mujoco', 'genesis-world', 'gewu-unity', 'isaac-lab'],
     keyPapers: [

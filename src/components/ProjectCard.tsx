@@ -98,71 +98,66 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Title & Provider */}
         <div className="cursor-pointer" onClick={() => onSelect(item)}>
-          <h3 className="text-lg sm:text-xl font-bold font-editorial-serif text-[#1A1816] group-hover:text-[#B83232] transition-colors leading-snug">
+          <h3 className="text-base sm:text-lg font-bold font-editorial-serif text-[#1A1816] group-hover:text-[#B83232] transition-colors leading-snug">
             {item.name}
           </h3>
-          <p className="text-xs font-semibold uppercase tracking-wider text-[#B83232] mt-1 mb-2.5 flex items-center gap-1.5">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-[#B83232] mt-1 mb-2 flex items-center gap-1.5">
             <span>{item.provider}</span>
             {item.releaseDate && (
-              <span className="text-[10px] text-[#8C867E] font-normal font-mono flex items-center gap-0.5">
-                • <Calendar className="w-3 h-3 inline text-[#8C867E]" /> {item.releaseDate}
-              </span>
+              <span className="text-[11px] text-[#8C867E] font-mono">• {item.releaseDate}</span>
             )}
           </p>
-
-          <p className="text-xs text-[#524D46] line-clamp-3 leading-relaxed mb-4">
+          <p className="text-[13px] text-[#524D46] line-clamp-3 leading-relaxed mb-4">
             {item.description}
           </p>
         </div>
 
         {/* Key Metrics / Specs Badges */}
-        <div className="space-y-1.5 mb-4 text-[11px] text-[#2D2A26] bg-[#FAF8F5] p-2.5 rounded-lg border border-[#D8D3CA]">
+        <div className="space-y-1.5 mb-4 text-[13px] text-[#2D2A26] bg-[#FAF8F5] p-3 rounded-lg border border-[#D8D3CA]">
           {item.cost && (
             <div className="flex items-center justify-between">
-              <span className="text-[#635D55] flex items-center gap-1 font-semibold uppercase text-[10px] tracking-wider">
-                <DollarSign className="w-3 h-3 text-[#2D2A26]" />成本
-              </span>
-              <span className="font-semibold text-[#2D2A26]">{item.cost}</span>
+              <span className="text-[#635D55] flex items-center gap-1 font-semibold text-xs"><DollarSign className="w-3.5 h-3.5" />成本</span>
+              <span className="font-semibold">{item.cost}</span>
             </div>
           )}
           {item.license && (
             <div className="flex items-center justify-between">
-              <span className="text-[#635D55] font-semibold uppercase text-[10px] tracking-wider">许可</span>
-              <span className="font-medium text-[#2D2A26] truncate max-w-[140px]">{item.license}</span>
+              <span className="text-[#635D55] font-semibold text-xs">许可</span>
+              <span className="truncate max-w-[160px]">{item.license}</span>
             </div>
           )}
           {item.trainStack && (
             <div className="flex items-center justify-between">
-              <span className="text-[#635D55] flex items-center gap-1 font-semibold uppercase text-[10px] tracking-wider"><Cpu className="w-3 h-3" />栈</span>
-              <span className="font-medium text-[#2D2A26] truncate max-w-[150px]">{item.trainStack}</span>
+              <span className="text-[#635D55] flex items-center gap-1 font-semibold text-xs"><Cpu className="w-3.5 h-3.5" />栈</span>
+              <span className="truncate max-w-[170px]">{item.trainStack}</span>
             </div>
           )}
           {item.simBackend && (
             <div className="flex items-center justify-between">
-              <span className="text-[#635D55] flex items-center gap-1 font-semibold uppercase text-[10px] tracking-wider"><Layers className="w-3 h-3" />仿真</span>
-              <span className="font-medium text-[#2D2A26] truncate max-w-[150px]">{item.simBackend}</span>
-            </div>
-          )}
-          {item.modelType && (
-            <div className="flex items-center justify-between">
-              <span className="text-[#635D55] font-semibold uppercase text-[10px] tracking-wider">模型</span>
-              <span className="font-medium text-[#B83232] truncate max-w-[150px]">{item.modelType}</span>
+              <span className="text-[#635D55] flex items-center gap-1 font-semibold text-xs"><Layers className="w-3.5 h-3.5" />仿真</span>
+              <span className="truncate max-w-[170px]">{item.simBackend}</span>
             </div>
           )}
           {item.deployStack && (
             <div className="flex items-center justify-between">
-              <span className="text-[#635D55] font-semibold uppercase text-[10px] tracking-wider">部署</span>
-              <span className="font-medium text-[#2D2A26] truncate max-w-[150px]">{item.deployStack}</span>
+              <span className="text-[#635D55] font-semibold text-xs">部署</span>
+              <span className="truncate max-w-[170px]">{item.deployStack}</span>
+            </div>
+          )}
+          {item.modelType && (
+            <div className="flex items-center justify-between">
+              <span className="text-[#635D55] font-semibold text-xs">模型</span>
+              <span className="text-[#B83232] truncate max-w-[170px]">{item.modelType}</span>
             </div>
           )}
           {item.scale && (
             <div className="flex items-center justify-between">
-              <span className="text-[#635D55] font-semibold uppercase text-[10px] tracking-wider">规模</span>
+              <span className="text-[#635D55] font-semibold text-xs">规模</span>
               <span className="font-semibold text-[#B83232]">{item.scale}</span>
             </div>
           )}
           {item.hardwareSpecs?.emergencyStop && (
-            <div className="text-[10px] text-[#524D46] leading-relaxed pt-1 border-t border-[#D8D3CA] mt-1">
+            <div className="text-[12px] text-[#524D46] leading-relaxed pt-1.5 border-t border-[#D8D3CA] mt-1">
               <span className="text-[#B83232] font-bold">急停: </span>
               <span className="line-clamp-2">{item.hardwareSpecs.emergencyStop}</span>
             </div>

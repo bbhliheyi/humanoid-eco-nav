@@ -2403,18 +2403,6 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hfUrl: 'https://huggingface.co/nvidia/GEAR-SONIC',
     modelType: 'Humanoid Behavior Base Model',
     license: 'Apache-2.0'
-    deployStack: 'ROS/ROS2 + C++ 库 (LiDAR+视觉+IMU 三传感器)',
-    deployStack: 'ROS + C++ 库 (单目+IMU 紧耦合优化)',
-    deployStack: 'Python 模块化框架 (集成 SOTA 深度估计器)',
-    deployStack: 'ROS/ROS2 + C++ 库 (2D/3D 实时建图)',
-    deployStack: 'ROS2 + C++ 库 (A*/DWA/MPPI 多规划器)',
-    deployStack: 'PyTorch + ONNX (单目→深度)',
-    deployStack: 'ROS + C++ 库 (LiDAR+IMU+GPS 因子图)',
-    deployStack: 'ROS/ROS2 + C++ 库 (LiDAR+IMU 紧耦合)',
-    deployStack: 'ROS2 Humble/Jazzy + C++ 库 (RGB-D/双目/LiDAR)',
-    deployStack: 'ROS/ROS2 + C++ 库 (MSCKF 滤波)',
-    deployStack: 'ROS + C++ 库 (单目+IMU/双目+IMU/GPS)',
-    deployStack: 'ROS/ROS2 + C++ 库 (支持单目/双目/RGB-D/VIO)',
   },
   {
     id: 'openpi',

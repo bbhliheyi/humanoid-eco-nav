@@ -89,6 +89,7 @@ export interface HardwareSpec {
   imuRef?: ComponentRef;
   batteryRef?: ComponentRef;
   componentRefs?: ComponentRef[];
+  emergencyStop?: string;
   officialResources?: { label: string; url: string }[];
 }
 

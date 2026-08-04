@@ -21,6 +21,7 @@ import {
   SELECTOR_SCENARIOS,
 } from './data/humanoidData';
 import { TECH_ARCHITECTURES } from './data/techArchitectureData';
+import { EMERGENCY_STOP } from './data/emergencyStopData';
 import { CategoryId, EcosystemItem, FilterState, TimelineMilestone } from './types';
 import { Star, ArrowRightLeft, X, ExternalLink, Github, Sparkles } from 'lucide-react';
 
@@ -62,11 +63,18 @@ export default function App() {
 
   // Merge techArchitecture into all ecosystem items
   const ALL_ITEMS = useMemo(() => {
-    return ECOSYSTEM_ITEMS.map((i) =>
-      TECH_ARCHITECTURES[i.id]
+    return ECOSYSTEM_ITEMS.map((i) => {
+      const item = TECH_ARCHITECTURES[i.id]
         ? { ...i, techArchitecture: TECH_ARCHITECTURES[i.id] }
-        : i
-    );
+        : i;
+      if (EMERGENCY_STOP[i.id] && item.hardwareSpecs) {
+        return {
+          ...item,
+          hardwareSpecs: { ...item.hardwareSpecs, emergencyStop: EMERGENCY_STOP[i.id] },
+        };
+      }
+      return item;
+    });
   }, []);
 
   // Build item map for fast lookup

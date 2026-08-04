@@ -1914,6 +1914,19 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     simBackend: 'MuJoCo',
     license: 'MIT'
   },
+  {
+    id: 'unilab',
+    name: 'UniLab (MotrixSim 极速 RL)',
+    provider: '社区开源 (UniLab Team)',
+    category: 'frameworks',
+    description: '基于 MotrixSim 仿真器的极速 RL 训练框架。PPO 训练仅需 51 秒（R9-7945HX+RTX3080，<12GB），对比 Isaac Lab 同类任务需 30+ 分钟。支持 NVIDIA/AMD/Intel 全平台 GPU。',
+    isOpenSource: true,
+    tags: ['UniLab', 'MotrixSim', '51秒训练', '全平台GPU', '极速RL'],
+    githubUrl: 'https://github.com/UniLab',
+    simBackend: 'MotrixSim (自研高速仿真器)',
+    license: 'Apache-2.0',
+    keyFeatures: ['51秒RL训练收敛', '支持NVIDIA/AMD/Intel GPU', '<12GB内存', 'PPO算法', '比Isaac Lab快30+倍'],
+  },
 
   // --- 三、仿真环境与物理引擎 ---
   {
@@ -2903,6 +2916,19 @@ export const PAPER_LIST: EcosystemItem[] = [
     githubUrl: 'https://github.com/columbia-ai-robotics/diffusion_policy',
     isOpenSource: true,
     tags: ['Diffusion Policy', 'RSS 2023', 'Visuomotor', 'Action Diffusion']
+  },
+  {
+    id: 'paper-sdp',
+    name: 'Set-Supervised Diffusion Policy (SDP)',
+    provider: 'TU Delft / 社区 (zmomo et al.)',
+    category: 'papers',
+    paperCategory: 'VLA',
+    description: 'RSS 2026。从"点监督"到"集合监督"的扩散策略训练方法。用正负动作对构造期望动作集合，通过反射式扩散采样让策略避开错误动作、在合理区域学习。在 noisy corrections 下成功率 86.5% vs DP 71.1%，实机 35/40 vs 23/40。',
+    venue: 'RSS 2026',
+    year: '2026',
+    websiteUrl: 'https://set-supervised-diffusion-policy.github.io/',
+    isOpenSource: true,
+    tags: ['RSS 2026', 'Diffusion Policy', 'Set Supervision', 'Imitation Learning', '纠错']
   },
   {
     id: 'paper-aloha',

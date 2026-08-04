@@ -47,6 +47,7 @@
 | [DIAL-MPC](https://github.com/LeCAR-Lab/dial-mpc) `LeCAR-Lab` | GPU 暴力采样 MPC 求解器(无需 RL 训练)+MuJoCo 示例。全阶力矩级控制。MIT。 |
 | [GR00T-VisualS2R](https://github.com/NVlabs/GR00T-VisualSim2Real) `NVIDIA` | Teacher-Student DAgger 蒸馏(PPO特权→RGB策略)+ONNX+G1 零样本。CVPR 2026。Apache-2.0。 |
 | [Genesis-Humanoid](https://github.com/UMass-Embodied-AGI/Genesis-Humanoid) `UMass` | 200K steps/sec@8192 envs + PPO+BC+遥操作。Sim-Real 同代码。Apache-2.0。 |
+| [UniLab](https://github.com/UniLab) `社区` | MotrixSim 极速 RL：PPO 仅 51 秒收敛(RTX3080<12GB)，比 Isaac Lab 快 30+ 倍。支持 NVIDIA/AMD/Intel 全平台。Apache-2.0。 |
 | [ManiSkill3](https://github.com/haosulab/ManiSkill) `Hillbot` | GPU 并行仿真+PPO/SAC/TD-MPC2 Baseline+Sim2Real 示例+人形任务。Apache-2.0。 |
 
 ---
@@ -166,6 +167,7 @@ Tesla Optimus · Figure 02 · Atlas 电动 · 1X Neo · Digit · Apollo · UBTec
 | RT-1 | VLA | RSS 2023 | [arXiv](https://arxiv.org/abs/2212.06817) |
 | Octo | VLA | RSS 2024 | [GitHub](https://github.com/octo-models/octo) |
 | Diffusion Policy | VLA | RSS 2023 | [GitHub](https://github.com/columbia-ai-robotics/diffusion_policy) |
+| SDP (Set-Supervised DP) | VLA | RSS 2026 | [主页](https://set-supervised-diffusion-policy.github.io/) |
 | GR00T N1 | VLA | arXiv 2025 | [GitHub](https://github.com/Nvidia/Isaac-GR00T) |
 | π0 | VLA | arXiv 2024 | [GitHub](https://github.com/Physical-Intelligence/openpi) |
 | EgoScale | VLA | CVPR 2025 | [arXiv](https://arxiv.org) |

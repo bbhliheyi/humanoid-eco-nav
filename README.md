@@ -152,41 +152,50 @@ Tesla Optimus · Figure 02 · Atlas 电动 · 1X Neo · Digit · Apollo · UBTec
 
 ## Phase 4: 测试部署 + 参考
 
-### 核心论文 (33篇)
+### 视觉 SLAM 与导航 (10)
 
-| 论文 | 类别 | 会议 | 链接 |
-|------|------|------|------|
-| legged_gym | Sim2Real | Science Robotics 2022 | [GitHub](https://github.com/leggedrobotics/legged_gym) |
-| Humanoid-Gym | Sim2Real | CoRL 2024 | [GitHub](https://github.com/roboterax/humanoid-gym) |
-| ASAP | Sim2Real | RSS 2025 | [GitHub](https://github.com/LeCAR-Lab/ASAP) |
-| DrEureka | Sim2Real | RSS 2024 | [GitHub](https://github.com/eureka-research/DrEureka) |
-| Isaac Gym | Sim2Real | NeurIPS 2021 | [NVIDIA](https://developer.nvidia.com/isaac-gym) |
-| Genesis | Sim2Real | arXiv 2024 | [GitHub](https://github.com/Genesis-Embodied-AI/genesis-world) |
-| LucidSim | Sim2Real | CoRL 2024 | [GitHub](https://github.com/lucidsim/lucidsim) |
-| RT-2 | VLA | CoRL 2023 | [arXiv](https://arxiv.org/abs/2307.15818) |
-| RT-1 | VLA | RSS 2023 | [arXiv](https://arxiv.org/abs/2212.06817) |
-| Octo | VLA | RSS 2024 | [GitHub](https://github.com/octo-models/octo) |
-| Diffusion Policy | VLA | RSS 2023 | [GitHub](https://github.com/columbia-ai-robotics/diffusion_policy) |
-| SDP (Set-Supervised DP) | VLA | RSS 2026 | [主页](https://set-supervised-diffusion-policy.github.io/) |
-| GR00T N1 | VLA | arXiv 2025 | [GitHub](https://github.com/Nvidia/Isaac-GR00T) |
-| π0 | VLA | arXiv 2024 | [GitHub](https://github.com/Physical-Intelligence/openpi) |
-| EgoScale | VLA | CVPR 2025 | [arXiv](https://arxiv.org) |
-| Gato | VLA | arXiv 2022 | [arXiv](https://arxiv.org/abs/2205.06175) |
-| HumanPlus | 控制 | CoRL 2024 | [GitHub](https://github.com/ZipengFu/humanplus) |
-| OmniH2O | 控制 | CoRL 2024 | [GitHub](https://github.com/CMU-GKG/OmniH2O) |
-| Mobile ALOHA | 控制 | arXiv 2024 | [GitHub](https://github.com/MarkFzp/mobile-aloha) |
-| ACT | 控制 | CoRL 2023 | [GitHub](https://github.com/tonyzhaozh/act) |
-| UMI | 控制 | RSS 2024 | [GitHub](https://github.com/real-stanford/universal_manipulation_interface) |
-| H2O | 控制 | CoRL 2023 | [GitHub](https://github.com/ZhengyiLuo/H2O) |
-| 3D Diffuser Actor | 控制 | CoRL 2024 | [GitHub](https://github.com/nickgkan/3d_diffuser_actor) |
-| Expressive Loco | 控制 | RSS 2024 | [GitHub](https://github.com/hybridrobotics/berkeley-humanoid) |
-| Awesome Humanoid 550+ | 综述 | GitHub | [GitHub](https://github.com/YanjieZe/awesome-humanoid-robot-learning) |
-| Sim2Real Survey | 综述 | IEEE T-RO 2023 | [IEEE](https://ieeexplore.ieee.org) |
-| VLA Survey | 综述 | arXiv 2025 | [arXiv](https://arxiv.org) |
-| Humanoid Survey | 综述 | AR 2025 | [arXiv](https://arxiv.org) |
-| Imitation Learning Survey | 综述 | AR 2024 | [arXiv](https://arxiv.org) |
-| Deep RL for Robotics | 综述 | IEEE T-RO 2021 | [arXiv](https://arxiv.org) |
-| PPO | 文献 | arXiv 2017 | [arXiv](https://arxiv.org/abs/1707.06347) |
+> 双目视觉、深度估计、SLAM、自主导航——可复用于人形机器人的感知定位基础设施。
+
+| 项目 | 开源内容 |
+|------|---------|
+| [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) `Zaragoza` | 最成熟视觉 SLAM 系统。单目/双目/RGB-D/VIO 四种模式+闭环+重定位+多地图。学术标准基线。GPL-3.0。 |
+| [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion) `港科大` | 紧耦合视觉-惯导里程计。单目/双目+IMU+GPS 融合。轻量化，适合人形实时状态估计。GPL-3.0。 |
+| [OpenVINS](https://github.com/rpng/open_vins) `Delaware` | 基于 MSCKF 滤波的 VIO 框架。代码清晰文档完善，ROS/ROS2 集成。研究入门首选。GPL-3.0。 |
+| [RTAB-Map](https://github.com/introlab/rtabmap) `IntRoLab` | 图优化 SLAM，RGB-D/双目/LiDAR+IMU+里程计多源融合。长期运行内存管理，ROS2 原生。BSD-3。 |
+| [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) `港大` | 最快 LiDAR-惯导里程计之一。直接点云配准+IMU 紧耦合，极速。GPL-2.0。 |
+| [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) `MIT` | LiDAR+IMU+GPS 因子图优化 SLAM。紧耦合+闭环检测，大场景建图。BSD-3。 |
+| [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2) `港大/TikTok` | SOTA 单目深度估计。单张 RGB→高质量深度图，可替代深度相机。轻量变体可用。Apache-2.0。 |
+| [Nav2](https://github.com/ros-navigation/navigation2) `开源` | ROS 2 官方导航框架。A*/DWA/MPPI 多规划器+行为树+代价地图。人形自主导航基础设施。Apache-2.0。 |
+| [Cartographer](https://github.com/cartographer-project/cartographer) `Google` | 2D/3D SLAM 库。LiDAR+IMU+里程计实时建图，ROS/ROS2。Apache-2.0。 |
+| [pySLAM](https://github.com/luigifreda/pyslam) `社区` | Python 模块化视觉 SLAM。集成 DepthAnythingV2/RAFT-Stereo/MASt3R+ORB-SLAM3 后端+高斯溅射重建。GPL-3.0。 |
+
+### 核心论文 (34篇)
+
+| 论文 | 简介 | 会议 |
+|------|------|------|
+| [legged_gym](https://github.com/leggedrobotics/legged_gym) | PPO+域随机化人形训练范式奠基 | Science Robotics 22 |
+| [Humanoid-Gym](https://github.com/roboterax/humanoid-gym) | Sim2Sim 校验+零样本真机部署 | CoRL 24 |
+| [ASAP](https://github.com/LeCAR-Lab/ASAP) | Delta Action 残差修正 Sim2Real | RSS 25 |
+| [DrEureka](https://github.com/eureka-research/DrEureka) | LLM 自动设计域随机化参数 | RSS 24 |
+| [Isaac Gym](https://developer.nvidia.com/isaac-gym) | GPU 大规模并行 RL 仿真 | NeurIPS 21 |
+| [Genesis](https://github.com/Genesis-Embodied-AI/genesis-world) | 统一多物理可微仿真 | 24 |
+| [LucidSim](https://github.com/lucidsim/lucidsim) | 生成式 AI 仿真场景纹理 | CoRL 24 |
+| [RT-2](https://arxiv.org/abs/2307.15818) | Web 知识迁移机器人 VLA 奠基 | CoRL 23 |
+| [Diffusion Policy](https://github.com/columbia-ai-robotics/diffusion_policy) | 扩散模型用于动作生成奠基 | RSS 23 |
+| [SDP](https://set-supervised-diffusion-policy.github.io/) | 集合监督扩散策略 86.5% 纠错 | RSS 26 |
+| [GR00T N1](https://github.com/Nvidia/Isaac-GR00T) | 快慢双系统人形 VLA | 25 |
+| [π0](https://github.com/Physical-Intelligence/openpi) | 流匹配通用 VLA | 24 |
+| [EgoScale](https://arxiv.org) | 人视频 Scaling Law | CVPR 25 |
+| [HumanPlus](https://github.com/ZipengFu/humanplus) | 单目 RGB 全身影子模仿 | CoRL 24 |
+| [OmniH2O](https://github.com/CMU-GKG/OmniH2O) | 多模态全身遥操作 | CoRL 24 |
+| [Mobile ALOHA](https://github.com/MarkFzp/mobile-aloha) | 低成本移动双臂遥操作 | 24 |
+| [ACT](https://github.com/tonyzhaozh/act) | Action Chunking Transformer | CoRL 23 |
+| [UMI](https://github.com/real-stanford/universal_manipulation_interface) | <$1000 通用操作采集 | RSS 24 |
+| [H2O](https://github.com/ZhengyiLuo/H2O) | 单目 RGB 实时双手遥操作 | CoRL 23 |
+| [Awesome Humanoid](https://github.com/YanjieZe/awesome-humanoid-robot-learning) | 550+ 论文综述索引 | GitHub |
+| [Sim2Real Survey](https://ieeexplore.ieee.org) | 四大类 Sim2Real 方法综述 | T-RO 23 |
+| [VLA Survey](https://arxiv.org) | 主流 VLA 架构对比 | 25 |
+| [PPO](https://arxiv.org/abs/1707.06347) | PPO 原始论文 | 17 |
 
 ### 技术百科 (18 术语)
 

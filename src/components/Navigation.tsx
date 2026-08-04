@@ -45,7 +45,7 @@ export const CATEGORIES: { id: CategoryId; name: string; subtitle: string; icon:
   { id: 'urdf-pipeline', name: '  └ URDF 建模部署', subtitle: '数字孪生全链路', icon: Workflow },
   { id: 'frameworks', name: '  └ 训练框架算法', subtitle: 'PPO / SAC / Sim2Real', icon: Boxes },
   { id: 'platforms', name: 'Phase 2: 硬件驱动', subtitle: '45 款平台 / 电机 / 通信 / 标定', icon: Cpu },
-  { id: 'control', name: 'Phase 3: 算法智能', subtitle: 'WBC 全身控制 / 遥操作', icon: Layers },
+  { id: 'control', name: 'Phase 3: 算法智能', subtitle: 'WBC / 遥操作 / SLAM / 视觉导航', icon: Layers },
   { id: 'vla', name: '  └ VLA 具身大脑', subtitle: '基础模型 / 世界模型', icon: BrainCircuit },
   { id: 'datasets', name: '  └ 训练数据集', subtitle: '真机轨迹 / 遥操作采集', icon: Database },
   { id: 'papers', name: '测试部署 + 参考', subtitle: 'S2R / 迭代 / 论文 / 百科', icon: Compass },

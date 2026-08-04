@@ -13,6 +13,7 @@ import {
   DollarSign,
   Tag,
   ShieldCheck,
+  ShieldAlert,
   FileText,
 } from 'lucide-react';
 import { EcosystemItem } from '../types';
@@ -439,6 +440,17 @@ export const DetailModal: React.FC<DetailModalProps> = ({
                       ))}
                     </div>
                   )}
+                </div>
+              )}
+
+              {/* Emergency Stop */}
+              {item.hardwareSpecs.emergencyStop && (
+                <div className="bg-[#FFF5F5] border border-[#B83232]/20 rounded-lg p-3 flex items-start gap-2">
+                  <ShieldAlert className="w-4 h-4 text-[#B83232] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-xs font-bold text-[#B83232]">急停方案：</span>
+                    <span className="text-xs text-[#524D46]">{item.hardwareSpecs.emergencyStop}</span>
+                  </div>
                 </div>
               )}
 

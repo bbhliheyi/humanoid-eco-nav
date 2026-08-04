@@ -2320,6 +2320,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     description: '纯端侧单目视觉导航方案，无需建图即点即走，无需云端算力。支持跟随、电子地图定点导航等多种模式，覆盖平地/沙土/台阶/草地/山路/林地等多种地形。',
     isOpenSource: false,
     tags: ['StarBrain', '视觉导航', '端侧运行', '单目', '无图导航', '多地形'],
+    license: 'Proprietary',
     keyFeatures: ['纯端侧运行无需云端', '单目摄像头即点即走', '无需建图', '多地形覆盖', '跟随+定点导航'],
   },
   {
@@ -2355,6 +2356,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['OmniStereo', 'CVPR 2025', '全景深度', '鱼眼相机', 'Jetson实时'],
     githubUrl: 'https://github.com/DengJiaxi1/OmniStereo',
+    license: 'Apache-2.0',
     license: 'Apache-2.0',
     keyFeatures: ['CVPR 2025', '鱼眼全景深度', 'Jetson 12.3FPS实时', '精度超SOTA 32%', '机器人/无人机导航'],
   },

@@ -1865,6 +1865,21 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     license: 'BSD-3-Clause'
   },
   {
+    id: 'locoformer',
+    name: 'LocoFormer (跨本体通用运动策略)',
+    provider: 'CMU (CoRL 2025)',
+    category: 'frameworks',
+    description: 'Transformer-XL 跨episode长上下文运动策略。数百种随机本体大规模RL+极端域随机化，零样本泛化新本体，摔倒后从失败中自学改进。',
+    isOpenSource: true,
+    tags: ['LocoFormer', 'CoRL 2025', 'Transformer-XL', '跨本体', 'in-context adaptation'],
+    githubUrl: 'https://github.com/lucidrains/locoformer',
+    websiteUrl: 'https://generalist-locomotion.github.io',
+    simBackend: 'Isaac Gym',
+    license: 'MIT',
+    keyFeatures: ['Transformer-XL 跨episode记忆', '数百种随机本体', '极端域随机化', '零样本泛化', '摔倒自学改进'],
+    deployStack: 'PyTorch + Isaac Gym + Transformer-XL',
+  },
+  {
     id: 'groot-visual-sim2real',
     name: 'GR00T-VisualSim2Real (NVIDIA CVPR 2026)',
     provider: 'NVIDIA NVlabs',

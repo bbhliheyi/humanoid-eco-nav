@@ -2921,7 +2921,46 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     cost: '< $500 USD',
     license: 'MIT',
     keyFeatures: ['< $500 极低成本全开源方案', 'CPG + IMU 反馈平衡控制', 'ROS/ROS2 集成', '适合人形双足控制入门理解与教学']
-  }
+  },
+  {
+    id: 'esp-claw',
+    name: 'ESP-Claw (乐鑫 AI Agent 框架)',
+    provider: 'Espressif (乐鑫科技)',
+    category: 'control',
+    description: '乐鑫开源 Chat Coding AI Agent 框架，纯 C 跑在 ESP32 上(<$5)。事件驱动毫秒响应+本地 MCP 协议，支持 GPT/Claude/Qwen/DeepSeek。',
+    isOpenSource: true,
+    tags: ['ESP32', 'ESP-Claw', 'AI Agent', 'MCP', '乐鑫'],
+    githubUrl: 'https://github.com/espressif/esp-claw',
+    license: 'Apache-2.0',
+    deployStack: 'ESP-IDF + C + LLM API',
+    keyFeatures: ['<$5 ESP32运行', 'Chat Coding自然语言编程', 'MCP协议', '事件驱动毫秒响应'],
+  },
+  {
+    id: 'zclaw',
+    name: 'Z-Claw (AI视觉机械爪)',
+    provider: '社区 (zclaw-org)',
+    category: 'control',
+    description: '搭载 ESP32-C3 的 AI 视觉机械爪，板载摄像头检测+分类+抓取。ESP-IDF v5.x + Ollama LLM + Telegram 遥控。',
+    isOpenSource: true,
+    tags: ['Z-Claw', 'ESP32-C3', 'AI视觉', '机械爪', '边缘AI'],
+    githubUrl: 'https://github.com/zclaw-org/zclaw',
+    license: 'MIT',
+    deployStack: 'ESP-IDF + Ollama + OpenRouter',
+    keyFeatures: ['ESP32-C3 板载AI', '视觉检测分类抓取', 'LLM远程控制'],
+  },
+  {
+    id: 'openclaw-eco',
+    name: 'OpenClaw (开源机械爪生态)',
+    provider: '社区',
+    category: 'control',
+    description: '模块化开源机械爪框架 v2.5.0。ESP32-S3/树莓派5 双平台，3D打印平行夹爪+逆运动学+力传感器+Web/MQTT/Home Assistant。',
+    isOpenSource: true,
+    tags: ['OpenClaw', '机械爪', 'ESP32-S3', '树莓派5', 'Home Assistant'],
+    githubUrl: 'https://github.com/openclaw',
+    license: 'MIT',
+    deployStack: 'ESP-IDF / Pi + Python + MQTT',
+    keyFeatures: ['ESP32-S3/Pi5双平台', '3D打印夹爪', '逆运动学', 'Home Assistant'],
+  },
 ];
 
 export const PAPER_LIST: EcosystemItem[] = [

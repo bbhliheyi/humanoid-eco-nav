@@ -2121,6 +2121,20 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     license: 'Apache-2.0'
   },
   {
+    id: 'motionbricks',
+    name: 'MotionBricks (人体动作 VQ-VAE 分词器)',
+    provider: 'NVIDIA NVlabs (GR00T 生态)',
+    category: 'vla',
+    description: 'GR00T-WBC 生态中的 VQ-VAE 人体动作分词器。将高维人体运动(关节位置/旋转/速度)压缩为离散 token 序列，Transformer 根据控制信号预测 token → 解码为机器人关节角。三阶段：Tokenization → Pose Generation → Root Trajectory。',
+    isOpenSource: true,
+    tags: ['NVIDIA', 'MotionBricks', 'VQ-VAE', '动作分词', 'GR00T', 'Motion Tokenizer'],
+    githubUrl: 'https://github.com/NVlabs/GR00T-WholeBodyControl',
+    modelType: '人体运动 VQ-VAE 分词器',
+    license: 'Apache-2.0',
+    keyFeatures: ['VQ-VAE/FSQ 动作离散化', 'Transformer 时序预测', '解耦 Pose+Root 生成', '实时交互式运动控制', 'GR00T 生态核心组件'],
+    deployStack: 'PyTorch + GR00T-WBC + Isaac Sim',
+  },
+  {
     id: 'ocs2-pinocchio',
     name: 'OCS2 & Pinocchio Dynamics',
     provider: 'ETH Zurich / Stack-of-Tasks',

@@ -18,6 +18,36 @@ import {
 } from 'lucide-react';
 import { EcosystemItem } from '../types';
 
+interface LicenseProfile {
+  allows: string[];
+  restrictions: string[];
+}
+
+// 许可速览映射：按 SPDX 通用条款归纳，按优先级匹配（先特殊后通用）
+const LICENSE_PROFILES: { match: RegExp; allows: string[]; restrictions: string[] }[] = [
+  { match: /未提供|无许可/, allows: ['浏览 / 评估代码'], restrictions: ['禁止商用', '禁止再分发', '使用前需联系作者授权'] },
+  { match: /proprietary/i, allows: ['评估使用'], restrictions: ['禁止商用', '禁止修改', '禁止再分发', '需官方授权'] },
+  { match: /cc by-nc-sa/i, allows: ['自由分享', '自由修改'], restrictions: ['禁止商用', '必须署名', '衍生作品须相同方式共享'] },
+  { match: /cc by-nc/i, allows: ['自由分享', '自由修改'], restrictions: ['禁止商用', '必须署名'] },
+  { match: /cc by/i, allows: ['商用', '自由分享', '自由修改'], restrictions: ['必须署名'] },
+  { match: /gpl-?3|gplv3/i, allows: ['商用', '修改', '再分发'], restrictions: ['衍生作品必须 GPL-3.0 开源', '需提供源码'] },
+  { match: /gpl-?2|gplv2/i, allows: ['商用', '修改', '再分发'], restrictions: ['衍生作品必须 GPL-2.0 开源', '需提供源码'] },
+  { match: /apache/i, allows: ['商用', '修改', '再分发', '专利授权'], restrictions: ['保留版权与许可声明', '无担保'] },
+  { match: /mit/i, allows: ['商用', '修改', '再分发', '再授权'], restrictions: ['保留版权声明', '无担保'] },
+  { match: /bsd/i, allows: ['商用', '修改', '再分发'], restrictions: ['保留版权声明', '不得用官方名称背书'] },
+  { match: /openmdw/i, allows: ['商用', '修改', '再分发'], restrictions: ['保留版权与许可声明'] },
+  { match: /openatom/i, allows: ['商用', '修改', '再分发'], restrictions: ['保留声明', '遵守 OpenAtom 条款'] },
+  { match: /eula|open model license|omniverse license/i, allows: ['个人 / 研究使用'], restrictions: ['商用需授权', '须遵守 NVIDIA 条款'] },
+];
+
+function getLicenseProfile(license?: string): LicenseProfile | null {
+  if (!license) return null;
+  for (const p of LICENSE_PROFILES) {
+    if (p.match.test(license)) return p;
+  }
+  return { allows: ['按项目声明使用'], restrictions: ['需阅读项目官方条款'] };
+}
+
 interface DetailModalProps {
   item: EcosystemItem | null;
   onClose: () => void;
@@ -47,6 +77,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({
 
   const isOpen = item.isOpenSource === true;
   const isPartial = item.isOpenSource === 'partial';
+  const licenseProfile = getLicenseProfile(item.license);
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center p-2 bg-[#2D2A26]/60 backdrop-blur-sm animate-in fade-in duration-150 overflow-y-auto">
@@ -103,17 +134,50 @@ export const DetailModal: React.FC<DetailModalProps> = ({
         </div>
 
         {/* 许可详情 */}
-        {item.licenseDetail && (
+        {item.license && (
           <div className="mb-6 border border-[#D8D3CA] rounded-xl overflow-hidden">
             <div className="bg-[#2D2A26] text-white px-4 py-2.5 flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#B83232]" />
               <h3 className="text-xs font-bold uppercase tracking-wider">许可详情</h3>
-              {item.license && (
-                <span className="ml-auto text-[10px] font-mono text-[#D8D3CA] uppercase">{item.license}</span>
-              )}
+              <span className="ml-auto text-[10px] font-mono text-[#D8D3CA] uppercase">{item.license}</span>
             </div>
-            <div className="p-4 bg-[#FAF8F5]">
-              <p className="text-xs text-[#524D46] leading-relaxed whitespace-pre-line">{item.licenseDetail}</p>
+            <div className="p-4 bg-[#FAF8F5] space-y-3">
+              {licenseProfile && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="bg-[#FFFFFF] p-3 rounded-lg border border-[#D8D3CA]">
+                    <span className="text-[9px] font-bold text-[#B83232] uppercase flex items-center gap-1">
+                      <CheckCircle2 className="w-3 h-3" /> 允许
+                    </span>
+                    <div className="flex flex-wrap gap-1 mt-1.5">
+                      {licenseProfile.allows.map((a) => (
+                        <span key={a} className="text-[10px] px-2 py-0.5 bg-[#E8F5E9] text-[#1B5E20] border border-[#A5D6A7] rounded">
+                          {a}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="bg-[#FFFFFF] p-3 rounded-lg border border-[#D8D3CA]">
+                    <span className="text-[9px] font-bold text-[#B83232] uppercase flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" /> 限制
+                    </span>
+                    <div className="flex flex-wrap gap-1 mt-1.5">
+                      {licenseProfile.restrictions.map((r) => (
+                        <span key={r} className="text-[10px] px-2 py-0.5 bg-[#FFF3E0] text-[#E65100] border border-[#FFCC80] rounded">
+                          {r}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {item.licenseDetail && (
+                <p className="text-xs text-[#524D46] leading-relaxed whitespace-pre-line bg-[#FFFFFF] border border-[#D8D3CA] rounded-lg p-3">
+                  {item.licenseDetail}
+                </p>
+              )}
+              <p className="text-[9px] text-[#8C867E] font-mono">
+                速览按 SPDX 通用条款归纳；详细条款以官方仓库 LICENSE / 官网声明为准（2026-08 核验）
+              </p>
             </div>
           </div>
         )}

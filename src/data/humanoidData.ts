@@ -45,6 +45,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 完全开源',
     releaseDate: '2026-01',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['百件量产极客级 BOM', '整合 AMP 运动先验', 'Sim2Sim 校验完整', '完全无保留硬件图纸'],
     techArchitecture: {
       overview: '3.5 万元全开源人形平台，从 CAD/PCB 到 Party OS 软件栈完整发布。上层 ROS2 + Isaac Lab 训练，底层 CAN 总线 + STM32 实时控制',
@@ -115,6 +116,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 3D 打印图纸与电路',
     releaseDate: '2025-05',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     hardwareSpecs: {
       height: '~90cm',
       weight: '~12kg',
@@ -153,6 +155,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 全套硬件设计资料',
     releaseDate: '2025-04',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~160cm',
       weight: '~48kg',
@@ -201,6 +204,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 全套图纸代码开源',
     releaseDate: '2024-07',
     license: 'OpenAtom License',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~180cm (青龙) / ~120cm (灵龙)',
       weight: '~85kg / ~30kg',
@@ -245,6 +249,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 3D 打印 + 现成标准件',
     releaseDate: '2026-05',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~80cm (桌面级)',
       weight: '~6kg',
@@ -289,6 +294,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 结构蓝图与装配指南',
     releaseDate: '2025-12',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~165cm',
       weight: '~55kg',
@@ -337,6 +343,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 机械与电气全套 CAD',
     releaseDate: '2026-03',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     hardwareSpecs: {
       height: '~120cm (v1)',
       weight: '~18kg',
@@ -380,6 +387,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 硬件+软件全开源',
     releaseDate: '2024-09',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     hardwareSpecs: {
       height: '~100cm',
       weight: '~10kg',
@@ -425,7 +433,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     deployStack: '真机系统',
     hardwareOpenSource: '✅ 完全开源',
     releaseDate: '2024-10',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'openarm',
@@ -443,7 +452,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     deployStack: '双臂力反馈遥操作',
     hardwareOpenSource: '✅ CAD、固件与代码',
     releaseDate: '2025-02',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'tienkung',
@@ -462,6 +472,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ URDF模型与设计',
     releaseDate: '2024-12',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~180cm',
       weight: '~75kg',
@@ -514,6 +525,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 本体闭源，软件开源',
     releaseDate: '2025-05',
     license: 'Proprietary / Open SDK',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~130cm (Booster T1)',
       weight: '~35kg',
@@ -571,6 +583,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 本体闭源，SDK/RL 框架开源',
     releaseDate: '2024-08 (H1) / 2025-03 (H1-2)',
     license: 'Proprietary (硬件) / BSD-3-Clause (SDK)',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~180cm',
       weight: '~47kg (H1) / ~51kg (H1-2)',
@@ -617,6 +630,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 本体闭源，SDK/RL/VLA 全开源',
     releaseDate: '2025-05',
     license: 'Proprietary (硬件) / BSD-3-Clause (SDK)',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~127cm',
       weight: '~35kg',
@@ -663,6 +677,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 完全开源',
     releaseDate: '2025-12',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['全开源硬件+BOM', 'RoboTamer 控制框架', 'URDF 模型', '教育科研入门级'],
     hardwareSpecs: {
       height: '~45cm',
@@ -703,6 +718,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '✅ 完全开源',
     releaseDate: '2025-07',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     keyFeatures: ['BOM全开源', '兼容Qmini控制框架', '海鲜市场低成本方案', '3MF拓竹兼容打印文件'],
     hardwareSpecs: {
       height: '~45cm',
@@ -760,6 +776,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '⚠️ 控制代码开源，硬件部分闭源',
     releaseDate: '2025-06',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['端到端神经网络控制', '无需传统 MPC/WBC', 'URDF 模型开源'],
   },
   {
@@ -776,6 +793,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-06 (Gen 2 发布)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~173cm',
       weight: '~57kg',
@@ -811,6 +829,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-08 (Figure 02)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~170cm',
       weight: '~60kg',
@@ -846,6 +865,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-04 (电动版发布)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~150cm (电动版)',
       weight: '~89kg',
@@ -880,6 +900,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-03',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~165cm',
       weight: '~30kg',
@@ -914,6 +935,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2023-10 (量产版)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~175cm',
       weight: '~65kg',
@@ -951,6 +973,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-05',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~170cm',
       weight: '~73kg',
@@ -985,6 +1008,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-01 (Walker S) / 2025-10 (Walker X)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~145cm (Walker S)',
       weight: '~63kg',
@@ -1024,6 +1048,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 本体闭源，训练框架开源',
     releaseDate: '2024-09',
     license: 'Proprietary (硬件) / MIT (Humanoid-Gym)',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~178cm (XBot-L) / ~130cm (XBot-S)',
       weight: '~65kg / ~30kg',
@@ -1059,6 +1084,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-03',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~170cm',
       weight: '~55kg',
@@ -1092,6 +1118,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-06',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~135cm',
       weight: '~30kg',
@@ -1125,6 +1152,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-01',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~150cm',
       weight: '~40kg',
@@ -1159,6 +1187,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-12',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~155cm',
       weight: '~45kg',
@@ -1195,6 +1224,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-11',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~165cm',
       weight: '~50kg',
@@ -1228,6 +1258,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-06',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~140cm',
       weight: '~40kg',
@@ -1262,6 +1293,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-04',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~175cm',
       weight: '~70kg',
@@ -1296,6 +1328,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-08 (Gen 7)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~170cm',
       weight: '~70kg',
@@ -1330,6 +1363,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2022-08 (发布)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~177cm',
       weight: '~52kg',
@@ -1364,6 +1398,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-11',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~178cm',
       weight: '~85kg',
@@ -1400,6 +1435,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-01',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~160cm',
       weight: '~60kg',
@@ -1434,6 +1470,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2023-08 (XR4)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~165cm',
       weight: '~55kg',
@@ -1472,6 +1509,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 硬件闭源，ROS 软件栈开源',
     releaseDate: '2017 (TALOS)',
     license: 'Proprietary (硬件) / Apache-2.0 (ROS 包)',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~175cm',
       weight: '~95kg',
@@ -1511,6 +1549,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2018 (初代)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~180cm',
       weight: '~85kg',
@@ -1544,6 +1583,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2017 (T-HR3)',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~154cm',
       weight: '~75kg',
@@ -1577,6 +1617,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2024-06',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~170cm',
       weight: '~60kg',
@@ -1610,6 +1651,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-11',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~178cm',
       weight: '~65kg',
@@ -1644,6 +1686,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 完全闭源',
     releaseDate: '2025-08',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~165cm',
       weight: '~50kg',
@@ -1677,6 +1720,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hardwareOpenSource: '❌ 闭源商用，N1 有部分开源资料',
     releaseDate: '2025-09',
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     hardwareSpecs: {
       height: '~175cm',
       weight: '~60kg',
@@ -1712,6 +1756,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/isaac-sim/IsaacLab',
     simBackend: 'Isaac Sim (PhysX)',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     techArchitecture: {
       overview: 'NVIDIA 官方模块化 RL 框架，基于 PhysX 5 GPU 加速 + Omniverse 渲染，提供从仿真训练到真机部署的全套工具链',
       pipeline: [
@@ -1741,6 +1786,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/leggedrobotics/legged_gym',
     simBackend: 'Isaac Gym',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     techArchitecture: {
       overview: 'ETH Zurich RSL 实验室的腿足/人形 RL 基石框架，以极简 PPO 实现 + 精心设计的域随机化成为社区事实标准',
       pipeline: [
@@ -1769,7 +1815,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['PyTorch', 'JAX', 'Warp', 'Isaac Lab'],
     githubUrl: 'https://github.com/Toni-SM/skrl',
     simBackend: 'Isaac Lab / MuJoCo Playground',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'humanoid-gym',
@@ -1782,6 +1829,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/roboterax/humanoid-gym',
     simBackend: 'Isaac Gym + MuJoCo',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     techArchitecture: {
       overview: '星动纪元首个全尺寸人形 Sim2Real 框架，首创 Isaac Gym→MuJoCo Sim2Sim 校验流程，在 XBot 上实现零样本落地',
       pipeline: ['URDF 导入 XBot 模型 → Isaac Gym 并行 envs', 'PPO+GAE 训练 + 域随机化', 'Sim2Sim 校验: Isaac Gym 训练策略 → MuJoCo 验证', '通过双仿真对比发现过拟合 → 修正域随机化参数', '通过 Sim2Sim 的策略 → 零样本部署到 XBot 真机'],
@@ -1802,7 +1850,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['宇树科技', 'Unitree G1', '29-DoF', 'Sim2Real'],
     githubUrl: 'https://github.com/unitreerobotics/unitree_rl_gym',
     simBackend: 'Isaac Gym / Isaac Lab + MuJoCo',
-    license: 'BSD-3-Clause'
+    license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'mujoco-playground',
@@ -1814,7 +1863,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['Google DeepMind', 'JAX', 'MJX', '单卡训练', '高吞吐'],
     githubUrl: 'https://github.com/google-deepmind/mujoco_playground',
     simBackend: 'MuJoCo MJX + Madrona',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'humanoidverse',
@@ -1826,7 +1876,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['上海交大', 'LeCAR-Lab', '多仿真器', '全栈解耦'],
     githubUrl: 'https://github.com/LeCAR-Lab/HumanoidVerse',
     simBackend: 'IsaacGym / IsaacLab / Genesis',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'asap',
@@ -1838,7 +1889,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['RSS 2025', 'Sim2Real Gap', '残差动作'],
     githubUrl: 'https://github.com/LeCAR-Lab/ASAP',
     simBackend: 'Isaac Gym / Genesis',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'eureka',
@@ -1850,7 +1902,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['LLM Reward', 'Auto-RL', 'NVIDIA', 'DrEureka'],
     githubUrl: 'https://github.com/eureka-research/eureka',
     simBackend: 'Isaac Gym',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'amp-mimic',
@@ -1862,7 +1915,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['AMP', '拟人步态', 'Motion Prior', 'Style RL'],
     websiteUrl: 'https://xbpeng.github.io/projects/AMP',
     simBackend: 'Custom / Isaac Gym',
-    license: 'BSD-3-Clause'
+    license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'locoformer',
@@ -1980,6 +2034,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/NVlabs/GR00T-VisualSim2Real',
     simBackend: 'Isaac Lab / Isaac Sim 5.1',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['Teacher-Student 蒸馏', 'RGB+本体感受零样本部署', 'CVPR 2026', 'G1 真机验证'],
   },
   {
@@ -1993,6 +2048,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/UMass-Embodied-AGI/Genesis-Humanoid',
     simBackend: 'Genesis',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['200K RL steps/sec', '8192 并行 envs', 'Sim-Real 同代码', 'BC 蒸馏', '50ms 遥操作'],
   },
   {
@@ -2005,6 +2061,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['GMR', 'Motion Retargeting', '2.1K Stars', '跨本体', '遥操作'],
     githubUrl: 'https://github.com/xxxxxx/GMR',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     keyFeatures: ['2.1K+ Stars', '跨本体通用重定向', 'AI视频/MoCap/VR多输入', '数据采集基础工具'],
   },
   {
@@ -2017,7 +2074,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['MPC', '采样控制', '全阶力矩', '无需训练'],
     githubUrl: 'https://github.com/LeCAR-Lab/dial-mpc',
     simBackend: 'MuJoCo',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'unilab',
@@ -2030,6 +2088,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/UniLab',
     simBackend: 'MotrixSim (自研高速仿真器)',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['51秒RL训练收敛', '支持NVIDIA/AMD/Intel GPU', '<12GB内存', 'PPO算法', '比Isaac Lab快30+倍'],
   },
 
@@ -2044,7 +2103,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     openSourceDetails: '✅ SDK / API / Extensions 开源，核心渲染引擎免费但闭源',
     tags: ['NVIDIA', 'PhysX5', 'Omniverse', 'RTX', '光线追踪'],
     websiteUrl: 'https://developer.nvidia.com/isaac/sim',
-    license: 'NVIDIA Omniverse License'
+    license: 'NVIDIA Omniverse License',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'mujoco',
@@ -2056,6 +2116,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['DeepMind', 'JAX', 'MJX', 'MJPC', '刚体动力学'],
     githubUrl: 'https://github.com/google-deepmind/mujoco',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     techArchitecture: {
       overview: 'Google DeepMind 的开源物理引擎，JAX GPU 加速 + 可微分物理，是学术界 RL 训练和 Sim2Sim 校验的黄金标准',
       pipeline: ['MJCF/URDF 模型加载 → MuJoCo 引擎物理步进', 'MJX (JAX): GPU 并行 32768+ envs', '可微分物理: 一阶梯度用于系统辨识和策略优化', 'MJPC: 实时模型预测控制求解器', 'Python bindings → Isaac Lab / legged_gym / 自定义脚本'],
@@ -2076,7 +2137,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['Genesis', '统一物理', '可微分物理', '高通量'],
     githubUrl: 'https://github.com/Genesis-Embodied-AI/genesis-world',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'genie-sim',
@@ -2087,7 +2149,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['智元机器人', '数字孪生', '大模型驱动场景', 'Isaac Sim'],
     githubUrl: 'https://github.com/AgibotTech/genie_sim',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'lingbot-world',
@@ -2098,7 +2161,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['世界模型', '14B MoE', '生成式仿真', '蚂蚁灵波', '720P/60fps'],
     websiteUrl: 'https://opensource.antgroup.com',
-    license: 'Custom Open License'
+    license: 'Custom Open License',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'gewu-unity',
@@ -2109,7 +2173,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['国地中心', 'Unity', '一键式RL', '青龙公版机'],
     websiteUrl: 'https://openloong.openatom.cn',
-    license: 'OpenAtom License'
+    license: 'OpenAtom License',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'robocasa',
@@ -2120,7 +2185,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['家庭场景', 'HumanoidBench', '基准测试', 'MuJoCo'],
     githubUrl: 'https://github.com/robocasa/robocasa',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'gazebo',
@@ -2134,6 +2200,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/gazebosim/gz-sim',
     simBackend: 'ODE / Bullet / DART (可选)',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     releaseDate: '2024-09 (Harmonic)',
     keyFeatures: ['ROS2 深度原生集成', '多传感器仿真（相机/LiDAR/IMU/力传感器）', '插件系统丰富', 'CPU 仿真不支持 GPU 并行 RL']
   },
@@ -2148,6 +2215,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['NVIDIA', 'PhysX5', '接触动力学', '实时物理'],
     websiteUrl: 'https://developer.nvidia.com/physx-sdk',
     license: 'NVIDIA EULA (免费使用)',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     releaseDate: '2024',
     keyFeatures: ['PhysX 5 最新物理内核', '高保真接触与摩擦', '不依赖 Omniverse', 'GPU 加速']
   },
@@ -2162,6 +2230,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/unitreerobotics/unitree_mujoco',
     simBackend: 'MuJoCo + unitree_sdk2 集成',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['unitree_sdk2 集成', 'H1/G1 MJCF 模型', '地形生成器', 'Sim2Sim 校验'],
   },
   {
@@ -2175,6 +2244,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/unitreerobotics/unitree_sim_isaaclab',
     simBackend: 'Isaac Lab (PhysX 5)',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['Isaac Lab 集成', '数据采集与回放', '模型验证', 'RL 训练衔接'],
   },
   {
@@ -2188,6 +2258,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/HorizonRobotics/EmbodiedGen',
     simBackend: '多后端 (Isaac/MuJoCo/SAPIEN/Genesis)',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['文本/照片→3D场景', '物理有效碰撞体', '多仿真后端导出', '地平线开源'],
   },
   {
@@ -2248,7 +2319,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['宇树科技', 'CycloneDDS', 'ROS2', 'Go2/H1/G1'],
     githubUrl: 'https://github.com/unitreerobotics/unitree_sdk2',
-    license: 'BSD-3-Clause'
+    license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'booster-studio',
@@ -2259,7 +2331,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: 'partial',
     tags: ['加速进化', '具身IDE', 'Sim2Real', 'C++/Python SDK'],
     websiteUrl: 'https://boosterobotics.com',
-    license: 'Proprietary Freeware'
+    license: 'Proprietary Freeware',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'groot-wbc',
@@ -2270,7 +2343,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['NVIDIA', 'WBC', '全身控制', '逆动力学', 'GEAR-SONIC'],
     githubUrl: 'https://github.com/NVlabs/GR00T-WholeBodyControl',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'motionbricks',
@@ -2342,7 +2416,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['ETH Zurich', 'MPC', 'Pinocchio', '动力学', 'OCS2'],
     githubUrl: 'https://github.com/leggedrobotics/ocs2',
-    license: 'BSD-3-Clause'
+    license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'aimrt',
@@ -2353,7 +2428,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['智元机器人', '中间件', '高并发', '低时延', ' AimRT'],
     githubUrl: 'https://github.com/AimRT/AimRT',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'open-television',
@@ -2364,7 +2440,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['VisionPro', '立体遥操作', 'AVP', 'UCSD', '数据采集'],
     githubUrl: 'https://github.com/OpenTeleVision/Open-TeleVision',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'aloha-mobile',
@@ -2375,7 +2452,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['Stanford', 'Mobile ALOHA', '遥操作', 'ACT算法'],
     websiteUrl: 'https://mobile-aloha.github.io',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'unitree-xr-teleop',
@@ -2387,6 +2465,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['宇树科技', 'Apple Vision Pro', 'Quest', 'H1/G1', '遥操作'],
     githubUrl: 'https://github.com/unitreerobotics/xr_teleoperate',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['AVP/Quest 双平台', 'H1/G1 全身遥操作', '灵巧手支持', '开源'],
   },
   {
@@ -2399,6 +2478,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['OpenWBT', 'Apple Vision Pro', '全身遥操作', '行走+操作'],
     githubUrl: 'https://github.com/GalaxyGeneralRobotics/OpenWBT',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     keyFeatures: ['AVP 全身追踪', '行走+下蹲+弯腰+抓取', 'G1/H1 适配', '全身动作采集'],
   },
 
@@ -2413,6 +2493,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['SLAM', 'ORB-SLAM3', '双目', '视觉惯导', '闭环'],
     githubUrl: 'https://github.com/UZ-SLAMLab/ORB_SLAM3',
     license: 'GPL-3.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['单目/双目/RGB-D/VIO 四种模式', '闭环检测+重定位', '多地图复用', '学术标准基线'],
   },
   {
@@ -2425,6 +2506,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['VIO', '视觉惯导', 'GPS融合', 'HKUST', '轻量化'],
     githubUrl: 'https://github.com/HKUST-Aerial-Robotics/VINS-Fusion',
     license: 'GPL-3.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['单目+IMU/双目+IMU/GPS 融合', '紧耦合优化', '在线标定', '无人机/机器人通用'],
   },
   {
@@ -2437,6 +2519,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['VIO', '滤波', 'MSCKF', '研究友好', 'ROS2'],
     githubUrl: 'https://github.com/rpng/open_vins',
     license: 'GPL-3.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['MSCKF 滤波架构', '清晰文档', 'ROS/ROS2 集成', '在线标定'],
   },
   {
@@ -2449,6 +2532,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['SLAM', 'RTAB-Map', 'RGB-D', '多源融合', 'ROS2'],
     githubUrl: 'https://github.com/introlab/rtabmap',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['RGB-D/双目/LiDAR 多源融合', '长期运行内存管理', 'ROS2 Humble/Jazzy 原生', '3D 稠密重建'],
   },
   {
@@ -2461,6 +2545,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['LiDAR', 'FAST-LIO2', '惯性里程计', 'HKU', '实时'],
     githubUrl: 'https://github.com/hku-mars/FAST_LIO',
     license: 'GPL-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['LiDAR+IMU 紧耦合', '极速点云配准', '多 LiDAR 型号支持', 'ROS/ROS2'],
   },
   {
@@ -2473,6 +2558,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['LiDAR', 'LIO-SAM', '因子图', 'GPS融合', '大场景'],
     githubUrl: 'https://github.com/TixiaoShan/LIO-SAM',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['LiDAR+IMU+GPS 紧耦合', '因子图优化', '闭环检测', 'ROS'],
   },
   {
@@ -2485,6 +2571,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['深度估计', '单目', 'Depth Anything', 'Transformer', '预训练'],
     githubUrl: 'https://github.com/DepthAnything/Depth-Anything-V2',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['单目→深度', 'SOTA 精度', '轻量级变体可用', 'PyTorch 推理'],
   },
   {
@@ -2497,6 +2584,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['ROS2', 'Nav2', '路径规划', '行为树', '自主导航'],
     githubUrl: 'https://github.com/ros-navigation/navigation2',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['行为树任务编排', 'A*/DWA/MPPI 多规划器', '代价地图', '定位插件化', 'ROS2 原生'],
   },
   {
@@ -2509,6 +2597,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['SLAM', 'Cartographer', 'Google', '2D/3D', 'ROS'],
     githubUrl: 'https://github.com/cartographer-project/cartographer',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['2D/3D SLAM', 'LiDAR+IMU+里程计', '实时建图', 'ROS/ROS2'],
   },
   {
@@ -2521,6 +2610,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['Python', 'SLAM', '深度估计', '高斯溅射', '研究框架'],
     githubUrl: 'https://github.com/luigifreda/pyslam',
     license: 'GPL-3.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['Python 模块化', '集成 SOTA 深度估计器', '高斯溅射体素重建', '10+ 数据集支持'],
   },
 
@@ -2534,6 +2624,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: false,
     tags: ['StarBrain', '视觉导航', '端侧运行', '单目', '无图导航', '多地形'],
     license: 'Proprietary',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['纯端侧运行无需云端', '单目摄像头即点即走', '无需建图', '多地形覆盖', '跟随+定点导航'],
   },
   {
@@ -2546,6 +2637,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['VINS-Mono', 'VIO', '单目+IMU', 'HKUST', '在线标定'],
     githubUrl: 'https://github.com/HKUST-Aerial-Robotics/VINS-Mono',
     license: 'GPL-3.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['单目+IMU紧耦合', '在线自标定', '闭环检测', 'ROS集成'],
   },
   {
@@ -2558,6 +2650,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['FAST-LIVO2', 'LiDAR+视觉+IMU', 'HKU', '实时着色', '多传感器融合'],
     githubUrl: 'https://github.com/hku-mars/FAST-LIVO2',
     license: 'GPL-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['LiDAR+视觉+IMU三传感器融合', '实时RGB着色点云', '直接法配准', '极速运行'],
   },
   {
@@ -2570,6 +2663,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['OmniStereo', 'CVPR 2025', '全景深度', '鱼眼相机', 'Jetson实时'],
     githubUrl: 'https://github.com/DengJiaxi1/OmniStereo',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['CVPR 2025', '鱼眼全景深度', 'Jetson 12.3FPS实时', '精度超SOTA 32%', '机器人/无人机导航'],
   },
   {
@@ -2587,6 +2681,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     keyFeatures: ['快慢双系统架构', '跨本体泛化能力强', 'EgoScale 数据注入', '商业友好许可'],
     releaseDate: '2026-05',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     techArchitecture: {
       overview: 'NVIDIA 通用人形 VLA 基础模型，快慢双系统架构 + EgoScale 2万小时人类视频预训练，支持跨本体零样本泛化',
       pipeline: [
@@ -2615,7 +2710,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['NVIDIA', '100M帧动捕', '全身控制', 'GEAR Lab'],
     hfUrl: 'https://huggingface.co/nvidia/GEAR-SONIC',
     modelType: 'Humanoid Behavior Base Model',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'openpi',
@@ -2628,6 +2724,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/Physical-Intelligence/openpi',
     modelType: 'Flow-Matching VLA',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     techArchitecture: {
       overview: 'Physical Intelligence 的开源 VLA 模型，基于流匹配 (Flow Matching) 的端到端动作生成，提供完整 Checkpoint 与微调工具链',
       pipeline: [
@@ -2656,7 +2753,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['USC', 'RSS 2026', 'Loco-Manipulation', '真机95%成功率'],
     githubUrl: 'https://github.com/physical-superintelligence-lab/Psi0',
     modelType: 'Loco-Manipulation Base Model',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'lingbot-vla',
@@ -2668,7 +2766,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['蚂蚁灵波', '2万小时真机', '跨本体', '后训练工具'],
     githubUrl: 'https://github.com/Robbyant/lingbot-vla',
     modelType: 'Universal Cross-Embodiment VLA',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'unifolm-vla',
@@ -2679,7 +2778,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['宇树科技', 'Unitree G1', 'WMA-0', '长程操作'],
     githubUrl: 'https://github.com/unitreerobotics/unifolm-vla',
-    license: 'BSD-3-Clause'
+    license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'agibot-go',
@@ -2690,7 +2790,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['智元机器人', 'ViLLA', 'InternVL', '隐式动作'],
     githubUrl: 'https://github.com/AgibotTech',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'galaxea-g05',
@@ -2701,7 +2802,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['星海图', 'Fast-WAM', '双系统智能', '零样本泛化'],
     githubUrl: 'https://github.com/galaxea-explorer',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'holomotion',
@@ -2712,7 +2814,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['地平线', 'MoE Transformer', 'Any-4 路线', '全身控制'],
     githubUrl: 'https://github.com/HorizonRobotics/HoloMotion',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'hex-vla',
@@ -2723,7 +2826,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['国地中心', 'Qwen-VL', '12M帧预训练', '流匹配'],
     githubUrl: 'https://github.com/Open-X-Humanoid/HEX',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'dexora',
@@ -2734,7 +2838,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['清华大学', 'ICRA 2026', '36-DoF', '灵巧手', '90%成功率'],
     githubUrl: 'https://github.com/dexoravla/Dexora',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'rdt2',
@@ -2745,7 +2850,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['清华 thu-ml', '1.2B参数', 'Diffusion Policy', '46数据集'],
     githubUrl: 'https://github.com/thu-ml/RDT2',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'dexvla',
@@ -2758,6 +2864,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/juruobenruo/DexVLA',
     modelType: 'VLA 通用操作模型',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['Qwen2-VL 视觉基座', '单臂/双臂/灵巧手统一', '跨本体泛化'],
   },
   {
@@ -2771,6 +2878,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/OpenDriveLab/WholebodyVLA',
     modelType: 'VLA 全身移动操作模型',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['ICLR 2026', '潜空间统一表征', '行走+操作同时', '单一模型端到端'],
   },
   {
@@ -2784,6 +2892,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/2toinf/X-VLA',
     modelType: 'VLA 跨本体适配模型',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['ICLR 2026', 'Soft-Prompt 轻量适配', 'AgiBot 挑战赛冠军', '跨本体泛化'],
   },
   {
@@ -2797,6 +2906,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/InternRobotics/InternVLA-M1',
     modelType: 'VLA 空间引导模型',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     keyFeatures: ['Qwen2.5-VL 基座', '3D 空间理解', 'MIT 开源', '上海 AI Lab'],
   },
   {
@@ -2810,6 +2920,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/Psi-Robot/DexGraspVLA',
     modelType: 'VLA 分层灵巧抓取',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['AAAI 2026 Oral', 'VLM+扩散分层', '>90% 成功率', '灵巧手抓取'],
   },
   {
@@ -2823,6 +2934,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/OpenGalaxea/GalaxeaVLA',
     modelType: 'VLA 双系统全身模型',
     license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['500+小时真机数据', 'Fast-WAM 世界模型', '双系统全身智能', '开放场景'],
   },
   {
@@ -2834,7 +2946,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['NVIDIA', 'Cosmos', '世界模型', '物理生成'],
     githubUrl: 'https://github.com/nvidia/Cosmos',
-    license: 'OpenMDW-1.1'
+    license: 'OpenMDW-1.1',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
 
   // --- 六、开源数据集 ---
@@ -2849,7 +2962,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     websiteUrl: 'https://agibot-world.com',
     scale: '百万级真机实例',
     contentDetails: '商业、家庭、工业多场景高精度示教',
-    license: 'CC BY-NC 4.0'
+    license: 'CC BY-NC 4.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'robomind-ds',
@@ -2862,7 +2976,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hfUrl: 'https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND',
     scale: '400,000+ 轨迹',
     contentDetails: '6 种本体，739 项日常与工业任务',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'humanoid-everyday-ds',
@@ -2875,7 +2990,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/physical-superintelligence-lab/Humanoid-Everyday',
     scale: '10.3k 轨迹 / 300 万帧',
     contentDetails: '260 种复杂日常任务',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'open-x-embodiment-ds',
@@ -2888,7 +3004,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/google-deepmind/open_x_embodiment',
     scale: '1,000,000+ Episodes',
     contentDetails: '22 种构型，500+ 技能',
-    license: 'CC BY 4.0'
+    license: 'CC BY 4.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'egoscale-ds',
@@ -2900,7 +3017,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['NVIDIA', '2万小时人类视频', 'Scaling Law', 'EgoScale'],
     scale: '20,000 小时第一人称视频',
     contentDetails: '人类日常动手操作，极高视角重合度',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'unitree-g1-ds',
@@ -2913,7 +3031,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hfUrl: 'https://huggingface.co/UnitreeRobotics',
     scale: '数万条高精轨迹',
     contentDetails: 'G1 29-DoF 真机姿态与视觉动作对',
-    license: 'BSD-3-Clause'
+    license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'droid-dataset',
@@ -2926,7 +3045,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     websiteUrl: 'https://droid-dataset.github.io',
     scale: '76,000+ 仿真与真机轨迹',
     contentDetails: '多角度 RGB/Depth 图像、三轴力矩与运动抓取轨迹',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'nvidia-cosmos-world',
@@ -2942,7 +3062,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'Physical World Foundation Model',
     keyFeatures: ['物理规律守恒推演', 'Cosmos-Transfer 视频风格迁移', '支持 720P/60FPS 实时推演', '开源微调脚本'],
     releaseDate: '2026-01',
-    license: 'OpenMDW-1.1'
+    license: 'OpenMDW-1.1',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'oasis-world-model',
@@ -2957,7 +3078,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'Interactive World Model',
     keyFeatures: ['20FPS 极低时延', '动作条件约束生成', '实时物理反馈'],
     releaseDate: '2025-11',
-    license: 'MIT'
+    license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
   },
   {
     id: 'worldgen-embodied',
@@ -2968,7 +3090,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     isOpenSource: true,
     tags: ['Stanford', 'WorldGen', 'DiT', '生成式仿真', '3D 交互'],
     githubUrl: 'https://github.com/svl-stanford/worldgen',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
   {
     id: 'lerobot-hub',
@@ -2981,7 +3104,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hfUrl: 'https://huggingface.co/lerobot',
     scale: '数千个开源社区 Episodes',
     contentDetails: 'ACT, Diffusion, VQ-BeT 适配的平铺格式',
-    license: 'Apache-2.0'
+    license: 'Apache-2.0',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
   },
 
   // --- 七、四足开源方案 (可适配/已迁移至人形机器人) ---
@@ -2996,6 +3120,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['MIT', 'WBC', 'MPC', '凸优化', '步态规划', '可迁移至人形'],
     githubUrl: 'https://github.com/mit-biomimetics/Cheetah-Software',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     keyFeatures: ['凸优化 MPC 实时步态生成', '全身阻抗控制 (WBC)', '高带宽卡尔曼状态估计器', '被 H1/G1/青龙/天工 参考']
   },
   {
@@ -3009,6 +3134,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/unitreerobotics/unitree_rl_gym',
     simBackend: 'Isaac Gym / Isaac Lab + MuJoCo',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['Go2 → H1/G1 直接技术迁移路径', '共享 CycloneDDS 通信中间件', 'PyTorch PPO + Domain Randomization', '29-DoF 人形运动学参数已适配']
   },
   {
@@ -3023,6 +3149,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware',
     cost: '< €10,000',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['低成本高带宽 BLDC 关节模组', 'Pinocchio + TSID 全身控制栈', '力控架构可直接迁移至双足平衡', 'ROS2 原生支持']
   },
   {
@@ -3036,6 +3163,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['ETH Zurich', '高速物理引擎', '接触动力学', 'GR00T使用', '比MuJoCo快3-5倍'],
     websiteUrl: 'https://raisim.com',
     license: 'Proprietary (学术免费)',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['比 MuJoCo 快 3-5 倍的接触解算', '高保真摩擦与碰撞建模', '支持人形双足站立与行走仿真', 'GR00T/ETH 人形训练后端之一']
   },
   {
@@ -3048,6 +3176,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['ROS', '模块化控制', 'MPC+WBC分层', '人形参考架构', '步态FMS'],
     githubUrl: 'https://github.com/chvmp/champ',
     license: 'BSD-3-Clause',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['MPC + WBC + FSM 分层控制架构', 'ROS/ROS2 原生集成', 'Gazebo + MuJoCo 双仿真支持', '步态状态机 (FMS) 可迁移至双足']
   },
   {
@@ -3062,6 +3191,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     websiteUrl: 'https://www.deeprobotics.cn',
     githubUrl: 'https://github.com/DeepRobotics',
     license: 'Proprietary SDK (Apache-2.0 for examples)',
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
     keyFeatures: ['工业级 GPU PPO 训练管线', '多模态感知融合参考实现', 'C++/Python 双语言 SDK', '适用于人形工业部署参考']
   },
   {
@@ -3076,6 +3206,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/stanfordroboticsclub/StanfordQuadruped',
     cost: '< $500 USD',
     license: 'MIT',
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
     keyFeatures: ['< $500 极低成本全开源方案', 'CPG + IMU 反馈平衡控制', 'ROS/ROS2 集成', '适合人形双足控制入门理解与教学']
   },
   {
@@ -3096,6 +3227,8 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
 
 export const PAPER_LIST: EcosystemItem[] = [
   {
+    license: '未提供许可证',
+    licenseDetail: '仓库（roboterax/humanoid-gym）文件列表无 LICENSE 文件，按 GitHub 默认规则保留所有权利；商用/复用需联系作者确认。',
     id: 'paper-humanoid-gym',
     name: 'Humanoid-Gym: Reinforcement Learning for Humanoid Robots with Zero-Shot Sim2Real',
     provider: 'RobotEra (星动纪元)',
@@ -3109,6 +3242,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Sim2Real', 'RL', 'Zero-Shot']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '仓库未包含 LICENSE 文件，按 GitHub 默认规则保留所有权利；使用前需联系作者确认授权条款。',
     id: 'paper-humanplus',
     name: 'HumanPlus: Humanoid Shadowing and Imitation from Humans',
     provider: 'Stanford University (Zipeng Fu et al.)',
@@ -3122,6 +3257,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Stanford', 'Imitation', 'Shadowing']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '仓库未包含 LICENSE 文件，按 GitHub 默认规则保留所有权利；论文页注明非商业研究用途，商用需联系作者。',
     id: 'paper-omnih2o',
     name: 'OmniH2O: Universal Whole-Body Teleoperation and Imitation for Humanoid Robots',
     provider: 'CMU / NVIDIA GEAR Lab',
@@ -3135,6 +3272,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['CMU', 'CoRL 2024', 'OmniH2O', 'Whole-Body']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '仓库未包含 LICENSE 文件，按 GitHub 默认规则保留所有权利；使用前需联系作者确认授权条款。',
     id: 'paper-expressive-humanoid',
     name: 'Expressive Humanoid Locomotion via Reinforcement Learning',
     provider: 'UC Berkeley Hybrid Robotics',
@@ -3148,6 +3287,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['UC Berkeley', 'RSS 2024', 'Expressive Locomotion']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-asap',
     name: 'ASAP: Aligning Simulation and Real-World Physics with Delta Action Models',
     provider: 'LeCAR-Lab (Shanghai Jiao Tong Univ)',
@@ -3161,6 +3302,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['RSS 2025', 'Delta Action', 'Sim2Real Gap']
   },
   {
+    license: 'Apache-2.0',
+    licenseDetail: '代码仓库采用 Apache-2.0：商用免费、可修改再分发，需保留版权与专利授权声明。',
     id: 'paper-psi-zero',
     name: 'Psi-Zero: Universal Whole-Body Foundation Models for Humanoid Loco-Manipulation',
     provider: 'USC PSI Lab',
@@ -3174,6 +3317,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['RSS 2026', 'Foundation Model', 'Loco-Manipulation']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-dexora',
     name: 'Dexora: Scaling Dexterous Bimanual Manipulation via 36-DoF VLA Foundation Architecture',
     provider: '清华大学等 (Tsinghua)',
@@ -3187,6 +3332,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['ICRA 2026', 'Dexterous Bimanual', '36-DoF']
   },
   {
+    license: 'MIT',
+    licenseDetail: '仓库采用 MIT 许可：可自由使用、修改与再分发（含商用），仅需保留版权声明。',
     id: 'paper-awesome-survey',
     name: 'Awesome Humanoid Robot Learning & Control Survey (550+ Papers)',
     provider: 'YanjieZe / JonyZhang',
@@ -3202,6 +3349,8 @@ export const PAPER_LIST: EcosystemItem[] = [
 
   // ========== 补充：关键论文与开源基线 ==========
   {
+    license: 'BSD-3-Clause',
+    licenseDetail: 'ETH Zurich 官方仓库采用 BSD-3-Clause：允许商用、修改、再分发，需保留版权声明，且不得使用 ETH/NVIDIA 名称背书。',
     id: 'paper-legged-gym',
     name: 'Learning Robust Perceptive Locomotion for Quadrupedal and Humanoid Robots',
     provider: 'ETH Zurich RSL (Rudin et al.)',
@@ -3215,6 +3364,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['legged_gym', 'Science Robotics', 'Domain Rand', 'PPO']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-ldp',
     name: 'Learning Dexterous In-Hand Manipulation (OpenAI)',
     provider: 'OpenAI (Andrychowicz et al.)',
@@ -3227,6 +3378,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['OpenAI', '灵巧手', 'Domain Rand', 'PPO']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-dr-eureka',
     name: 'DrEureka: Language Model Guided Sim-to-Real Transfer',
     provider: 'NVIDIA / UPenn (Ma et al.)',
@@ -3240,6 +3393,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['NVIDIA', 'LLM', 'Sim2Real', 'RSS 2024']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-isaac-gym',
     name: 'Isaac Gym: High Performance GPU-Based Physics Simulation for Robot Learning',
     provider: 'NVIDIA (Makoviychuk et al.)',
@@ -3252,6 +3407,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['NVIDIA', 'GPU 并行', 'NeurIPS 2021', 'Isaac Gym']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-rt2',
     name: 'RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control',
     provider: 'Google DeepMind (Brohan et al.)',
@@ -3264,6 +3421,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Google', 'RT-2', 'VLA', 'Web Knowledge Transfer']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-rt1',
     name: 'RT-1: Robotics Transformer for Real-World Control at Scale',
     provider: 'Google Robotics (Brohan et al.)',
@@ -3276,6 +3435,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Google', 'RT-1', 'Robotics Transformer', 'RSS 2023']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-octo',
     name: 'Octo: An Open-Source Generalist Robot Policy',
     provider: 'UC Berkeley / Stanford / CMU (Ghosh et al.)',
@@ -3289,6 +3450,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Octo', 'RSS 2024', 'Open Source', 'Generalist Policy']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-gato',
     name: 'A Generalist Agent (Gato)',
     provider: 'DeepMind (Reed et al.)',
@@ -3301,6 +3464,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['DeepMind', 'Generalist Agent', 'Transformer', 'Multi-Task']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-diffusion-policy',
     name: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion',
     provider: 'Columbia / MIT (Chi et al.)',
@@ -3314,6 +3479,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Diffusion Policy', 'RSS 2023', 'Visuomotor', 'Action Diffusion']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-sdp',
     name: 'Set-Supervised Diffusion Policy (SDP)',
     provider: 'TU Delft / 社区 (zmomo et al.)',
@@ -3327,6 +3494,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['RSS 2026', 'Diffusion Policy', 'Set Supervision', 'Imitation Learning', '纠错']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-aloha',
     name: 'Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation',
     provider: 'Stanford (Zipeng Fu / Tony Zhao et al.)',
@@ -3340,6 +3509,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Stanford', 'ALOHA', 'Teleoperation', 'ACT', '$32K']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-act',
     name: 'Action Chunking Transformer (ACT) for Robot Learning',
     provider: 'Stanford (Zhao et al.)',
@@ -3353,6 +3524,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['ACT', 'CoRL 2023', 'Action Chunking', 'Imitation Learning']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-umi',
     name: 'Universal Manipulation Interface (UMI)',
     provider: 'Stanford (Chi et al.)',
@@ -3366,6 +3539,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Stanford', 'UMI', 'RSS 2024', 'Data Collection', '<$1000']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可：可自由使用、修改、商用与再分发，仅需保留版权声明（无担保）。',
     id: 'paper-3d-diffusion-policy',
     name: '3D Diffuser Actor: Policy Diffusion with 3D Scene Representations',
     provider: 'MIT / Improbable AI (Ke et al.)',
@@ -3379,6 +3554,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['3D Diffusion', 'CoRL 2024', 'Point Cloud', 'Spatial Reasoning']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '仓库未包含 LICENSE 文件，按 GitHub 默认规则保留所有权利；论文页注明非商业研究用途，商用需联系作者。',
     id: 'paper-h2o',
     name: 'H2O: Human-to-Humanoid Whole-Body Teleoperation',
     provider: 'CMU / SJTU (He et al.)',
@@ -3392,6 +3569,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['CMU', 'H2O', 'Teleoperation', 'Monocular RGB']
   },
   {
+    license: 'MIT',
+    licenseDetail: '代码仓库采用 MIT 许可（Copyright 2023 Ge Yang）：可自由使用、修改、商用与再分发，仅需保留版权声明。',
     id: 'paper-lucidsim',
     name: 'LucidSim: Learning Visual Locomotion from Generated Images',
     provider: 'MIT CSAIL (Yu et al.)',
@@ -3405,6 +3584,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['MIT', 'Generative AI', 'Visual Locomotion', 'CoRL 2024']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-rfm',
     name: 'Reinforcement Fine-Tuning (RFT) for Large Language Models',
     provider: 'OpenAI / Stanford',
@@ -3417,6 +3598,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['RFT', 'LLM', 'Task Planning', 'VLA Fine-tuning']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-sim2real-survey',
     name: 'Sim-to-Real Transfer in Robotics: A Survey',
     provider: 'Zhao et al. (ETH Zurich / MPI)',
@@ -3429,6 +3612,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Survey', 'Sim2Real', 'IEEE T-RO', '200+ Refs']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-humanoid-survey',
     name: 'Humanoid Locomotion and Manipulation: A Comprehensive Review',
     provider: 'Gu et al. (CMU / NVIDIA)',
@@ -3441,6 +3626,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Survey', 'Humanoid', 'Locomotion', 'Manipulation']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-imitation-survey',
     name: 'Imitation Learning for Robotics: A Survey',
     provider: 'Osa et al. (Univ. of Tokyo / Preferred Networks)',
@@ -3453,6 +3640,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Survey', 'Imitation Learning', 'IL+RL']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-rl-survey',
     name: 'Deep Reinforcement Learning for Robotics: A Survey of Recent Advances',
     provider: 'Ibarz et al. (DeepMind)',
@@ -3465,6 +3654,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Survey', 'Deep RL', 'IEEE T-RO', 'DeepMind']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-vla-survey',
     name: 'Vision-Language-Action Models for Robotics: A Survey',
     provider: 'Multiple Institutions',
@@ -3477,6 +3668,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Survey', 'VLA', 'Foundation Model', 'Multi-Embodiment']
   },
   {
+    license: 'Apache-2.0',
+    licenseDetail: '代码仓库采用 Apache-2.0：商用免费、可修改再分发，需保留版权与专利授权声明；模型权重另按 NVIDIA 条款授权。',
     id: 'paper-groot-n1',
     name: 'GR00T N1: An Open Foundation Model for Generalist Humanoid Robots',
     provider: 'NVIDIA GEAR (Bjorck et al.)',
@@ -3490,6 +3683,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['NVIDIA', 'GR00T N1', 'Dual-System', 'EgoScale']
   },
   {
+    license: 'Apache-2.0',
+    licenseDetail: '代码仓库采用 Apache-2.0：商用免费、可修改再分发，需保留版权与专利授权声明。',
     id: 'paper-pi0',
     name: 'π0: A Vision-Language-Action Flow Model for General Robot Control',
     provider: 'Physical Intelligence (Black et al.)',
@@ -3503,6 +3698,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Physical Intelligence', 'π0', 'Flow Matching', 'Cross-Embodiment']
   },
   {
+    license: 'Apache-2.0',
+    licenseDetail: '代码仓库采用 Apache-2.0：商用免费、可修改再分发，需保留版权与专利授权声明。',
     id: 'paper-genesis',
     name: 'Genesis: A Universal and Generative Physics Engine for Robotics',
     provider: 'Genesis-Embodied-AI (Zhou et al.)',
@@ -3516,6 +3713,8 @@ export const PAPER_LIST: EcosystemItem[] = [
     tags: ['Genesis', 'Unified Physics', 'Differentiable', 'GPU']
   },
   {
+    license: '未提供许可证',
+    licenseDetail: '论文/预印本条目，无配套开源代码仓库；引用请遵循学术规范，商用实现需联系作者或机构确认授权。',
     id: 'paper-egoscale',
     name: 'EgoScale: Scaling Human Video Data for Robot Learning',
     provider: 'NVIDIA / UC Berkeley (Grauman et al.)',

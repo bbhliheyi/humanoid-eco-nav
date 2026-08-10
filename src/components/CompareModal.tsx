@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, ArrowRightLeft, ExternalLink, Github, CheckCircle2, AlertCircle } from 'lucide-react';
 import { EcosystemItem } from '../types';
+import { getLicenseProfile } from '../lib/licenses';
 
 interface CompareModalProps {
   items: EcosystemItem[];
@@ -89,6 +90,40 @@ export const CompareModal: React.FC<CompareModalProps> = ({ items, onClose, onRe
                     {item.license || '未知'}
                   </td>
                 ))}
+              </tr>
+
+              {/* 许可速览 */}
+              <tr>
+                <td className="py-3 px-4 font-semibold uppercase tracking-wider text-[11px] bg-[#EFECE6] text-[#2D2A26]">许可速览</td>
+                {items.map((item) => {
+                  const p = getLicenseProfile(item.license);
+                  return (
+                    <td key={item.id} className="py-3 px-4 border-l border-[#D8D3CA]">
+                      {p ? (
+                        <div className="space-y-1.5">
+                          <div>
+                            <span className="text-[9px] font-bold text-[#1B5E20]">✓ 允许</span>
+                            <div className="flex flex-wrap gap-1 mt-0.5">
+                              {p.allows.map((a) => (
+                                <span key={a} className="text-[9px] px-1.5 py-0.5 bg-[#E8F5E9] text-[#1B5E20] border border-[#A5D6A7] rounded">{a}</span>
+                              ))}
+                            </div>
+                          </div>
+                          <div>
+                            <span className="text-[9px] font-bold text-[#E65100]">⚠ 限制</span>
+                            <div className="flex flex-wrap gap-1 mt-0.5">
+                              {p.restrictions.map((r) => (
+                                <span key={r} className="text-[9px] px-1.5 py-0.5 bg-[#FFF3E0] text-[#E65100] border border-[#FFCC80] rounded">{r}</span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        <span className="text-[#8C867E]">未标注</span>
+                      )}
+                    </td>
+                  );
+                })}
               </tr>
 
               {/* 成本预算 */}

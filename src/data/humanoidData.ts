@@ -2183,6 +2183,20 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     license: 'Apache-2.0',
     keyFeatures: ['文本/照片→3D场景', '物理有效碰撞体', '多仿真后端导出', '地平线开源'],
   },
+  {
+    id: 'nvidia-agent-toolkit',
+    name: 'NVIDIA Agent Toolkit + Omniverse (AI 搭建仿真环境)',
+    provider: 'NVIDIA (SIGGRAPH 2026)',
+    category: 'simulators',
+    description: 'AI Agent 自动搭建物理仿真环境。三大开源库: ovrtx(RTX传感器), ovphysx(GPU物理), CAD-to-SimReady(资产转换)。SimReady Blender 蓝图+NemoClaw Agent。',
+    isOpenSource: true,
+    tags: ['NVIDIA', 'SIGGRAPH 2026', 'AI Agent', 'Blender', '物理仿真'],
+    githubUrl: 'https://github.com/NVIDIA/ovrtx',
+    simBackend: 'Omniverse + PhysX 5 + Blender',
+    license: 'Apache-2.0',
+    keyFeatures: ['ovrtx RTX传感器仿真', 'ovphysx GPU物理加速', 'CAD自动转SimReady', 'NemoClaw Agent驱动', 'Blender原生集成'],
+    deployStack: 'NVIDIA GPU + Omniverse + Blender',
+  },
 
   // --- 四、真机部署、控制与遥操作 ---
   {

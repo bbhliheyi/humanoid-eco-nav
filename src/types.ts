@@ -30,6 +30,8 @@ export interface EcosystemItem {
   hfUrl?: string;
   releaseDate?: string; // e.g. "2026-05"
   license?: string;
+  // 许可详情：许可证类型、开源范围、商用条款等详细说明（详情弹窗"许可详情"板块展示）
+  licenseDetail?: string;
   // Specific fields for Platforms
   cost?: string;
   trainStack?: string;

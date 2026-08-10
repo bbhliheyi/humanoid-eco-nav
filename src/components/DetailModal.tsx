@@ -39,7 +39,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({
   const handleCopyLink = () => {
     const text = `${item.name} (${item.provider})\nGitHub: ${item.githubUrl || 'N/A'}\n官网: ${
       item.websiteUrl || 'N/A'
-    }\n许可证: ${item.license || 'N/A'}\n简介: ${item.description}`;
+    }\n许可证: ${item.license || 'N/A'}\n许可详情: ${item.licenseDetail || 'N/A'}\n简介: ${item.description}`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -101,6 +101,22 @@ export const DetailModal: React.FC<DetailModalProps> = ({
         <div className="bg-[#FAF8F5] p-4 border border-[#D8D3CA] rounded-xl text-[#524D46] text-xs sm:text-sm leading-relaxed mb-6 font-sans">
           {item.description}
         </div>
+
+        {/* 许可详情 */}
+        {item.licenseDetail && (
+          <div className="mb-6 border border-[#D8D3CA] rounded-xl overflow-hidden">
+            <div className="bg-[#2D2A26] text-white px-4 py-2.5 flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#B83232]" />
+              <h3 className="text-xs font-bold uppercase tracking-wider">许可详情</h3>
+              {item.license && (
+                <span className="ml-auto text-[10px] font-mono text-[#D8D3CA] uppercase">{item.license}</span>
+              )}
+            </div>
+            <div className="p-4 bg-[#FAF8F5]">
+              <p className="text-xs text-[#524D46] leading-relaxed whitespace-pre-line">{item.licenseDetail}</p>
+            </div>
+          </div>
+        )}
 
         {/* Detailed Specs Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">

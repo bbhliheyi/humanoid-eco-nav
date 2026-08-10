@@ -1954,6 +1954,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'UniVLA (VQ-VAE 隐式动作 VLA)',
     provider: 'OpenDriveLab (RSS 2025)',
     category: 'vla',
+    websiteUrl: 'https://github.com/OpenDriveLab/UniVLA',
     description: 'VQ-VAE 无监督学习本体无关的离散隐式动作空间。仅用 OpenVLA 5% 预训练资源达 SOTA，12M 轻量动作解码器 + LoRA 微调。MIT 可商用。',
     isOpenSource: true,
     tags: ['UniVLA', 'VQ-VAE', '隐式动作', 'RSS 2025', 'MIT'],
@@ -1961,6 +1962,23 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'VQ-VAE 隐式动作 VLA',
     license: 'Apache-2.0',
     licenseDetail: 'OpenDriveLab 的 UniVLA（RSS 2025）采用 Apache-2.0：商用免费、可修改再分发，需保留版权与专利授权声明。',
+techArchitecture: {
+      overview: 'VQ-VAE 无监督学习本体无关的离散隐式动作空间：仅用 OpenVLA 5% 的预训练资源即达 SOTA，12M 参数轻量策略。',
+      pipeline: [
+        '视觉-语言输入 → 隐式动作 VQ-VAE 离散化 → 自回归生成动作 token 序列 → 解码为机器人动作',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'VQ-VAE',
+        'Transformer',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '隐式动作分词 + 自回归生成',
+      algorithms: [
+        'VQ-VAE 动作分词',
+        '自回归生成',
+      ],
+    },
     keyFeatures: ['VQ-VAE 无监督隐式动作', '本体无关动作空间', '5% 资源达 SOTA', '12M 轻量解码器', 'MIT 可商用'],
     deployStack: 'PyTorch + LoRA + HuggingFace',
   },
@@ -1969,6 +1987,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'ΔVLA (隐式世界知识 VQ-VAE)',
     provider: 'JiuTian-VL (2026)',
     category: 'vla',
+    websiteUrl: 'https://github.com/JiuTian-VL/DeltaVLA',
     description: 'Latent World Variation Quantization：VQ-VAE 学习世界知识变化(而非预测未来状态)的离散隐空间。在仿真和真机操作任务上达 SOTA。',
     isOpenSource: true,
     tags: ['ΔVLA', 'VQ-VAE', '世界知识', '隐式空间', '2026'],
@@ -1976,6 +1995,22 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: '世界知识 VQ-VAE VLA',
     license: '未提供许可证',
     licenseDetail: '仓库（JiuTian-VL/DeltaVLA）未包含 LICENSE 文件，按 GitHub 默认规则保留所有权利；使用、复用或商用前需联系作者确认授权条款。',
+techArchitecture: {
+      overview: 'Latent World Variation Quantization：VQ-VAE 学习世界知识变化（而非预测图像/动作本身），以更少资源捕获可泛化的动作先验。',
+      pipeline: [
+        '视觉-语言输入 → 世界知识变化量化 (VQ-VAE) → 隐式动作生成 → 执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'VQ-VAE',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '世界变化量化 + 动作生成',
+      algorithms: [
+        'VQ-VAE',
+        '世界知识变化量化',
+      ],
+    },
     keyFeatures: ['VQ-VAE 世界知识编码', '离散隐空间学习', 'SOTA操作性能'],
     deployStack: 'PyTorch + HuggingFace',
   },
@@ -1984,6 +2019,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'MoEActok (MoE 动作分词器)',
     provider: '社区 (CVPR 2026)',
     category: 'vla',
+    websiteUrl: 'https://github.com/cpaaax/MoEActok',
     description: 'CVPR 2026。技能聚类的多专家 VQ-VAE 动作分词器。不同专家处理平移/抓取等技能，粗到细训练范式。在 RoboTwin 和真机零样本迁移上超越 Binning/FAST/VQ-BET。',
     isOpenSource: true,
     tags: ['MoEActok', 'CVPR 2026', 'MoE', 'VQ-VAE', '动作分词'],
@@ -1991,6 +2027,24 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'MoE VQ-VAE 动作分词器',
     license: '未提供许可证',
     licenseDetail: '仓库（cpaaax/MoEActok）未包含 LICENSE 文件，按 GitHub 默认规则保留所有权利；使用、复用或商用前需联系作者确认授权条款。',
+techArchitecture: {
+      overview: 'CVPR 2026：技能聚类的多专家 VQ-VAE 动作分词器，不同专家处理平移/抓取等技能，粗到细训练范式提升分词质量。',
+      pipeline: [
+        '动作数据 → 技能聚类 → 多专家 VQ-VAE 分词（粗到细）→ 动作 token 序列',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'MoE',
+        'VQ-VAE',
+      ],
+      system: 'GPU 训练',
+      architecturePattern: '多专家分技能并行分词',
+      algorithms: [
+        'MoE 多专家',
+        'VQ-VAE',
+        '粗到细训练',
+      ],
+    },
     keyFeatures: ['MoE 多专家 VQ-VAE', '技能聚类(平移/抓取)', '粗到细训练', '零样本真机迁移'],
     deployStack: 'PyTorch + RoboTwin + Simpler-Env',
   },
@@ -2006,6 +2060,22 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: '全身原生 VLA (语言+像素→全DoF)',
     license: '未提供许可证',
     licenseDetail: '清华 IIIS / 上海期智研究院 / Spirit AI 已公开代码、训练数据与模型权重，但 GitHub 仓库（OpenHLM-project/OpenHLM）尚未提供 LICENSE 文件，正式授权条款待作者发布；商用前必须与作者确认。',
+techArchitecture: {
+      overview: '全身原生 VLA：语言+像素直接映射全自由度关节控制（不解耦上下身），系统对比实验选出最佳方案，清华 IIIS/上海期智/Spirit AI 出品。',
+      pipeline: [
+        '语言+像素输入 → 全身原生 VLA 编码 → 全自由度关节动作输出（行走+操作统一）',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '端到端全身联合建模',
+      algorithms: [
+        '全身联合 VLA',
+        '因果 Transformer',
+      ],
+    },
     keyFeatures: ['全身不解耦控制', '超GR00T N1.6', '<50%演示数据', '代码+数据+权重全开源'],
     deployStack: 'PyTorch + Isaac Sim + 真机部署',
   },
@@ -2056,12 +2126,34 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'GMR (General Motion Retargeting)',
     provider: '社区 (2.1K+ Stars)',
     category: 'control',
+    websiteUrl: 'https://github.com/YanjieZe/GMR',
     description: '通用动作重定向框架(2147 Stars)，支持任意人体运动数据(AI生成视频/MoCap/VR)重定向到任意人形机器人(Unitree/智元/傅利叶等)，是人形遥操作和模仿学习数据采集的基础工具。',
     isOpenSource: true,
     tags: ['GMR', 'Motion Retargeting', '2.1K Stars', '跨本体', '遥操作'],
-    githubUrl: 'https://github.com/xxxxxx/GMR',
+    githubUrl: 'https://github.com/YanjieZe/GMR',
     license: 'MIT',
     licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+techArchitecture: {
+      overview: '通用运动重定向框架：将任意人体运动数据（SMPL-X/BVH/FBX/GVHMR）实时重定向到多样人形机器人，CPU 上 60-70 FPS，是人形遥操作与模仿学习数据生成的基础工具。',
+      pipeline: [
+        '人体运动输入 (SMPL-X/BVH/FBX/GVHMR)',
+        '关节角度提取与身高自适应缩放',
+        'Mink 求解器 IK 重定向（含速度约束）',
+        '机器人关节命令输出（MuJoCo 可视化）',
+      ],
+      softwareStack: [
+        'Python',
+        'MuJoCo',
+        'Mink IK',
+      ],
+      system: '离线批处理 + 实时 UDP 流 (Xsens MVN)',
+      architecturePattern: '输入解析 → 重定向优化 → 输出映射',
+      algorithms: [
+        'Mink IK 求解',
+        '身高自适应缩放',
+        '速度约束优化',
+      ],
+    },
     keyFeatures: ['2.1K+ Stars', '跨本体通用重定向', 'AI视频/MoCap/VR多输入', '数据采集基础工具'],
   },
   {
@@ -2315,12 +2407,38 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'unitree_sdk2 / unitree_ros2',
     provider: '宇树科技 (Unitree Robotics)',
     category: 'control',
+    websiteUrl: 'https://www.unitree.com',
     description: '宇树官方第二代通信 SDK，底层使用 CycloneDDS 实现亚毫秒级低延迟，完全兼容 ROS2 Humble。',
     isOpenSource: true,
     tags: ['宇树科技', 'CycloneDDS', 'ROS2', 'Go2/H1/G1'],
     githubUrl: 'https://github.com/unitreerobotics/unitree_sdk2',
     license: 'BSD-3-Clause',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '宇树第二代通信 SDK：基于 CycloneDDS 实现亚毫秒级控制指令下发与状态反馈，与 ROS2 Humble 深度兼容，是宇树全系机器人的标准控制接口。',
+      pipeline: [
+        '控制命令生成 → DDS 序列化 → CycloneDDS 总线 → 机器人执行',
+        '机器人状态反馈 → DDS → 订阅端消费',
+      ],
+      softwareStack: [
+        'CycloneDDS',
+        'ROS2 Humble',
+        'C++',
+        'Python',
+      ],
+      system: 'Ubuntu 20.04/22.04 + ROS2',
+      architecturePattern: '发布-订阅 (DDS Topic)',
+      algorithms: [
+        'DDS 通信',
+        'QoS 配置',
+      ],
+    },
+    keyFeatures: [
+      'CycloneDDS 亚毫秒低延迟',
+      'ROS2 Humble 完全兼容',
+      'Go2/H1/G1 全系支持',
+      'C++/Python 双语言',
+    ],
   },
   {
     id: 'booster-studio',
@@ -2330,27 +2448,78 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     description: '全球首款专为具身智能打造的集成开发环境 IDE，内置可编程 3D 节点图、一键 Sim2Real 编译部署与在线调试。',
     isOpenSource: 'partial',
     tags: ['加速进化', '具身IDE', 'Sim2Real', 'C++/Python SDK'],
-    websiteUrl: 'https://boosterobotics.com',
+    websiteUrl: 'https://www.booster.tech/zh/open-source/',
     license: 'Proprietary Freeware',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '加速进化 (Booster Robotics) 的具身智能 IDE：可编程 3D 节点图 + 云端物理仿真沙盒 + Sim2Real 统一接口，配套开源 SDK、Booster Gym/Train/Deploy 训练部署框架。',
+      pipeline: [
+        '节点图可视化编程 → 云端物理仿真验证 → 编译 → 真机执行（仿真/真机接口完全统一）',
+      ],
+      softwareStack: [
+        'C++',
+        'Python',
+        'Isaac Lab (Booster Train)',
+        '云端仿真',
+      ],
+      system: '云端沙盒 + 真机部署双端',
+      architecturePattern: '可视化节点图 → 统一 HAL 接口 → 多后端执行',
+      algorithms: [
+        'Sim2Real 接口统一',
+        'Vibe Coding 辅助代码生成',
+      ],
+    },
+    keyFeatures: [
+      '行业首款具身智能专属 IDE',
+      '可编程 3D 节点图',
+      '纯云端物理仿真沙盒',
+      'Sim2Real 一键编译部署',
+    ],
   },
   {
     id: 'groot-wbc',
     name: 'GR00T-WholeBodyControl',
     provider: 'NVIDIA GEAR Team',
     category: 'control',
+    websiteUrl: 'https://github.com/NVlabs/GR00T-WholeBodyControl',
     description: 'NVIDIA 统一人形全身全身力矩控制平台 (Decoupled WBC / GEAR-SONIC)，实现高频质心平衡与逆动力学解算。',
     isOpenSource: true,
     tags: ['NVIDIA', 'WBC', '全身控制', '逆动力学', 'GEAR-SONIC'],
     githubUrl: 'https://github.com/NVlabs/GR00T-WholeBodyControl',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'NVIDIA 统一人形全身力矩控制平台：以解耦式 WBC (Decoupled Whole-Body Control) 实现高频质心平衡与逆动力学解算，与 GR00T 策略模型及 GEAR-SONIC 平台集成。',
+      pipeline: [
+        '策略目标输出 (GR00T) → 质心状态估计 → Decoupled WBC 求解 → 逆动力学 → 关节力矩 → 执行',
+      ],
+      softwareStack: [
+        'C++',
+        'Isaac Lab',
+        'GEAR-SONIC',
+      ],
+      system: 'NVIDIA 生态（Isaac 仿真 + 真机）',
+      architecturePattern: '分层控制：高层策略 → 中层 WBC → 底层执行',
+      algorithms: [
+        'Decoupled WBC',
+        '二次规划 (QP)',
+        '逆动力学',
+        '质心平衡',
+      ],
+    },
+    keyFeatures: [
+      'Decoupled WBC 全身力矩控制',
+      '高频质心平衡',
+      'GEAR-SONIC 平台集成',
+      'NVIDIA 官方维护',
+    ],
   },
   {
     id: 'motionbricks',
     name: 'MotionBricks (人体动作 VQ-VAE 分词器)',
     provider: 'NVIDIA NVlabs (GR00T 生态)',
     category: 'vla',
+    websiteUrl: 'https://github.com/NVlabs/GR00T-WholeBodyControl',
     description: 'GR00T-WBC 生态中的 VQ-VAE 人体动作分词器。将高维人体运动(关节位置/旋转/速度)压缩为离散 token 序列，Transformer 根据控制信号预测 token → 解码为机器人关节角。三阶段：Tokenization → Pose Generation → Root Trajectory。',
     isOpenSource: true,
     tags: ['NVIDIA', 'MotionBricks', 'VQ-VAE', '动作分词', 'GR00T', 'Motion Tokenizer'],
@@ -2358,6 +2527,22 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: '人体运动 VQ-VAE 分词器',
     license: 'Apache-2.0 / NVIDIA Open Model License (权重)',
     licenseDetail: 'NVIDIA GR00T-WholeBodyControl 仓库采用双重许可：\n• 全部源代码/脚本：Apache-2.0（商用免费、可修改再分发，需保留版权与专利授权声明）\n• 训练好的模型权重/检查点：NVIDIA Open Model License，使用受 NVIDIA 条款约束，部署前需查阅 NVIDIA 官网许可原文',
+techArchitecture: {
+      overview: 'GR00T-WBC 生态中的 VQ-VAE 人体动作分词器：将高维人体运动（关节位置/旋转/速度）压缩为离散动作 token，作为策略训练的中间表示。',
+      pipeline: [
+        '人体运动数据 → VQ-VAE 编码 → 离散动作 token → 供策略模型训练',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'VQ-VAE',
+      ],
+      system: 'GPU 训练',
+      architecturePattern: '运动分词 + 离散表示学习',
+      algorithms: [
+        'VQ-VAE',
+        '动作量化',
+      ],
+    },
     keyFeatures: ['VQ-VAE/FSQ 动作离散化', 'Transformer 时序预测', '解耦 Pose+Root 生成', '实时交互式运动控制', 'GR00T 生态核心组件'],
     deployStack: 'PyTorch + GR00T-WBC + Isaac Sim',
   },
@@ -2366,6 +2551,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'NVIDIA Kimodo (文本→人形动作扩散模型)',
     provider: 'NVIDIA NVlabs',
     category: 'vla',
+    websiteUrl: 'https://github.com/nv-tlabs/kimodo',
     description: 'NVIDIA 开源文本驱动人形动作生成模型。282M Transformer 去噪器，自然语言+约束条件(关键帧/末端位姿/路径点)→3D人形运动轨迹。提供 Unitree G1 专用权重，兼容 ProtoMotions+MuJoCo+GEAR-SONIC 真机部署。',
     isOpenSource: true,
     tags: ['NVIDIA', 'Kimodo', 'Text-to-Motion', 'Diffusion', 'G1', '动作生成'],
@@ -2374,6 +2560,23 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: '文本→动作 扩散 Transformer (282M)',
     license: 'Apache-2.0 (源码) / 权重单独授权',
     licenseDetail: '源码采用 Apache-2.0：商用免费、可修改再分发，需保留版权与专利授权声明。\n模型权重与数据在 HuggingFace 页面上单独授权（NVIDIA Open Model License / NVIDIA R&D Model License），下载与商用前需逐项确认对应页面条款。',
+techArchitecture: {
+      overview: 'NVIDIA 开源文本驱动人形动作生成模型：282M Transformer 去噪器，自然语言+约束条件（关键帧/风格）生成全身动作。',
+      pipeline: [
+        '文本/约束输入 → Transformer 去噪器 → 动作序列生成 → 重定向/执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer',
+        '扩散',
+      ],
+      system: 'GPU 推理',
+      architecturePattern: '条件扩散生成',
+      algorithms: [
+        '扩散去噪 (282M)',
+        '文本-动作对齐',
+      ],
+    },
     keyFeatures: ['自然语言文本→3D动作', 'G1专用权重', '关键帧+末端约束', '700h光学动捕训练', 'ProtoMotions真机闭环'],
     deployStack: 'PyTorch + MuJoCo + ProtoMotions + GEAR-SONIC',
   },
@@ -2389,6 +2592,24 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: '实时文本→动作 VLA (VAE+DDPM+PPO)',
     license: 'MIT',
     licenseDetail: '中国电信 TeleAI 的 TextOp 代码仓库（TeleHuman/TextOp）采用 MIT 许可：可自由使用、修改、再分发（含商用），仅需保留原版权声明。\n对应论文文本按 CC BY-NC-SA 4.0 发布，代码与论文条款相互独立。',
+techArchitecture: {
+      overview: '中国电信 TeleAI 两层架构实时文本驱动人形控制：高层自回归运动扩散模型（Transformer VAE+DDPM）生成短时轨迹，底层实时控制执行，实现秒级响应。',
+      pipeline: [
+        '文本输入 → 自回归运动扩散（Transformer VAE+DDPM）→ 短时轨迹 → 底层控制器实时执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer VAE',
+        'DDPM',
+      ],
+      system: 'GPU 推理 + 真机',
+      architecturePattern: '高层轨迹生成 + 底层实时控制分层',
+      algorithms: [
+        'Transformer VAE',
+        'DDPM 扩散',
+        '自回归生成',
+      ],
+    },
     keyFeatures: ['流式语言指令实时控制', '~0.73s交互延迟', 'G1真机验证', '两层架构(高层扩散+低层RL)'],
     deployStack: 'PyTorch + Isaac Lab + PPO + G1',
   },
@@ -2397,6 +2618,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'Humanoid-Motion-Diffusion',
     provider: '社区 (Blackhand01)',
     category: 'vla',
+    websiteUrl: 'https://github.com/Blackhand01/Humanoid-Motion-Diffusion',
     description: '基于 DDPM 扩散 Transformer 的人形全身轨迹生成。24关节 SMPL 轴角72通道，音频条件+时序交叉注意力，含 TSI jitter 指标和自碰撞检测的 Sim2Real 验证管线。',
     isOpenSource: true,
     tags: ['Diffusion', 'Transformer', '全身轨迹', '音频条件', 'Sim2Real'],
@@ -2404,6 +2626,23 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: '音频→人形轨迹 DDPM Transformer',
     license: '未提供许可证',
     licenseDetail: 'GitHub 仓库（Blackhand01/Humanoid-Motion-Diffusion）未包含 LICENSE 文件，按 GitHub 默认规则保留所有权利；商用、再分发或集成前需联系作者获取明确授权。',
+techArchitecture: {
+      overview: '基于 DDPM 扩散 Transformer 的人形全身轨迹生成：24 关节 SMPL 轴角 72 通道，支持音频条件与跨本体动作合成。',
+      pipeline: [
+        '条件输入（音频/文本）→ 扩散 Transformer 迭代去噪 → 全身轨迹（SMPL 72 通道）',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'DDPM',
+        'Transformer',
+      ],
+      system: 'GPU 推理',
+      architecturePattern: '条件扩散生成',
+      algorithms: [
+        'DDPM',
+        '扩散 Transformer',
+      ],
+    },
     keyFeatures: ['音频条件动作生成', '24关节72通道轨迹', 'TSI jitter指标', '自碰撞检测', 'Sim2Real验证'],
     deployStack: 'PyTorch + SMPL + Isaac Gym',
   },
@@ -2412,60 +2651,182 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'OCS2 & Pinocchio Dynamics',
     provider: 'ETH Zurich / Stack-of-Tasks',
     category: 'control',
+    websiteUrl: 'https://github.com/leggedrobotics/ocs2',
     description: '开源领域最经典的非线性 MPC 控制库 (OCS2) 与刚体动力学快速算法库 (Pinocchio)，用于全身轨迹优化。',
     isOpenSource: true,
     tags: ['ETH Zurich', 'MPC', 'Pinocchio', '动力学', 'OCS2'],
     githubUrl: 'https://github.com/leggedrobotics/ocs2',
     license: 'BSD-3-Clause',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'ETH Zurich 开源的非线性 MPC 控制库 OCS2 与刚体动力学库 Pinocchio，用于四足/人形全身轨迹优化与实时控制，是开源运控领域的经典基础库。',
+      pipeline: [
+        '系统动力学建模 (Pinocchio) → OCS2 非线性 MPC 滚动求解 → 最优轨迹 → 执行',
+      ],
+      softwareStack: [
+        'C++',
+        'Pinocchio',
+        'Eigen',
+        'ROS',
+      ],
+      system: 'Linux + ROS',
+      architecturePattern: '模型预测控制滚动优化',
+      algorithms: [
+        'SQP 序列二次规划',
+        '非线性 MPC',
+        '刚体动力学',
+        '轨迹优化',
+      ],
+    },
+    keyFeatures: [
+      '非线性 MPC 控制库',
+      'Pinocchio 刚体动力学',
+      'ETH 开源经典',
+      '全身轨迹优化',
+    ],
   },
   {
     id: 'aimrt',
     name: 'AimRT 中间件',
     provider: '智元机器人 (Agibot)',
     category: 'control',
+    websiteUrl: 'https://github.com/AimRT/AimRT',
     description: '智元自研的高性能机器人运行时中间件，专为具身智能高并发、低时延异构计算与实时调度设计。',
     isOpenSource: true,
     tags: ['智元机器人', '中间件', '高并发', '低时延', ' AimRT'],
     githubUrl: 'https://github.com/AimRT/AimRT',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '面向具身智能的高性能机器人运行时中间件：模块化插件架构，支持高并发、低时延异构计算与实时调度，可对接 EtherCAT/CAN/ROS2 等通信后端。',
+      pipeline: [
+        '算法模块注册 → AimRT 统一调度 → 通信后端 (EtherCAT/CAN/ROS2) → 执行',
+      ],
+      softwareStack: [
+        'C++',
+        'Python (插件)',
+        'EtherCAT',
+        'CAN',
+        'ROS2',
+      ],
+      system: 'Linux 实时系统',
+      architecturePattern: '插件化模块注册 + 统一调度器',
+      algorithms: [
+        '实时调度',
+        '事件驱动',
+        '异构计算',
+      ],
+    },
+    keyFeatures: [
+      '高并发低时延中间件',
+      '异构计算支持',
+      '模块化插件架构',
+      '具身智能运行时',
+    ],
   },
   {
     id: 'open-television',
     name: 'Open-TeleVision / AVP Teleop',
     provider: 'UCSD + MIT / YanjieZe',
     category: 'control',
+    websiteUrl: 'https://github.com/OpenTeleVision/Open-TeleVision',
     description: '基于 Apple Vision Pro 与立体 RGB 摄像头的沉浸式主动双眼遥操作系统，支持高精度全身模仿采集。',
     isOpenSource: true,
     tags: ['VisionPro', '立体遥操作', 'AVP', 'UCSD', '数据采集'],
     githubUrl: 'https://github.com/OpenTeleVision/Open-TeleVision',
     license: 'MIT',
-    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+techArchitecture: {
+      overview: '基于 Apple Vision Pro 与立体 RGB 摄像头的主动双眼遥操作系统，实现沉浸式全身控制与高精度模仿学习数据采集。',
+      pipeline: [
+        'Vision Pro 头部/手部追踪 → 立体视频回传 → 遥操作映射 → 机器人执行 → 数据采集',
+      ],
+      softwareStack: [
+        'Python',
+        'ROS',
+        'Apple Vision Pro 生态',
+      ],
+      system: 'AVP + 机器人本体',
+      architecturePattern: '头显追踪 → 主从映射',
+      algorithms: [
+        '头部姿态追踪',
+        '立体视觉',
+        '主从遥操作',
+      ],
+    },
+    keyFeatures: [
+      'Apple Vision Pro 沉浸式遥操作',
+      '主动双眼立体视觉',
+      '全身模仿数据采集',
+      'UCSD 开源',
+    ],
   },
   {
     id: 'aloha-mobile',
     name: 'ALOHA / Mobile ALOHA',
     provider: 'Stanford University',
     category: 'control',
+    githubUrl: 'https://github.com/MarkFzp/mobile-aloha',
     description: '低成本双手灵巧遥操作及移动双臂硬件方案，配合 ACT 行为克隆算法，掀起具身模仿学习浪潮。',
     isOpenSource: true,
     tags: ['Stanford', 'Mobile ALOHA', '遥操作', 'ACT算法'],
     websiteUrl: 'https://mobile-aloha.github.io',
     license: 'MIT',
-    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+techArchitecture: {
+      overview: '斯坦福低成本双手灵巧遥操作与移动双臂硬件方案，配合 ACT (Action Chunking Transformer) 行为克隆算法实现模仿学习，是具身模仿学习浪潮的代表作。',
+      pipeline: [
+        '主臂遥操作 → 关节映射 → 从臂执行 → 数据采集 → ACT 训练 → 策略复现',
+      ],
+      softwareStack: [
+        'Python',
+        'PyTorch (ACT)',
+        'ROS',
+      ],
+      system: 'ViperX 从臂 + 移动底盘',
+      architecturePattern: '主从遥操作 + 行为克隆',
+      algorithms: [
+        'ACT 行为克隆',
+        '关节空间映射',
+      ],
+    },
+    keyFeatures: [
+      '低成本双手遥操作',
+      '移动底盘方案',
+      'ACT 行为克隆配合',
+      '斯坦福开源',
+    ],
   },
   {
     id: 'unitree-xr-teleop',
     name: 'Unitree XR 遥操作 (Apple Vision Pro / Quest)',
     provider: '宇树科技 (Unitree Robotics)',
     category: 'control',
+    websiteUrl: 'https://github.com/unitreerobotics/xr_teleoperate',
     description: '宇树官方 XR 遥操作系统，支持 Apple Vision Pro 和 Meta Quest，实现 H1/G1 人形全身遥操作，支持多种灵巧手。',
     isOpenSource: true,
     tags: ['宇树科技', 'Apple Vision Pro', 'Quest', 'H1/G1', '遥操作'],
     githubUrl: 'https://github.com/unitreerobotics/xr_teleoperate',
     license: 'BSD-3-Clause',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '宇树官方 XR 遥操作系统：支持 Apple Vision Pro 与 Meta Quest，实现 H1/G1 人形全身遥操作与多型号灵巧手控制。',
+      pipeline: [
+        'XR 设备追踪 → 头部/手部姿态 → 全身动作映射 → H1/G1 执行',
+      ],
+      softwareStack: [
+        'C++',
+        'Python',
+        'unitree_sdk2',
+      ],
+      system: 'XR 设备 + 宇树机器人',
+      architecturePattern: 'XR 追踪 → 动作重定向 → 执行',
+      algorithms: [
+        '手部追踪',
+        '姿态映射',
+        '遥操作',
+      ],
+    },
     keyFeatures: ['AVP/Quest 双平台', 'H1/G1 全身遥操作', '灵巧手支持', '开源'],
   },
   {
@@ -2473,12 +2834,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'OpenWBT (人形全身遥操作)',
     provider: '银河通用 & 清华大学',
     category: 'control',
+    websiteUrl: 'https://github.com/GalaxyGeneralRobotics/OpenWBT',
     description: '基于 Apple Vision Pro 的人形机器人全身遥操作系统，支持行走、下蹲、弯腰、抓取等全身动作采集，适配 Unitree G1/H1。',
     isOpenSource: true,
     tags: ['OpenWBT', 'Apple Vision Pro', '全身遥操作', '行走+操作'],
     githubUrl: 'https://github.com/GalaxyGeneralRobotics/OpenWBT',
     license: 'MIT',
     licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+techArchitecture: {
+      overview: '银河通用与清华大学合作的基于 Apple Vision Pro 的人形全身遥操作系统，支持行走、下蹲、弯腰、抓取等全身动作采集与执行。',
+      pipeline: [
+        'AVP 全身追踪 → 动作语义解析 → 全身动作映射 → G1/H1 执行',
+      ],
+      softwareStack: [
+        'Python',
+        'C++',
+        'unitree_sdk2',
+      ],
+      system: 'AVP + 宇树机器人',
+      architecturePattern: '全身追踪 → 语义动作映射',
+      algorithms: [
+        '全身姿态追踪',
+        '动作重定向',
+      ],
+    },
     keyFeatures: ['AVP 全身追踪', '行走+下蹲+弯腰+抓取', 'G1/H1 适配', '全身动作采集'],
   },
 
@@ -2488,12 +2867,36 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'ORB-SLAM3',
     provider: 'University of Zaragoza (Campos et al.)',
     category: 'slam',
+    websiteUrl: 'https://github.com/UZ-SLAMLab/ORB_SLAM3',
     description: '最成熟的开源视觉 SLAM 系统，支持单目/双目/RGB-D/视觉惯导四种模式，带闭环检测和重定位。人形机器人室内定位的基础工具。',
     isOpenSource: true,
     tags: ['SLAM', 'ORB-SLAM3', '双目', '视觉惯导', '闭环'],
     githubUrl: 'https://github.com/UZ-SLAMLab/ORB_SLAM3',
     license: 'GPL-3.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '视觉 SLAM 经典系统：单目/双目/RGB-D/视觉惯导四种模式，ORB 特征 + 三线程并行（跟踪/局部建图/回环检测），带闭环检测与重定位，人形机器人室内定位的成熟基准方案。',
+      pipeline: [
+        '图像输入 → ORB 特征提取 → 跟踪线程位姿估计',
+        '局部建图（共视关键帧 BA）',
+        '回环检测 (DBoW2) → 全局优化 → 位姿输出',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'OpenCV',
+        'Eigen',
+        'g2o',
+      ],
+      system: 'Linux + 相机/IMU',
+      architecturePattern: '三线程并行：跟踪 / 局部建图 / 回环',
+      algorithms: [
+        'ORB 特征',
+        '滑动窗口 BA',
+        '回环检测 (DBoW2)',
+        '图优化 (g2o)',
+      ],
+    },
     keyFeatures: ['单目/双目/RGB-D/VIO 四种模式', '闭环检测+重定位', '多地图复用', '学术标准基线'],
   },
   {
@@ -2501,12 +2904,32 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'VINS-Fusion',
     provider: '香港科技大学 (Qin et al.)',
     category: 'slam',
+    websiteUrl: 'https://github.com/HKUST-Aerial-Robotics/VINS-Fusion',
     description: '紧耦合视觉-惯导里程计，支持单目/双目+IMU+GPS 多传感器融合。轻量化，非常适合人形机器人实时状态估计。',
     isOpenSource: true,
     tags: ['VIO', '视觉惯导', 'GPS融合', 'HKUST', '轻量化'],
     githubUrl: 'https://github.com/HKUST-Aerial-Robotics/VINS-Fusion',
     license: 'GPL-3.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '港科大紧耦合视觉-惯导里程计：单目/双目+IMU+GPS 多传感器融合，基于滑动窗口优化，轻量化适合人形机器人实时状态估计。',
+      pipeline: [
+        '图像/IMU 同步 → IMU 预积分 → 特征跟踪 → 滑动窗口紧耦合优化 → 位姿输出（可选融合 GPS）',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'Eigen',
+        'Ceres',
+      ],
+      system: 'Linux + 相机/IMU/GPS',
+      architecturePattern: '滑动窗口紧耦合优化',
+      algorithms: [
+        '滑动窗口 BA',
+        'IMU 预积分',
+        '多源融合',
+      ],
+    },
     keyFeatures: ['单目+IMU/双目+IMU/GPS 融合', '紧耦合优化', '在线标定', '无人机/机器人通用'],
   },
   {
@@ -2514,12 +2937,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'OpenVINS',
     provider: 'University of Delaware (Geneva et al.)',
     category: 'slam',
+    websiteUrl: 'https://github.com/rpng/open_vins',
     description: '基于滤波的视觉-惯导估计框架，代码架构清晰，文档完善，支持单目/双目+IMU。学术界和研究入门的首选 VIO 方案。',
     isOpenSource: true,
     tags: ['VIO', '滤波', 'MSCKF', '研究友好', 'ROS2'],
     githubUrl: 'https://github.com/rpng/open_vins',
     license: 'GPL-3.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '基于滤波（MSCKF）的视觉-惯导估计框架：代码架构清晰、文档完善，支持单目/双目+IMU，是学术界 VIO 入门首选。',
+      pipeline: [
+        'IMU 状态传播 → 特征观测更新 → MSCKF 滤波 → 位姿/状态输出',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'Eigen',
+      ],
+      system: 'Linux + 相机/IMU',
+      architecturePattern: '滤波框架 (MSCKF)',
+      algorithms: [
+        'MSCKF',
+        '误差状态卡尔曼滤波',
+      ],
+    },
     keyFeatures: ['MSCKF 滤波架构', '清晰文档', 'ROS/ROS2 集成', '在线标定'],
   },
   {
@@ -2527,12 +2968,32 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'RTAB-Map (Real-Time Appearance-Based Mapping)',
     provider: 'IntRoLab (Université de Sherbrooke)',
     category: 'slam',
+    websiteUrl: 'https://github.com/introlab/rtabmap',
     description: '基于图优化的成熟 SLAM 系统，支持 RGB-D/双目/LiDAR+IMU+里程计多源融合。内存管理机制适合长时间运行，ROS2 原生集成。',
     isOpenSource: true,
     tags: ['SLAM', 'RTAB-Map', 'RGB-D', '多源融合', 'ROS2'],
     githubUrl: 'https://github.com/introlab/rtabmap',
     license: 'BSD-3-Clause',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '基于图优化的成熟 SLAM 系统：RGB-D/双目/LiDAR+IMU+里程计多源融合，内存管理机制（长期记忆/工作记忆）适合长时间运行建图。',
+      pipeline: [
+        '传感器输入 → 前端里程计 → 回环检测 → 图优化 → 地图输出',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'PCL',
+        'GTSAM',
+      ],
+      system: 'Linux + RGB-D/LiDAR',
+      architecturePattern: '前端里程计 + 后端图优化',
+      algorithms: [
+        'RTAB-Map',
+        '回环检测（视觉词袋）',
+        '图优化',
+      ],
+    },
     keyFeatures: ['RGB-D/双目/LiDAR 多源融合', '长期运行内存管理', 'ROS2 Humble/Jazzy 原生', '3D 稠密重建'],
   },
   {
@@ -2540,12 +3001,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'FAST-LIO2',
     provider: '香港大学 MARS Lab (Xu et al.)',
     category: 'slam',
+    websiteUrl: 'https://github.com/hku-mars/FAST_LIO',
     description: '目前最快的 LiDAR-惯导里程计之一，直接点云配准+IMU 紧耦合，计算效率极高，支持多种 LiDAR。适合带 LiDAR 的人形机器人实时定位。',
     isOpenSource: true,
     tags: ['LiDAR', 'FAST-LIO2', '惯性里程计', 'HKU', '实时'],
     githubUrl: 'https://github.com/hku-mars/FAST_LIO',
     license: 'GPL-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '目前最快的 LiDAR-惯导里程计之一：直接点云配准 + IMU 紧耦合，ikd-Tree 增量式数据结构，计算效率极高，支持多种 LiDAR。',
+      pipeline: [
+        'LiDAR 点云 → 运动补偿去畸变 → 直接点云配准 (ikd-Tree) → 迭代卡尔曼滤波 → 位姿输出',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'PCL',
+      ],
+      system: 'Linux + LiDAR/IMU',
+      architecturePattern: '直接法配准 + 滤波紧耦合',
+      algorithms: [
+        'ikd-Tree 增量式树',
+        '迭代卡尔曼滤波 (IEKF)',
+        '直接点云配准',
+      ],
+    },
     keyFeatures: ['LiDAR+IMU 紧耦合', '极速点云配准', '多 LiDAR 型号支持', 'ROS/ROS2'],
   },
   {
@@ -2553,12 +3033,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'LIO-SAM (LiDAR-Inertial Odometry via Smoothing and Mapping)',
     provider: 'Tixiao Shan (MIT)',
     category: 'slam',
+    websiteUrl: 'https://github.com/TixiaoShan/LIO-SAM',
     description: '基于因子图优化的 LiDAR-惯导 SLAM，紧耦合 LiDAR+IMU+GPS 多传感器，闭环检测，适合结构化环境的大场景建图。',
     isOpenSource: true,
     tags: ['LiDAR', 'LIO-SAM', '因子图', 'GPS融合', '大场景'],
     githubUrl: 'https://github.com/TixiaoShan/LIO-SAM',
     license: 'BSD-3-Clause',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '基于因子图优化的 LiDAR-惯导 SLAM：紧耦合 LiDAR+IMU+GPS 多传感器，含闭环检测，适合结构化环境大规模建图。',
+      pipeline: [
+        '点云特征提取（角点/平面）→ IMU 预积分 → 因子图优化 → 回环检测 → 全局地图',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'GTSAM',
+      ],
+      system: 'Linux + LiDAR/IMU/GPS',
+      architecturePattern: '因子图优化 (GTSAM)',
+      algorithms: [
+        '因子图优化',
+        '特征配准',
+        '回环检测',
+      ],
+    },
     keyFeatures: ['LiDAR+IMU+GPS 紧耦合', '因子图优化', '闭环检测', 'ROS'],
   },
   {
@@ -2566,12 +3065,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'Depth Anything V2',
     provider: '香港大学 / TikTok (Yang et al.)',
     category: 'slam',
+    websiteUrl: 'https://github.com/DepthAnything/Depth-Anything-V2',
     description: 'SOTA 单目深度估计模型，从单张 RGB 图像预测高质量深度图。可作为人形机器人视觉感知的深度输入源，替代昂贵的深度相机。',
     isOpenSource: true,
     tags: ['深度估计', '单目', 'Depth Anything', 'Transformer', '预训练'],
     githubUrl: 'https://github.com/DepthAnything/Depth-Anything-V2',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'SOTA 单目深度估计模型：从单张 RGB 图像预测高质量深度图，可作为人形机器人视觉感知的深度输入源，替代昂贵深度相机。',
+      pipeline: [
+        'RGB 图像 → DINOv2 预训练编码器 → 深度解码头 → 深度图输出',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'DINOv2',
+      ],
+      system: 'GPU 推理 / 端侧部署',
+      architecturePattern: '编码器-解码器（基础模型微调）',
+      algorithms: [
+        'DINOv2 特征',
+        '多尺度深度回归',
+      ],
+    },
     keyFeatures: ['单目→深度', 'SOTA 精度', '轻量级变体可用', 'PyTorch 推理'],
   },
   {
@@ -2579,12 +3095,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'Nav2 (ROS 2 Navigation Framework)',
     provider: 'Open Robotics / Community',
     category: 'slam',
+    websiteUrl: 'https://docs.nav2.org',
     description: 'ROS 2 官方导航框架，集成行为树、代价地图、路径规划(A*/DWA/MPPI)和定位。人形机器人室内自主导航的标准基础设施。',
     isOpenSource: true,
     tags: ['ROS2', 'Nav2', '路径规划', '行为树', '自主导航'],
     githubUrl: 'https://github.com/ros-navigation/navigation2',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'ROS 2 官方导航框架：行为树 + 代价地图 + 路径规划（A*/DWA/MPPI）+ 定位（AMCL），人形机器人室内自主导航的标准基础。',
+      pipeline: [
+        '定位 (AMCL) → 全局规划 (A*) → 局部规划 (DWA/MPPI) → 速度命令 → 底盘执行',
+      ],
+      softwareStack: [
+        'ROS2',
+        'BehaviorTree.CPP',
+        'nav2 插件体系',
+      ],
+      system: 'ROS2 (Humble/Jazzy)',
+      architecturePattern: '行为树驱动的插件化导航管线',
+      algorithms: [
+        'A* 全局规划',
+        'DWA/MPPI 局部规划',
+        'AMCL 定位',
+      ],
+    },
     keyFeatures: ['行为树任务编排', 'A*/DWA/MPPI 多规划器', '代价地图', '定位插件化', 'ROS2 原生'],
   },
   {
@@ -2592,12 +3127,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'Cartographer (Google)',
     provider: 'Google',
     category: 'slam',
+    websiteUrl: 'https://github.com/cartographer-project/cartographer',
     description: 'Google 的 2D/3D SLAM 库，支持 LiDAR+IMU+里程计融合，实时建图，ROS/ROS2 集成。适用于室内移动机器人定位建图。',
     isOpenSource: true,
     tags: ['SLAM', 'Cartographer', 'Google', '2D/3D', 'ROS'],
     githubUrl: 'https://github.com/cartographer-project/cartographer',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'Google 的 2D/3D SLAM 库：LiDAR+IMU+里程计融合，实时建图（子图机制），ROS/ROS2 集成完善。',
+      pipeline: [
+        '传感器输入 → 局部 SLAM（扫描匹配+子图）→ 回环闭合 → 全局优化 → 地图输出',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'Ceres',
+      ],
+      system: 'Linux + LiDAR/IMU/里程计',
+      architecturePattern: '子图 + 回环闭环的图优化',
+      algorithms: [
+        'Ceres 图优化',
+        '扫描匹配',
+        '子图机制',
+      ],
+    },
     keyFeatures: ['2D/3D SLAM', 'LiDAR+IMU+里程计', '实时建图', 'ROS/ROS2'],
   },
   {
@@ -2605,12 +3159,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'pySLAM',
     provider: 'Luigi Freda (社区)',
     category: 'slam',
+    websiteUrl: 'https://github.com/luigifreda/pyslam',
     description: '模块化 Python 视觉 SLAM 框架，集成 DepthAnythingV2/RAFT-Stereo/MASt3R 等前沿深度估计器 + ORB-SLAM3 后端 + 高斯溅射重建。研究/教学首选。',
     isOpenSource: true,
     tags: ['Python', 'SLAM', '深度估计', '高斯溅射', '研究框架'],
     githubUrl: 'https://github.com/luigifreda/pyslam',
     license: 'GPL-3.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '模块化 Python 视觉 SLAM 框架：集成 DepthAnythingV2、RAFT-Stereo、MASt3R 等最新深度/匹配模型，便于快速原型与研究。',
+      pipeline: [
+        '图像输入 → 特征/深度提取（可插拔最新模型）→ 里程计 → 优化 → 位姿输出',
+      ],
+      softwareStack: [
+        'Python',
+        'PyTorch',
+        'OpenCV',
+      ],
+      system: 'Linux + 相机',
+      architecturePattern: '模块化可插拔（特征/深度/优化）',
+      algorithms: [
+        '特征点法',
+        '深度模型融合',
+        '图优化',
+      ],
+    },
     keyFeatures: ['Python 模块化', '集成 SOTA 深度估计器', '高斯溅射体素重建', '10+ 数据集支持'],
   },
 
@@ -2625,6 +3198,22 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['StarBrain', '视觉导航', '端侧运行', '单目', '无图导航', '多地形'],
     license: 'Proprietary',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '纯端侧单目视觉导航方案：无需建图即点即走，无需云端算力；支持跟随、电子地图定点导航等模式，覆盖平地/沙土/台阶/草地多种地形。',
+      pipeline: [
+        '单目图像 → 端侧模型感知（地形/障碍）→ 导航决策 → 运动控制',
+      ],
+      softwareStack: [
+        '端侧 NPU 推理',
+        'ROS',
+      ],
+      system: '端侧部署（无云端依赖）',
+      architecturePattern: '感知-决策-控制单链路',
+      algorithms: [
+        '单目视觉感知',
+        '路径规划',
+      ],
+    },
     keyFeatures: ['纯端侧运行无需云端', '单目摄像头即点即走', '无需建图', '多地形覆盖', '跟随+定点导航'],
   },
   {
@@ -2632,12 +3221,33 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'VINS-Mono',
     provider: '香港科技大学 (Qin et al.)',
     category: 'slam',
+    websiteUrl: 'https://github.com/HKUST-Aerial-Robotics/VINS-Mono',
     description: '鲁棒的单目视觉-惯导状态估计器，紧耦合优化框架，在线IMU标定+相机外参标定+闭环检测。无人机/机器人最广泛使用的VIO方案之一。',
     isOpenSource: true,
     tags: ['VINS-Mono', 'VIO', '单目+IMU', 'HKUST', '在线标定'],
     githubUrl: 'https://github.com/HKUST-Aerial-Robotics/VINS-Mono',
     license: 'GPL-3.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '鲁棒的单目视觉-惯导状态估计器：紧耦合优化框架，在线 IMU 标定 + 相机外参标定 + 回环检测，无人机/机器人最广泛使用的 VIO 方案之一。',
+      pipeline: [
+        '单目图像 + IMU → 预积分 → 滑动窗口优化 → 位姿输出 → 回环检测 → 全局优化',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'Eigen',
+        'Ceres',
+      ],
+      system: 'Linux + 单目相机/IMU',
+      architecturePattern: '滑动窗口紧耦合优化 + 回环',
+      algorithms: [
+        '滑动窗口 BA',
+        'IMU 预积分',
+        '在线标定',
+        '回环检测',
+      ],
+    },
     keyFeatures: ['单目+IMU紧耦合', '在线自标定', '闭环检测', 'ROS集成'],
   },
   {
@@ -2645,12 +3255,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'FAST-LIVO2',
     provider: '香港大学 MARS Lab',
     category: 'slam',
+    websiteUrl: 'https://github.com/hku-mars/FAST-LIVO2',
     description: '目前最快的直接法LiDAR-惯性-视觉里程计，同时融合LiDAR+视觉+IMU三种传感器，实时RGB着色点云建图。',
     isOpenSource: true,
     tags: ['FAST-LIVO2', 'LiDAR+视觉+IMU', 'HKU', '实时着色', '多传感器融合'],
     githubUrl: 'https://github.com/hku-mars/FAST-LIVO2',
     license: 'GPL-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '目前最快的直接法 LiDAR-惯性-视觉里程计：同时融合 LiDAR+视觉+IMU 三种传感器，实时 RGB 着色点云建图。',
+      pipeline: [
+        'LiDAR/相机/IMU 输入 → 直接法联合配准 → 迭代卡尔曼滤波 → 位姿 + 彩色点云输出',
+      ],
+      softwareStack: [
+        'C++',
+        'ROS',
+        'PCL',
+      ],
+      system: 'Linux + LiDAR/相机/IMU',
+      architecturePattern: '直接法多传感器紧耦合',
+      algorithms: [
+        '直接法配准',
+        'IEKF',
+        '多传感器融合',
+      ],
+    },
     keyFeatures: ['LiDAR+视觉+IMU三传感器融合', '实时RGB着色点云', '直接法配准', '极速运行'],
   },
   {
@@ -2658,12 +3287,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'OmniStereo (全景双目深度估计)',
     provider: 'DengJiaxi et al. (CVPR 2025)',
     category: 'slam',
+    websiteUrl: 'https://github.com/DengJiaxi1/OmniStereo',
     description: 'CVPR 2025。基于多视角鱼眼相机的实时全景深度估计，Cassini投影+轻量立体匹配网络，Jetson AGX Orin上12.3FPS实时运行，精度超第二名32%。',
     isOpenSource: true,
     tags: ['OmniStereo', 'CVPR 2025', '全景深度', '鱼眼相机', 'Jetson实时'],
     githubUrl: 'https://github.com/DengJiaxi1/OmniStereo',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'CVPR 2025：基于多视角鱼眼相机的实时全景深度估计，Cassini 投影 + 轻量立体匹配网络，可在 Jetson AGX 上实时运行。',
+      pipeline: [
+        '多鱼眼相机 → Cassini 投影 → 轻量立体匹配网络 → 全景深度图',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Jetson 部署',
+      ],
+      system: 'Jetson AGX / GPU',
+      architecturePattern: '投影变换 + 端到端立体网络',
+      algorithms: [
+        'Cassini 投影',
+        '立体匹配网络',
+      ],
+    },
     keyFeatures: ['CVPR 2025', '鱼眼全景深度', 'Jetson 12.3FPS实时', '精度超SOTA 32%', '机器人/无人机导航'],
   },
   {
@@ -2671,6 +3317,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'Isaac GR00T N1 / N1.5 / N1.6 / N1.7',
     provider: 'NVIDIA',
     category: 'vla',
+    websiteUrl: 'https://github.com/Nvidia/Isaac-GR00T',
     description: 'NVIDIA 旗下的通用人形机器人 VLA 基础模型，最新 N1.7 版本融入 EgoScale 2万小时人类第一人称动作视频，具备强大的思维链推理与泛化能力。',
     isOpenSource: true,
     openSourceDetails: '✅ Apache-2.0 (可商用授权)',
@@ -2711,13 +3358,36 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     hfUrl: 'https://huggingface.co/nvidia/GEAR-SONIC',
     modelType: 'Humanoid Behavior Base Model',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '1.2M-42M 参数行为基础模型',
+      '100M+ 帧动捕预训练',
+      '统一全身步态+灵巧手',
+      'GR00T-WBC 生态集成',
+    ],
+techArchitecture: {
+      overview: '人形机器人行为基础模型（1.2M-42M 参数）：经 100M+ 帧、700 小时动捕数据预训练，统一全身动作表示，与 GR00T-WBC 平台集成。',
+      pipeline: [
+        '动捕数据预训练 → 行为 token 化 → 全身动作生成/策略初始化',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'VQ 分词',
+      ],
+      system: 'GPU 训练 + 真机',
+      architecturePattern: '行为基础模型 + 分词表示',
+      algorithms: [
+        '行为分词',
+        '全身统一表示',
+      ],
+    },
   },
   {
     id: 'openpi',
     name: 'openpi (π0 / π0.5)',
     provider: 'Physical Intelligence (π)',
     category: 'vla',
+    websiteUrl: 'https://github.com/Physical-Intelligence/openpi',
     description: 'Physical Intelligence 开源的基于流匹配 (Flow Matching) 的 VLA 基础模型，提供完整的 Checkpoint 与微调工具链。',
     isOpenSource: true,
     tags: ['Physical Intelligence', 'π0', 'Flow Matching', '流匹配'],
@@ -2725,6 +3395,12 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'Flow-Matching VLA',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '流匹配 (Flow Matching) 动作头',
+      '完整 Checkpoint 开源',
+      '单模/双模版本',
+      '跨本体动作专家',
+    ],
     techArchitecture: {
       overview: 'Physical Intelligence 的开源 VLA 模型，基于流匹配 (Flow Matching) 的端到端动作生成，提供完整 Checkpoint 与微调工具链',
       pipeline: [
@@ -2754,7 +3430,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/physical-superintelligence-lab/Psi0',
     modelType: 'Loco-Manipulation Base Model',
     license: 'MIT',
-    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+    keyFeatures: [
+      '全身移动操作 (Loco-Manipulation)',
+      '9 个真机任务超越基线 40%+',
+      '开源基础模型',
+      '大空间作业',
+    ],
+techArchitecture: {
+      overview: '开源全尺寸人形机器人大空间移动与操作 (Loco-Manipulation) 基础模型：在 9 个真机任务上超越现有方案，支持全身协同控制。',
+      pipeline: [
+        '视觉-语言输入 → 全身策略推理 → 移动+操作联合动作输出',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '全身联合动作建模',
+      algorithms: [
+        'Loco-Manipulation 联合策略',
+        '多模态融合',
+      ],
+    },
   },
   {
     id: 'lingbot-vla',
@@ -2767,7 +3465,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/Robbyant/lingbot-vla',
     modelType: 'Universal Cross-Embodiment VLA',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '2 万小时真机训练',
+      '17 厂商 20+ 形态适配',
+      '开源后训练框架',
+      '通用 VLA 基础模型',
+    ],
+techArchitecture: {
+      overview: '经过 2 万小时真机训练的通用 VLA 基础模型：适配 17 家厂商 20+ 种机器人形态，开源后训练 (Post-Training) 工具链。',
+      pipeline: [
+        '多本体真机数据 → 基础模型预训练 → 后训练适配 (Post-Training) → 各形态机器人部署',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '基础模型 + 后训练适配',
+      algorithms: [
+        '跨本体泛化',
+        '后训练适配',
+      ],
+    },
   },
   {
     id: 'unifolm-vla',
@@ -2779,7 +3499,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['宇树科技', 'Unitree G1', 'WMA-0', '长程操作'],
     githubUrl: 'https://github.com/unitreerobotics/unifolm-vla',
     license: 'BSD-3-Clause',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '宇树首个端到端 VLA',
+      '世界模型 WMA-0',
+      'G1 平台 12 类长程任务',
+      '端侧可部署',
+    ],
+techArchitecture: {
+      overview: '宇树首个端到端 VLA 具身大脑模型与世界模型-动作框架 (WMA-0)：在 G1 平台完成 12 类复杂长程任务，端侧可部署。',
+      pipeline: [
+        '视觉-语言输入 → 端到端 VLA 推理 → 世界模型预测 + 动作生成 → G1 执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer',
+        '世界模型',
+      ],
+      system: 'GPU + 端侧部署 (G1)',
+      architecturePattern: 'VLA + 世界模型双轨',
+      algorithms: [
+        '世界模型',
+        '端到端 VLA',
+      ],
+    },
   },
   {
     id: 'agibot-go',
@@ -2791,7 +3534,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['智元机器人', 'ViLLA', 'InternVL', '隐式动作'],
     githubUrl: 'https://github.com/AgibotTech',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      'ViLLA 架构',
+      '隐式动作标记 (IAT)',
+      'InternVL-2B 视觉编码',
+      '万卡级训练',
+    ],
+techArchitecture: {
+      overview: '智元基于 ViLLA 架构与隐式动作标记 (Implicit Action Token) 的 VLA 模型，使用万卡级集群与大规模数据训练，支持跨本体部署。',
+      pipeline: [
+        '视觉-语言输入 → ViLLA 架构编码 → 隐式动作标记生成 → 机器人执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'ViLLA 架构',
+        'Transformer',
+      ],
+      system: '万卡集群训练 + 真机部署',
+      architecturePattern: '隐式动作标记 (IAT)',
+      algorithms: [
+        '隐式动作标记',
+        'ViLLA 架构',
+      ],
+    },
   },
   {
     id: 'galaxea-g05',
@@ -2803,7 +3569,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['星海图', 'Fast-WAM', '双系统智能', '零样本泛化'],
     githubUrl: 'https://github.com/galaxea-explorer',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      'Fast-WAM 世界模型',
+      '双系统全身智能',
+      '跨场景零样本泛化',
+      '全身协同控制',
+    ],
+techArchitecture: {
+      overview: '星海图具备 Fast-WAM 世界模型与双系统全身智能的 VLA 基础模型：跨场景零样本泛化，全身协同控制。',
+      pipeline: [
+        '视觉输入 → Fast-WAM 世界模型预测 → 双系统决策（快系统执行/慢系统规划）→ 全身动作',
+      ],
+      softwareStack: [
+        'PyTorch',
+        '世界模型',
+        'Transformer',
+      ],
+      system: 'GPU + 真机部署',
+      architecturePattern: '世界模型 + 双系统架构',
+      algorithms: [
+        'Fast-WAM 世界模型',
+        '双系统智能',
+      ],
+    },
   },
   {
     id: 'holomotion',
@@ -2815,7 +3604,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['地平线', 'MoE Transformer', 'Any-4 路线', '全身控制'],
     githubUrl: 'https://github.com/HorizonRobotics/HoloMotion',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      'MoE Transformer',
+      'Any Pose / Command / Terrain',
+      '全身控制基础模型',
+      '通用动作生成',
+    ],
+techArchitecture: {
+      overview: '基于 MoE Transformer 的通用人形全身控制基础模型：贯彻 Any Pose / Any Command 理念，支持多样全身动作生成与控制。',
+      pipeline: [
+        '任意指令/姿态输入 → MoE Transformer 推理 → 全身控制输出',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'MoE Transformer',
+      ],
+      system: 'GPU 推理',
+      architecturePattern: 'MoE 专家路由 + 全身控制',
+      algorithms: [
+        'MoE Transformer',
+        '全身控制',
+      ],
+    },
   },
   {
     id: 'hex-vla',
@@ -2827,7 +3638,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['国地中心', 'Qwen-VL', '12M帧预训练', '流匹配'],
     githubUrl: 'https://github.com/Open-X-Humanoid/HEX',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      'Qwen-VL 基础',
+      '流匹配动作头',
+      '统一本体感知预测',
+      '12M+ 帧预训练',
+    ],
+techArchitecture: {
+      overview: '基于 Qwen-VL 与流匹配动作头的全身 VLA 框架：融合统一本体感知预测器，预训练数据覆盖 12M+ 帧，实现跨本体泛化。',
+      pipeline: [
+        '视觉-语言输入 → Qwen-VL 编码 → 统一本体感知预测 → 流匹配动作头 → 全身动作',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Qwen-VL',
+        '流匹配',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '基础 LLM + 流匹配动作头',
+      algorithms: [
+        '流匹配动作头',
+        '统一本体感知预测',
+      ],
+    },
   },
   {
     id: 'dexora',
@@ -2839,7 +3673,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['清华大学', 'ICRA 2026', '36-DoF', '灵巧手', '90%成功率'],
     githubUrl: 'https://github.com/dexoravla/Dexora',
     license: 'MIT',
-    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+    keyFeatures: [
+      '36-DoF 灵巧手操作',
+      '100K 仿真 + 12.2K 真机示教',
+      '真机成功率 90%+',
+      '双臂 VLA',
+    ],
+techArchitecture: {
+      overview: '面向双臂 36-DoF 灵巧手操作的 VLA 框架：结合 100K 仿真与 12.2K 真机示教，真机成功率突破性提升，开源基础架构。',
+      pipeline: [
+        '视觉-语言输入 → VLA 推理 → 36-DoF 灵巧手动作输出 → 双臂执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer',
+      ],
+      system: 'GPU 训练 + 双臂真机',
+      architecturePattern: '灵巧手高维动作建模',
+      algorithms: [
+        '36-DoF 动作建模',
+        '仿真-真机混合训练',
+      ],
+    },
   },
   {
     id: 'rdt2',
@@ -2851,7 +3707,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['清华 thu-ml', '1.2B参数', 'Diffusion Policy', '46数据集'],
     githubUrl: 'https://github.com/thu-ml/RDT2',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '1.2B 参数',
+      '离散/连续扩散+流匹配',
+      '46 数据集 1M+ 轨迹预训练',
+      '统一动作表示',
+    ],
+techArchitecture: {
+      overview: '1.2B 参数离散/连续扩散与流匹配基础动作模型：在 46 个具身数据集上完成 1M+ 轨迹大规模预训练，统一动作表示。',
+      pipeline: [
+        '多数据集预训练 (1M+ 轨迹) → 统一动作表示 → 扩散/流匹配生成动作 → 执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        '扩散',
+        '流匹配',
+      ],
+      system: 'GPU 大规模预训练 + 部署',
+      architecturePattern: '统一动作 token + 生成式动作头',
+      algorithms: [
+        '扩散模型',
+        '流匹配',
+        '离散/连续混合表示',
+      ],
+    },
   },
   {
     id: 'dexvla',
@@ -2865,6 +3745,22 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'VLA 通用操作模型',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '基于 Qwen2-VL 的通用视觉-语言-动作模型：统一支持单臂、双臂和灵巧手控制，跨本体零样本泛化。',
+      pipeline: [
+        '视觉-语言输入 → Qwen2-VL 编码 → 统一动作头（单臂/双臂/灵巧手）→ 执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Qwen2-VL',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '统一动作头 + 跨本体泛化',
+      algorithms: [
+        'Qwen2-VL',
+        '跨本体动作建模',
+      ],
+    },
     keyFeatures: ['Qwen2-VL 视觉基座', '单臂/双臂/灵巧手统一', '跨本体泛化'],
   },
   {
@@ -2879,6 +3775,22 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'VLA 全身移动操作模型',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'ICLR 2026：统一潜空间 VLA 模型，实现人形机器人全身移动操作（同时行走和操作），单一模型处理全身动作。',
+      pipeline: [
+        '视觉-语言输入 → 统一潜空间编码 → 全身动作生成（行走+操作联合）→ 执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '统一潜空间全身建模',
+      algorithms: [
+        '统一潜空间',
+        '全身移动操作联合策略',
+      ],
+    },
     keyFeatures: ['ICLR 2026', '潜空间统一表征', '行走+操作同时', '单一模型端到端'],
   },
   {
@@ -2893,6 +3805,22 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'VLA 跨本体适配模型',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'ICLR 2026：基于 Soft-Prompt Transformer 的跨本体 VLA（AgiBot 系），通过软提示实现不同本体间的策略迁移。',
+      pipeline: [
+        '视觉-语言输入 → Soft-Prompt 注入 → Transformer 推理 → 跨本体动作输出',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Transformer',
+      ],
+      system: 'GPU 训练 + 多本体部署',
+      architecturePattern: 'Soft-Prompt 跨本体迁移',
+      algorithms: [
+        'Soft-Prompt',
+        '跨本体迁移',
+      ],
+    },
     keyFeatures: ['ICLR 2026', 'Soft-Prompt 轻量适配', 'AgiBot 挑战赛冠军', '跨本体泛化'],
   },
   {
@@ -2907,6 +3835,23 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'VLA 空间引导模型',
     license: 'MIT',
     licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+techArchitecture: {
+      overview: '基于 Qwen2.5-VL 的空间引导 VLA 框架：利用 3D 空间理解提升机器人操作精度与泛化能力。',
+      pipeline: [
+        '视觉-语言输入 → Qwen2.5-VL 编码 → 3D 空间理解引导 → 动作输出',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'Qwen2.5-VL',
+        '3D 感知',
+      ],
+      system: 'GPU 训练 + 真机部署',
+      architecturePattern: '空间引导动作生成',
+      algorithms: [
+        '3D 空间理解',
+        'Qwen2.5-VL',
+      ],
+    },
     keyFeatures: ['Qwen2.5-VL 基座', '3D 空间理解', 'MIT 开源', '上海 AI Lab'],
   },
   {
@@ -2921,6 +3866,24 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'VLA 分层灵巧抓取',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'AAAI 2026 Oral：分层灵巧抓取 VLA——VLM 规划器（高层）生成抓取策略，扩散策略控制器（底层）执行，灵巧手抓取任务。',
+      pipeline: [
+        '视觉输入 → VLM 规划器（高层抓取规划）→ 扩散策略控制器（底层）→ 灵巧手执行',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'VLM',
+        '扩散策略',
+      ],
+      system: 'GPU 推理 + 灵巧手真机',
+      architecturePattern: '高层规划 + 底层控制分层',
+      algorithms: [
+        'VLM 规划',
+        '扩散策略',
+        '灵巧抓取',
+      ],
+    },
     keyFeatures: ['AAAI 2026 Oral', 'VLM+扩散分层', '>90% 成功率', '灵巧手抓取'],
   },
   {
@@ -2935,6 +3898,23 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     modelType: 'VLA 双系统全身模型',
     license: 'Apache-2.0',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '星海图双系统 VLA 模型 G0/G0.5 系列：配套 500+ 小时真实世界开放场景数据集，Fast-WAM 世界模型 + 全身智能。',
+      pipeline: [
+        '视觉输入 → Fast-WAM 世界模型 → 双系统决策 → 全身动作输出',
+      ],
+      softwareStack: [
+        'PyTorch',
+        '世界模型',
+        'Transformer',
+      ],
+      system: 'GPU + 真机部署',
+      architecturePattern: '双系统 + 世界模型',
+      algorithms: [
+        'Fast-WAM',
+        '双系统架构',
+      ],
+    },
     keyFeatures: ['500+小时真机数据', 'Fast-WAM 世界模型', '双系统全身智能', '开放场景'],
   },
   {
@@ -2947,7 +3927,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     tags: ['NVIDIA', 'Cosmos', '世界模型', '物理生成'],
     githubUrl: 'https://github.com/nvidia/Cosmos',
     license: 'OpenMDW-1.1',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '世界基础模型平台',
+      '权重+训练脚本开源',
+      '生成式物理解算器',
+      '数据生成管线',
+    ],
+techArchitecture: {
+      overview: 'NVIDIA Cosmos 世界基础模型平台：开源模型权重、Post-training 训练脚本与生成式物理感知，面向机器人与具身智能数据生成。',
+      pipeline: [
+        '文本/视频输入 → Cosmos 世界模型生成 → 合成数据 → 策略训练',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'NeMo',
+        'NVIDIA GPU 生态',
+      ],
+      system: 'NVIDIA GPU 集群',
+      architecturePattern: '世界模型生成 + 训练管线',
+      algorithms: [
+        '视频生成',
+        '世界模型',
+        '域随机化',
+      ],
+    },
   },
 
   // --- 六、开源数据集 ---
@@ -2963,7 +3967,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     scale: '百万级真机实例',
     contentDetails: '商业、家庭、工业多场景高精度示教',
     license: 'CC BY-NC 4.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '百万级真机实例',
+      '100% 真实物理场景',
+      '商业/家庭/工业轨迹',
+      '轨迹级+操作级标注',
+    ],
+techArchitecture: {
+      overview: '智元百万级真机具身数据集：100% 真实物理场景采样的商业服务、家庭整理与工业装配轨迹，含轨迹级与操作级多种标注。',
+      pipeline: [
+        '真机遥操作采集 → 多模态标注 → 数据集发布 (AGIBOT WORLD 2026) → 策略训练',
+      ],
+      softwareStack: [
+        'Python',
+        'LeRobot 生态',
+        'HuggingFace 托管',
+      ],
+      system: '多机器人本体采集',
+      architecturePattern: '真机采集 → 标注 → 训练闭环',
+      algorithms: [
+        '多模态标注',
+        '轨迹级数据',
+      ],
+    },
   },
   {
     id: 'robomind-ds',
@@ -2977,7 +4004,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     scale: '400,000+ 轨迹',
     contentDetails: '6 种本体，739 项日常与工业任务',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '400K+ 轨迹',
+      '6 种构型覆盖',
+      '739 项操作任务',
+      '阵列触觉数据',
+    ],
+techArchitecture: {
+      overview: '从 107k 拓展至 400k+ 轨迹的巨型人形数据集：覆盖"天工"等 6 种构型、739 项操作任务，含多任务统一标注格式。',
+      pipeline: [
+        '多本体真机采集 → 任务标注 → 统一格式数据集 → 多任务策略训练',
+      ],
+      softwareStack: [
+        'Python',
+        '标准数据集格式',
+      ],
+      system: '6 种人形构型采集',
+      architecturePattern: '多构型统一标注',
+      algorithms: [
+        '任务级标注',
+        '跨构型训练',
+      ],
+    },
   },
   {
     id: 'humanoid-everyday-ds',
@@ -2991,7 +4040,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     scale: '10.3k 轨迹 / 300 万帧',
     contentDetails: '260 种复杂日常任务',
     license: 'MIT',
-    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+    keyFeatures: [
+      '10.3k 轨迹 / 300 万帧',
+      '9 种感知模态',
+      '日常场景操作',
+      '多模态同步',
+    ],
+techArchitecture: {
+      overview: '10.3k 轨迹、300 万帧的多模态人形数据集：集成 9 种感知模态（RGB/Depth/IMU 等），聚焦日常场景操作。',
+      pipeline: [
+        '多模态真机采集 → 9 模态同步 → 数据集发布 → 策略训练',
+      ],
+      softwareStack: [
+        'Python',
+        '多模态同步工具',
+      ],
+      system: '真机多传感器采集',
+      architecturePattern: '多模态同步采集',
+      algorithms: [
+        '多模态对齐',
+        '日常操作任务',
+      ],
+    },
   },
   {
     id: 'open-x-embodiment-ds',
@@ -3005,7 +4076,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     scale: '1,000,000+ Episodes',
     contentDetails: '22 种构型，500+ 技能',
     license: 'CC BY 4.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '22 种机器人形态',
+      '500+ 技能',
+      '100 万+ Episodes',
+      'RT-X/π0 预训练基础',
+    ],
+techArchitecture: {
+      overview: '全球最大的跨形态机器人开放数据集：融合 22 种机器人形态、500+ 技能与 100 万+ Episodes，是 RT-X/π0 等模型的预训练基础。',
+      pipeline: [
+        '多实验室数据贡献 → 统一格式 (RLDS) → 大规模预训练 → 跨形态模型',
+      ],
+      softwareStack: [
+        'RLDS',
+        'TensorFlow/PyTorch',
+      ],
+      system: '22 种机器人形态',
+      architecturePattern: '统一格式联邦数据集',
+      algorithms: [
+        '跨形态预训练',
+        '统一动作空间',
+      ],
+    },
   },
   {
     id: 'egoscale-ds',
@@ -3018,7 +4111,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     scale: '20,000 小时第一人称视频',
     contentDetails: '人类日常动手操作，极高视角重合度',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      '1-2 万小时第一人称视频',
+      'Log-linear 规模定律验证',
+      '支撑 GR00T N1.7',
+      '人类视频规模化',
+    ],
+techArchitecture: {
+      overview: '1 万-2 万小时人类第一人称视角动作视频集：验证了人类视频规模化与具身 VLA 模型性能的 Log-linear 关系，支撑 GR00T N1.7 等模型。',
+      pipeline: [
+        '第一人称视频采集 → 清洗/标注 → 规模-性能曲线验证 → 模型预训练',
+      ],
+      softwareStack: [
+        'Python',
+        '视频处理管线',
+      ],
+      system: '头戴设备采集',
+      architecturePattern: '视频规模化训练',
+      algorithms: [
+        '第一人称视频学习',
+        '规模定律验证',
+      ],
+    },
   },
   {
     id: 'unitree-g1-ds',
@@ -3032,7 +4147,29 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     scale: '数万条高精轨迹',
     contentDetails: 'G1 29-DoF 真机姿态与视觉动作对',
     license: 'BSD-3-Clause',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      'G1 真机官方轨迹',
+      '双手+全身操作',
+      '拧瓶盖/倒水/叠衣等日常',
+      '宇树官方发布',
+    ],
+techArchitecture: {
+      overview: '宇树官方发布的 G1 真机双手与全身操作轨迹：涵盖拧瓶盖、倒水、叠衣服、整理桌板等典型日常动作。',
+      pipeline: [
+        'G1 真机遥操作采集 → 轨迹整理 → 数据集发布 → 策略训练',
+      ],
+      softwareStack: [
+        'Python',
+        'unitree_sdk2',
+      ],
+      system: 'G1 真机',
+      architecturePattern: '官方真机轨迹发布',
+      algorithms: [
+        '双手操作轨迹',
+        '全身动作数据',
+      ],
+    },
   },
   {
     id: 'droid-dataset',
@@ -3046,7 +4183,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     scale: '76,000+ 仿真与真机轨迹',
     contentDetails: '多角度 RGB/Depth 图像、三轴力矩与运动抓取轨迹',
     license: 'MIT',
-    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+    keyFeatures: [
+      '18 实验室 / 86 场景',
+      '76K+ 真机轨迹',
+      '双手灵巧操作',
+      '扩散策略训练标准',
+    ],
+techArchitecture: {
+      overview: '跨 18 个实验室、86 个不同真实场景采集的大规模双手灵巧操作数据集：76,000+ 条真机轨迹，动作条件扩散策略训练标准数据源。',
+      pipeline: [
+        '多实验室遥操作采集 → 标准格式发布 → 扩散策略训练',
+      ],
+      softwareStack: [
+        'Python',
+        'RLDS',
+        '扩散策略',
+      ],
+      system: '86 个真实场景',
+      architecturePattern: '联邦采集 + 标准格式',
+      algorithms: [
+        '动作条件扩散',
+        '跨场景泛化',
+      ],
+    },
   },
   {
     id: 'nvidia-cosmos-world',
@@ -3063,7 +4223,24 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     keyFeatures: ['物理规律守恒推演', 'Cosmos-Transfer 视频风格迁移', '支持 720P/60FPS 实时推演', '开源微调脚本'],
     releaseDate: '2026-01',
     license: 'OpenMDW-1.1',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: 'NVIDIA 开放的通用物理世界基础模型：包含 Cosmos-Transfer 域迁移器（将仿真视角翻译为真实视角），服务 Sim2Real 数据生成。',
+      pipeline: [
+        '仿真渲染 → Cosmos-Transfer 域迁移 → 真实感数据 → 策略训练',
+      ],
+      softwareStack: [
+        'PyTorch',
+        'NeMo',
+        'Cosmos 系列',
+      ],
+      system: 'NVIDIA GPU 集群',
+      architecturePattern: '域迁移数据管线',
+      algorithms: [
+        'Cosmos-Transfer',
+        '视角翻译',
+      ],
+    },
   },
   {
     id: 'oasis-world-model',
@@ -3079,7 +4256,24 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     keyFeatures: ['20FPS 极低时延', '动作条件约束生成', '实时物理反馈'],
     releaseDate: '2025-11',
     license: 'MIT',
-    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。'
+    licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+techArchitecture: {
+      overview: '开源交互式 20FPS 实时视频世界生成模型：根据机器人底盘与机械臂动作指令实时预测周围环境碰撞与物体变形。',
+      pipeline: [
+        '动作指令 + 历史帧 → 世界模型推理 (20FPS) → 未来帧预测（碰撞/变形）',
+      ],
+      softwareStack: [
+        'PyTorch',
+        '扩散/自回归',
+        'DiT',
+      ],
+      system: 'GPU 实时推理',
+      architecturePattern: '动作条件视频预测',
+      algorithms: [
+        'DiT',
+        '实时视频生成',
+      ],
+    },
   },
   {
     id: 'worldgen-embodied',
@@ -3105,7 +4299,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     scale: '数千个开源社区 Episodes',
     contentDetails: 'ACT, Diffusion, VQ-BeT 适配的平铺格式',
     license: 'Apache-2.0',
-    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。'
+    licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+    keyFeatures: [
+      'HuggingFace 官方维护',
+      '极速数据加载',
+      'LeRobot 深度集成',
+      '社区生态',
+    ],
+techArchitecture: {
+      overview: 'HuggingFace 官方维护的极速具身数据集托管 Hub：支持各种双臂、双手与桌上人形机器人数据集，与 LeRobot 训练框架深度集成。',
+      pipeline: [
+        '数据集上传 Hub → 标准化格式 → LeRobot 一键加载训练',
+      ],
+      softwareStack: [
+        'Python',
+        'HuggingFace Hub',
+        'LeRobot',
+      ],
+      system: '云托管 + 本地训练',
+      architecturePattern: '数据集即服务 + 训练集成',
+      algorithms: [
+        '数据集标准化',
+        '社区生态',
+      ],
+    },
   },
 
   // --- 七、四足开源方案 (可适配/已迁移至人形机器人) ---
@@ -3114,6 +4331,7 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'MIT Cheetah Software (WBC / MPC / State Estimation)',
     provider: 'MIT Biomimetic Robotics Lab',
     category: 'control',
+    websiteUrl: 'https://github.com/mit-biomimetics/Cheetah-Software',
     description: '四足机器人领域最具影响力的开源控制软件栈，其凸优化 MPC、全身阻抗控制 (WBC) 与高带宽状态估计算法被广泛迁移至人形双足站立、步态规划与实时平衡控制。',
     isOpenSource: true,
     openSourceDetails: '✅ 全部 C++ 源码开源 (MIT License)',
@@ -3121,6 +4339,24 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/mit-biomimetics/Cheetah-Software',
     license: 'MIT',
     licenseDetail: 'MIT 许可标准条款速览：\n• 允许：商用、修改、再分发与再授权\n• 义务：保留版权声明\n• 特点：最宽松的常见许可之一；无担保\n详细条款以仓库 LICENSE 文件为准。',
+techArchitecture: {
+      overview: 'MIT 猎豹四足控制软件栈：凸优化 MPC 生成步态，全身阻抗控制 (WBC) 跟踪，高带宽状态估计；算法被广泛迁移至人形双足站立、步态规划与实时平衡控制。',
+      pipeline: [
+        '传感器 → 状态估计 (EKF/QP) → 凸优化 MPC 步态 → WBC 全身阻抗 → 关节执行',
+      ],
+      softwareStack: [
+        'C++',
+        'Eigen',
+        'LCM 通信',
+      ],
+      system: 'Linux + 实时控制',
+      architecturePattern: '分层控制：状态估计 → MPC → WBC',
+      algorithms: [
+        '凸优化 MPC',
+        'WBC 全身阻抗',
+        'EKF 状态估计',
+      ],
+    },
     keyFeatures: ['凸优化 MPC 实时步态生成', '全身阻抗控制 (WBC)', '高带宽卡尔曼状态估计器', '被 H1/G1/青龙/天工 参考']
   },
   {
@@ -3171,12 +4407,31 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'CHAMP (Quadruped Locomotion Framework)',
     provider: 'Community / TU Delft / 多家大学联合',
     category: 'control',
+    websiteUrl: 'https://github.com/chvmp/champ',
     description: '基于 ROS 的模块化四足运动控制框架，采用分层 (MPC + WBC) 控制器架构。该分层设计已被多个人形项目 (OpenLoong 青龙、Asimov) 采纳并改造用于双足步态规划与全身控制。',
     isOpenSource: true,
     tags: ['ROS', '模块化控制', 'MPC+WBC分层', '人形参考架构', '步态FMS'],
     githubUrl: 'https://github.com/chvmp/champ',
     license: 'BSD-3-Clause',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '基于 ROS 的模块化四足运动控制框架：MPC+WBC 分层控制器 + 步态 FMS 状态机；该分层设计已被 OpenLoong 青龙、Asimov 等人形项目采纳改造用于双足步态与全身控制。',
+      pipeline: [
+        '状态估计 → MPC 步态规划 → WBC 跟踪 → 关节执行',
+      ],
+      softwareStack: [
+        'ROS',
+        'C++',
+        'Gazebo',
+      ],
+      system: 'ROS + 仿真/真机',
+      architecturePattern: '分层控制 + FMS 状态机',
+      algorithms: [
+        'MPC',
+        'WBC',
+        'FMS 步态状态机',
+      ],
+    },
     keyFeatures: ['MPC + WBC + FSM 分层控制架构', 'ROS/ROS2 原生集成', 'Gazebo + MuJoCo 双仿真支持', '步态状态机 (FMS) 可迁移至双足']
   },
   {
@@ -3192,6 +4447,25 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     githubUrl: 'https://github.com/DeepRobotics',
     license: 'Proprietary SDK (Apache-2.0 for examples)',
     licenseDetail: 'Apache-2.0 标准条款速览：\n• 允许：商用、修改、再分发，含显式专利授权\n• 义务：保留版权与许可声明，变更需显著标注\n• 特点：对商业集成友好；无担保、无商标授权\n详细条款以仓库 LICENSE 文件（Apache-2.0 全文）为准。',
+techArchitecture: {
+      overview: '云深处 (Deep Robotics) 工业级四足机器人开源 Python/C++ SDK 与 RL 训练示例：GPU 并行 PPO 运控训练管线与多模态感知融合架构，可改造复用于人形机器人的工业部署场景。',
+      pipeline: [
+        'RL 训练 (GPU 并行 PPO) → 模型导出 → SDK 部署 → 真机执行',
+        '多模态感知融合（独立链路）',
+      ],
+      softwareStack: [
+        'Python',
+        'C++',
+        'PyTorch',
+        'ROS',
+      ],
+      system: 'Linux',
+      architecturePattern: '训练-部署分离 + 感知融合',
+      algorithms: [
+        'GPU 并行 PPO',
+        '多模态感知融合',
+      ],
+    },
     keyFeatures: ['工业级 GPU PPO 训练管线', '多模态感知融合参考实现', 'C++/Python 双语言 SDK', '适用于人形工业部署参考']
   },
   {
@@ -3214,12 +4488,30 @@ export const ECOSYSTEM_ITEMS: EcosystemItem[] = [
     name: 'ESP-Claw (乐鑫 AI Agent 框架)',
     provider: 'Espressif (乐鑫科技)',
     category: 'control',
+    websiteUrl: 'https://github.com/espressif/esp-claw',
     description: '乐鑫开源 Chat Coding AI Agent 框架，纯 C 跑在 ESP32 上(<$5)。事件驱动毫秒响应+本地 MCP 协议，支持 GPT/Claude/Qwen/DeepSeek。',
     isOpenSource: true,
     tags: ['ESP32', 'ESP-Claw', 'AI Agent', 'MCP', '乐鑫'],
     githubUrl: 'https://github.com/espressif/esp-claw',
     license: 'Apache-2.0',
     licenseDetail: 'Espressif（乐鑫）官方仓库采用 Apache-2.0：商用免费、可修改再分发，需保留版权与专利授权声明。支持在 ESP32 系列芯片上运行。',
+techArchitecture: {
+      overview: '乐鑫开源的 Chat Coding AI Agent 框架：纯 C 实现跑在 ESP32 上（<$5），事件驱动毫秒响应 + 本地 MCP 协议，支持 GPT/Claude/Qwen/DeepSeek 等 LLM。',
+      pipeline: [
+        '自然语言输入 → LLM API → 意图解析 → 事件驱动执行 → 响应',
+      ],
+      softwareStack: [
+        'C (ESP-IDF)',
+        'MCP 协议',
+        'LLM API',
+      ],
+      system: 'ESP32 系列芯片',
+      architecturePattern: '事件驱动 Agent 循环',
+      algorithms: [
+        'MCP 工具调用',
+        '事件驱动调度',
+      ],
+    },
     deployStack: 'ESP-IDF + C + LLM API',
     keyFeatures: ['<$5 ESP32运行', 'Chat Coding自然语言编程', 'MCP协议', '事件驱动毫秒响应'],
   },

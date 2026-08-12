@@ -88,7 +88,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   sidebarCollapsed,
   setSidebarCollapsed,
 }) => {
-  const showFilters = ['full-platforms', 'diy-robots', 'arms-components', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets', 'papers'].includes(
+  const showFilters = ['full-platforms', 'diy-robots', 'arms-components', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets', 'deployment', 'papers'].includes(
     filter.categoryId
   );
 

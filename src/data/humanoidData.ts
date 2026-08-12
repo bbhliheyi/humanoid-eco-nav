@@ -5457,7 +5457,7 @@ export const PAPER_LIST: EcosystemItem[] = [
     id: 'paper-legged-gym',
     name: 'Learning Robust Perceptive Locomotion for Quadrupedal and Humanoid Robots',
     provider: 'ETH Zurich RSL (Rudin et al.)',
-    category: 'papers',
+    category: 'awesome',
     paperCategory: 'Sim2Real',
     description: 'legged_gym 框架的原论文，奠定了 PPO+域随机化+非对称 AC 的人形/四足 RL 训练范式，是所有人形 RL 项目的算法基础。',
     venue: 'Science Robotics 2022',

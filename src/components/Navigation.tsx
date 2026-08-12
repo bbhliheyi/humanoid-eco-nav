@@ -22,7 +22,6 @@ import {
   PanelLeftOpen,
   Wrench,
   Cog,
-  List,
 } from 'lucide-react';
 import { CategoryId, FilterState } from '../types';
 
@@ -54,8 +53,7 @@ export const CATEGORIES: { id: CategoryId; name: string; subtitle: string; icon:
   { id: 'slam', name: '  └ 视觉 SLAM 与导航', subtitle: 'ORB-SLAM3 / VINS / RTAB-Map', icon: Activity },
   { id: 'vla', name: '  └ VLA 具身大脑', subtitle: '基础模型 / 世界模型', icon: BrainCircuit },
   { id: 'datasets', name: '  └ 训练数据集', subtitle: '真机轨迹 / 遥操作采集', icon: Database },
-  { id: 'papers', name: '测试部署 + 参考', subtitle: 'S2R / 论文 / 迭代', icon: Compass },
-  { id: 'awesome', name: '  └ 开源资源列表', subtitle: 'Awesome Lists / 数据库', icon: List },
+  { id: 'papers', name: '测试部署 + 参考', subtitle: 'S2R / 论文 / 资源列表', icon: Compass },
   { id: 'timeline', name: '发展里程碑', subtitle: '2024-2026 时间线', icon: Clock },
   { id: 'glossary', name: '技术百科', subtitle: '知识体系 (总分架构)', icon: FileText },
   { id: 'analytics', name: '数据统计', subtitle: '生态全景数据分析', icon: BarChart3 },
@@ -65,7 +63,7 @@ export const CATEGORIES: { id: CategoryId; name: string; subtitle: string; icon:
 const GROUP_P1 = ['simulators', 'urdf-pipeline', 'frameworks'];
 const GROUP_P2 = ['full-platforms', 'diy-robots', 'arms-components'];
 const GROUP_P3 = ['control', 'slam', 'vla', 'datasets'];
-const GROUP_P4 = ['papers', 'awesome', 'timeline', 'glossary', 'analytics'];
+const GROUP_P4 = ['papers', 'timeline', 'glossary', 'analytics'];
 
 const PHASE_CONFIG: { keys: string[]; label: string; subtitle: string; step: number }[] = [
   { keys: GROUP_P1, label: 'Phase 1: 数字孪生', subtitle: '仿真器+URDF+RL训练', step: 1 },
@@ -88,7 +86,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   sidebarCollapsed,
   setSidebarCollapsed,
 }) => {
-  const showFilters = ['full-platforms', 'diy-robots', 'arms-components', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets', 'papers', 'awesome'].includes(
+  const showFilters = ['full-platforms', 'diy-robots', 'arms-components', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets', 'papers'].includes(
     filter.categoryId
   );
 

@@ -141,16 +141,18 @@ export default function App() {
     const counts: Record<CategoryId, number> = {
       overview: ECOSYSTEM_ITEMS.length,
       timeline: TIMELINE_DATA.length,
-      platforms: ALL_ITEMS.filter((i) => i.category === 'platforms').length,
+      'full-platforms': ALL_ITEMS.filter((i) => i.category === 'full-platforms').length,
+      'diy-robots': ALL_ITEMS.filter((i) => i.category === 'diy-robots').length,
+      'arms-components': ALL_ITEMS.filter((i) => i.category === 'arms-components').length,
       frameworks: ALL_ITEMS.filter((i) => i.category === 'frameworks').length,
       simulators: ALL_ITEMS.filter((i) => i.category === 'simulators').length,
       control: ALL_ITEMS.filter((i) => i.category === 'control').length,
       slam: ALL_ITEMS.filter((i) => i.category === 'slam').length,
       vla: ALL_ITEMS.filter((i) => i.category === 'vla').length,
       datasets: ALL_ITEMS.filter((i) => i.category === 'datasets').length,
+      papers: PAPER_LIST.length,
       guide: 0, // Standalone guide
       glossary: 0,
-      papers: PAPER_LIST.length,
       wizard: SELECTOR_SCENARIOS.length,
       'urdf-pipeline': 5,
       analytics: ECOSYSTEM_ITEMS.length,
@@ -272,7 +274,7 @@ export default function App() {
             <AnalyticsView items={ECOSYSTEM_ITEMS} />
           )}
 
-          {['platforms', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets'].includes(
+          {['full-platforms', 'diy-robots', 'arms-components', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets'].includes(
             filter.categoryId
           ) && (
             <div>

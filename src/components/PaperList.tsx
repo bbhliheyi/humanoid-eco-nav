@@ -5,12 +5,16 @@ import { EcosystemItem } from '../types';
 interface PaperListProps {
   papers: EcosystemItem[];
   onSelect: (item: EcosystemItem) => void;
+  subCategories?: string[];
+  title?: string;
+  subtitle?: string;
+  badge?: string;
 }
 
-export const PaperList: React.FC<PaperListProps> = ({ papers, onSelect }) => {
+export const PaperList: React.FC<PaperListProps> = ({ papers, onSelect, subCategories: subCats, title, subtitle, badge }) => {
   const [selectedSubCategory, setSelectedSubCategory] = useState<string>('ALL');
 
-  const subCategories = ['ALL', 'Sim2Real', 'WholeBodyControl', 'VLA', 'Survey'];
+  const subCategories = subCats ?? ['ALL', 'Sim2Real', 'WholeBodyControl', 'VLA', 'Survey'];
 
   const filteredPapers = papers.filter((p) => {
     if (selectedSubCategory === 'ALL') return true;
@@ -24,11 +28,11 @@ export const PaperList: React.FC<PaperListProps> = ({ papers, onSelect }) => {
         <div>
           <div className="flex items-center gap-2 text-[#B83232] text-xs font-mono font-bold uppercase tracking-wider mb-1.5">
             <FileText className="w-4 h-4 stroke-[2.5]" />
-            <span>ACADEMIC PAPERS & BENCHMARKS (2024–2026.08)</span>
+            <span>{badge ?? 'ACADEMIC PAPERS & BENCHMARKS (2024–2026.08)'}</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black font-editorial-serif text-[#1A1816] tracking-tight">关键学术论文、综述与开源基线</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black font-editorial-serif text-[#1A1816] tracking-tight">{title ?? '关键学术论文、综述与开源基线'}</h2>
           <p className="text-xs text-[#524D46] mt-1 max-w-2xl">
-            涵盖 RSS、CoRL、ICRA、ICLR 顶会关于 Sim2Real 域随机化、全身控制 (WBC)、VLA 基础模型及 550+ 论文精选综述。
+            {subtitle ?? '涵盖 RSS、CoRL、ICRA、ICLR 顶会关于 Sim2Real 域随机化、全身控制 (WBC)、VLA 基础模型及 550+ 论文精选综述。'}
           </p>
         </div>
 

@@ -150,7 +150,8 @@ export default function App() {
       slam: ALL_ITEMS.filter((i) => i.category === 'slam').length,
       vla: ALL_ITEMS.filter((i) => i.category === 'vla').length,
       datasets: ALL_ITEMS.filter((i) => i.category === 'datasets').length,
-      papers: PAPER_LIST.length,
+      papers: PAPER_LIST.filter((p) => p.category !== 'deployment').length,
+      deployment: PAPER_LIST.filter((p) => p.category === 'deployment').length + ALL_ITEMS.filter((i) => i.category === 'deployment').length,
       guide: 0, // Standalone guide
       glossary: 0,
       wizard: SELECTOR_SCENARIOS.length,
@@ -262,8 +263,43 @@ export default function App() {
             />
           )}
 
+          {filter.categoryId === 'deployment' && (
+            <div className="space-y-8">
+              <PaperList
+                papers={PAPER_LIST.filter((p) => p.category === 'deployment')}
+                onSelect={setSelectedItem}
+                subCategories={['ALL', 'Sim2Real']}
+                badge="SIM2REAL & DEPLOYMENT (2024–2026.08)"
+                title="测试部署：Sim2Real 与基准验证"
+                subtitle="Sim2Real 迁移、域随机化、仿真到真机部署的开源论文与基准测试信息。"
+              />
+              {filteredItems.length > 0 && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {filteredItems.map((item) => (
+                    <ProjectCard
+                      key={item.id}
+                      item={item}
+                      onSelect={setSelectedItem}
+                      isFavorite={favorites.includes(item.id)}
+                      onToggleFavorite={toggleFavorite}
+                      isCompared={compareList.includes(item.id)}
+                      onToggleCompare={toggleCompare}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
           {filter.categoryId === 'papers' && (
-            <PaperList papers={PAPER_LIST} onSelect={setSelectedItem} />
+            <PaperList
+              papers={PAPER_LIST}
+              onSelect={setSelectedItem}
+              subCategories={['ALL', 'WholeBodyControl', 'VLA', 'Survey']}
+              badge="ACADEMIC PAPERS & OPEN BASELINES (2024–2026.08)"
+              title="开源基线 / 学术论文"
+              subtitle="全身控制 (WBC)、VLA 基础模型、综述与开源资源列表：涵盖 RSS、CoRL、ICRA、ICLR 顶会及 550+ 论文精选。"
+            />
           )}
 
           {filter.categoryId === 'glossary' && (

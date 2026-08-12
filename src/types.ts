@@ -10,6 +10,7 @@ export type CategoryId =
   | 'vla'
   | 'datasets'
   | 'papers'
+  | 'deployment'
   | 'wizard'
   | 'urdf-pipeline'
   | 'guide'

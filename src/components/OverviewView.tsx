@@ -39,10 +39,10 @@ const PIPELINE_STEPS = [
   {
     step: 2,
     title: '硬件本体',
-    subtitle: '选平台 / 配电机 / 搭电路',
-    categoryId: 'platforms' as CategoryId,
+    subtitle: '全尺寸 / DIY / 机械臂',
+    categoryId: 'full-platforms' as CategoryId,
     icon: Cpu,
-    metric: '45 款人形平台',
+    metric: '55+ 款人形平台',
   },
   {
     step: 3,
@@ -130,11 +130,11 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
               <span>启动选型向导</span>
             </button>
             <button
-              onClick={() => onNavigateCategory('platforms')}
+              onClick={() => onNavigateCategory('full-platforms')}
               className="px-5 py-2.5 bg-[#2D2A26] hover:bg-[#B83232] text-white text-xs sm:text-sm font-semibold uppercase tracking-wider rounded-lg flex items-center gap-2 transition-all shadow-sm cursor-pointer"
             >
               <Cpu className="w-4 h-4" />
-              <span>浏览 45 款硬件平台</span>
+              <span>浏览 55+ 款硬件平台</span>
             </button>
             <button
               onClick={() => onNavigateCategory('glossary')}

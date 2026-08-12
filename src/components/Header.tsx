@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({
   totalCount,
 }) => {
   return (
-    <header className="sticky top-0 z-30 bg-[#F7F5F0]/95 backdrop-blur-md border-b border-[#D8D3CA] text-[#2D2A26]">
+    <header className="sticky top-0 z-30 bg-[#F7F5F0]/95 backdrop-blur-md border-b border-[#D8D3CA] text-[#2D2A26] h-[112px] overflow-hidden">
       {/* Top Editorial Issue Bar */}
       <div className="bg-[#2D2A26] text-[#F7F5F0] px-4 lg:px-8 py-1.5 flex justify-between items-center text-[10px] tracking-[0.2em] font-semibold uppercase font-sans">
         <div className="flex items-center gap-3">
@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Main Header Container */}
-      <div className="px-4 lg:px-8 py-3.5 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="px-4 lg:px-8 py-2 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
         {/* Logo & Editorial Title */}
         <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-start">
           <div className="flex items-center gap-3">

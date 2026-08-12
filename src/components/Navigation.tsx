@@ -20,6 +20,9 @@ import {
   ChevronLeft,
   PanelLeftClose,
   PanelLeftOpen,
+  Wrench,
+  Cog,
+  List,
 } from 'lucide-react';
 import { CategoryId, FilterState } from '../types';
 
@@ -44,12 +47,15 @@ export const CATEGORIES: { id: CategoryId; name: string; subtitle: string; icon:
   { id: 'simulators', name: 'Phase 1: 数字孪生', subtitle: '仿真器 + URDF + RL 训练', icon: Activity },
   { id: 'urdf-pipeline', name: '  └ URDF 建模部署', subtitle: '数字孪生全链路', icon: Workflow },
   { id: 'frameworks', name: '  └ 训练框架算法', subtitle: 'PPO / SAC / Sim2Real', icon: Boxes },
-  { id: 'platforms', name: 'Phase 2: 硬件驱动', subtitle: '45 款平台 / 电机 / 通信 / 标定', icon: Cpu },
-  { id: 'control', name: 'Phase 3: 算法智能', subtitle: 'WBC / 遥操作 / 中间件', icon: Layers },
+  { id: 'full-platforms', name: 'Phase 2: 硬件驱动', subtitle: '全尺寸人形平台（开源+商业）', icon: Cpu },
+  { id: 'diy-robots', name: '  └ DIY 与桌面级', subtitle: '低成本 / 3D打印 / 教育', icon: Wrench },
+  { id: 'arms-components', name: '  └ 机械臂与组件', subtitle: '7-DoF 手臂 / 模块化部件', icon: Cog },
+  { id: 'control', name: 'Phase 3: 算法智能', subtitle: 'WBC / 遥操作 / 运动训练', icon: Layers },
   { id: 'slam', name: '  └ 视觉 SLAM 与导航', subtitle: 'ORB-SLAM3 / VINS / RTAB-Map', icon: Activity },
   { id: 'vla', name: '  └ VLA 具身大脑', subtitle: '基础模型 / 世界模型', icon: BrainCircuit },
   { id: 'datasets', name: '  └ 训练数据集', subtitle: '真机轨迹 / 遥操作采集', icon: Database },
-  { id: 'papers', name: '测试部署 + 参考', subtitle: 'S2R / 迭代 / 论文 / 百科', icon: Compass },
+  { id: 'papers', name: '测试部署 + 参考', subtitle: 'S2R / 论文 / 迭代', icon: Compass },
+  { id: 'awesome', name: '  └ 开源资源列表', subtitle: 'Awesome Lists / 数据库', icon: List },
   { id: 'timeline', name: '发展里程碑', subtitle: '2024-2026 时间线', icon: Clock },
   { id: 'glossary', name: '技术百科', subtitle: '知识体系 (总分架构)', icon: FileText },
   { id: 'analytics', name: '数据统计', subtitle: '生态全景数据分析', icon: BarChart3 },
@@ -57,15 +63,15 @@ export const CATEGORIES: { id: CategoryId; name: string; subtitle: string; icon:
 
 // 按人形机器人从零开发流程分组
 const GROUP_P1 = ['simulators', 'urdf-pipeline', 'frameworks'];
-const GROUP_P2 = ['platforms'];
+const GROUP_P2 = ['full-platforms', 'diy-robots', 'arms-components'];
 const GROUP_P3 = ['control', 'slam', 'vla', 'datasets'];
-const GROUP_P4 = ['papers', 'timeline', 'glossary', 'analytics'];
+const GROUP_P4 = ['papers', 'awesome', 'timeline', 'glossary', 'analytics'];
 
 const PHASE_CONFIG: { keys: string[]; label: string; subtitle: string; step: number }[] = [
   { keys: GROUP_P1, label: 'Phase 1: 数字孪生', subtitle: '仿真器+URDF+RL训练', step: 1 },
-  { keys: GROUP_P2, label: 'Phase 2: 硬件驱动', subtitle: '电机选型 / 通信标定 / HIL', step: 2 },
+  { keys: GROUP_P2, label: 'Phase 2: 硬件驱动', subtitle: '全尺寸 / DIY / 机械臂', step: 2 },
   { keys: GROUP_P3, label: 'Phase 3: 算法智能', subtitle: 'WBC + VLA + 数据集', step: 3 },
-  { keys: GROUP_P4, label: 'Phase 4: 测试部署', subtitle: 'S2R / 迭代 / 论文 / 百科', step: 4 },
+  { keys: GROUP_P4, label: 'Phase 4: 测试部署', subtitle: 'S2R / 论文 / 资源 / 百科', step: 4 },
 ];
 
 export const Navigation: React.FC<NavigationProps> = ({
@@ -82,13 +88,13 @@ export const Navigation: React.FC<NavigationProps> = ({
   sidebarCollapsed,
   setSidebarCollapsed,
 }) => {
-  const showFilters = ['platforms', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets', 'papers'].includes(
+  const showFilters = ['full-platforms', 'diy-robots', 'arms-components', 'frameworks', 'simulators', 'control', 'slam', 'vla', 'datasets', 'papers', 'awesome'].includes(
     filter.categoryId
   );
 
   if (sidebarCollapsed) {
     return (
-      <aside className="fixed left-0 top-[84px] h-[calc(100vh-84px)] z-20 bg-[#FAF8F5] border-r border-[#D8D3CA] flex flex-col items-center py-3 w-[52px] transition-all duration-200 font-sans">
+      <aside className="fixed left-0 top-[112px] h-[calc(100vh-112px)] z-20 bg-[#FAF8F5] border-r border-[#D8D3CA] flex flex-col items-center py-3 w-[52px] transition-all duration-200 font-sans">
         <button
           onClick={() => setSidebarCollapsed(false)}
           className="p-1.5 mb-3 text-[#635D55] hover:text-[#B83232] hover:bg-[#EFECE6] rounded transition-colors cursor-pointer"
@@ -136,7 +142,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   }
 
   return (
-    <aside className="fixed left-0 top-[84px] h-[calc(100vh-84px)] z-20 bg-[#FAF8F5] border-r border-[#D8D3CA] flex flex-col w-[264px] transition-all duration-200 font-sans text-[#2D2A26]">
+    <aside className="fixed left-0 top-[112px] h-[calc(100vh-112px)] z-20 bg-[#FAF8F5] border-r border-[#D8D3CA] flex flex-col w-[264px] transition-all duration-200 font-sans text-[#2D2A26]">
       {/* Sidebar Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-[#D8D3CA]">
         <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#B83232] bg-[#EFECE6] px-2.5 py-1 rounded">

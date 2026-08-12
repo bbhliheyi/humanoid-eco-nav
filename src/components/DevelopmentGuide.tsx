@@ -71,7 +71,8 @@ const phases = [
     ],
     pitfall: '电机驱动调通后直接跑全身控制，结果正方向反了或零点偏移导致机器人自毁。必须先做单关节标定，再逐步扩展到全身。',
     links: [
-      { label: '硬件平台', cat: 'platforms' as CategoryId },
+      { label: '全尺寸平台', cat: 'full-platforms' as CategoryId },
+      { label: 'DIY 与桌面级', cat: 'diy-robots' as CategoryId },
       { label: '技术百科（硬件）', cat: 'glossary' as CategoryId },
     ],
   },

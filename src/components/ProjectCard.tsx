@@ -107,9 +107,26 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <span className="text-[11px] text-[#8C867E] font-mono">• {item.releaseDate}</span>
             )}
           </p>
-          <p className="text-[13px] text-[#524D46] line-clamp-3 leading-relaxed mb-4">
+          <p className="text-[13px] text-[#524D46] line-clamp-3 leading-relaxed mb-3">
             {item.description}
           </p>
+
+          {/* 功能标签：一眼区分每个开源库的具体能力 */}
+          {item.tags && item.tags.length > 0 && (
+            <div className="flex flex-wrap gap-1 mb-3">
+              {item.tags.slice(0, 4).map((t) => (
+                <span
+                  key={t}
+                  className="text-[10px] px-2 py-0.5 bg-[#FFFFFF] border border-[#B83232]/25 text-[#B83232] rounded font-semibold"
+                >
+                  {t}
+                </span>
+              ))}
+              {item.tags.length > 4 && (
+                <span className="text-[10px] px-1.5 py-0.5 text-[#8C867E]">+{item.tags.length - 4}</span>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Key Metrics / Specs Badges */}

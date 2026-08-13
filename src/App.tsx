@@ -286,6 +286,24 @@ export default function App() {
             filter.categoryId
           ) && (
             <div>
+              {/* 模块说明栏：类目定位 + 条目数 */}
+              {(() => {
+                const cat = CATEGORIES.find((c) => c.id === filter.categoryId);
+                return (
+                  <div className="mb-6 bg-[#FFFFFF] border border-[#D8D3CA] rounded-2xl p-5 shadow-sm flex items-center justify-between gap-3 flex-wrap">
+                    <div>
+                      <h2 className="text-xl sm:text-2xl font-black font-editorial-serif text-[#1A1816] tracking-tight">
+                        {cat?.name.replace(/^Phase \d: /, '').replace(/^  └ /, '')}
+                      </h2>
+                      <p className="text-xs text-[#524D46] mt-1 max-w-xl">{cat?.subtitle}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-black text-[#B83232] font-mono">{filteredItems.length}</div>
+                      <div className="text-[10px] text-[#635D55] uppercase tracking-wider">开源项目</div>
+                    </div>
+                  </div>
+                );
+              })()}
               {filteredItems.length === 0 ? (
                 <div className="text-center py-16 bg-[#FFFFFF] rounded-2xl border border-[#D8D3CA] shadow-xs">
                   <p className="text-[#635D55] text-sm">没有找到匹配此筛选条件的项目</p>
